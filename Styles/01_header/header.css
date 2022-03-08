@@ -74,10 +74,13 @@
 }
 
 .submenu__item {
-  display: block;
   justify-content: flex-start;
   padding: 1.5rem;
   box-shadow: 0 0.2rem 0 -0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.submenu__item i {
+  font-size: 1rem;
 }
 
 .submenu__item:hover {
