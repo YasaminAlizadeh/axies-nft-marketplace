@@ -1,0 +1,236 @@
+.hero__character {
+  position: relative;
+  display: inline-block;
+}
+
+.character__body {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5rem;
+  width: 70%;
+  z-index: -2;
+}
+
+.face__wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: bottom;
+  background: linear-gradient(141deg, #a4d4c3, #73a08f);
+  border-radius: 40%;
+  z-index: -1;
+  box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.288);
+  transition: tranform 0.3s ease-in-out;
+}
+
+.face__wrapper--animated {
+  animation: wake-up 8.5s 0.6s forwards;
+}
+
+.horn {
+  position: absolute;
+  top: -4%;
+  width: 8%;
+  height: 20%;
+  z-index: -1;
+  background-color: #73a08f;
+}
+
+.horn--left {
+  left: 10%;
+  transform: rotateZ(-30deg);
+}
+
+.horn--right {
+  right: 10%;
+  transform: rotateZ(30deg);
+}
+
+.horn__tip {
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #73a08f;
+  box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.288);
+}
+
+.eyes__wrapper {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.eye {
+  position: relative;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+
+.eyelid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #448e9f 56%;
+  box-shadow: 0 0.1rem 0.5rem 0.5rem rgba(0, 0, 0, 0.329);
+  z-index: 5;
+}
+
+.eyelid--left--animated {
+  animation: blink 7s 1.2s forwards;
+}
+
+.eyelid--right--animated {
+  animation: blink 7s 1.25s forwards;
+}
+
+.pupil {
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 60%;
+  border-radius: 50%;
+  background-image: linear-gradient(141deg, rgb(17, 0, 17), purple);
+}
+
+.pupil--animated {
+  animation: look-around 7s 1.25s forwards;
+}
+
+.pupil__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 60%;
+  border-radius: 50%;
+  background-image: linear-gradient(141deg, black, rgb(8, 0, 8));
+}
+
+.sparkles {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.425);
+}
+
+.mouth {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.1rem;
+  width: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.281);
+}
+
+.hand {
+  position: absolute;
+  bottom: 10%;
+  height: 15%;
+  width: 20%;
+  border-radius: 40%;
+  background-color: #a4d4c3;
+  box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.288);
+  z-index: 2;
+  opacity: 0;
+}
+
+.hand--animated {
+  animation: wake-up-hands 9s forwards;
+}
+
+.hand--left {
+  left: 0;
+}
+
+.hand--right {
+  right: 0;
+}
+
+@keyframes wake-up {
+  10%,
+  87% {
+    top: -20%;
+    transform: translateX(-50%) scaleY(1);
+  }
+}
+
+@keyframes wake-up-hands {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    bottom: 75%;
+  }
+
+  8%,
+  96% {
+    opacity: 1;
+    bottom: 56%;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  5%,
+  20%,
+  40%,
+  75%,
+  100% {
+    height: 52%;
+  }
+
+  10% {
+    height: 100%;
+  }
+
+  30% {
+    height: 80%;
+  }
+
+  80% {
+    height: 90%;
+  }
+}
+
+@keyframes look-around {
+  50%,
+  85% {
+    left: 50%;
+  }
+
+  60% {
+    left: 70%;
+  }
+
+  70% {
+    left: 30%;
+  }
+}

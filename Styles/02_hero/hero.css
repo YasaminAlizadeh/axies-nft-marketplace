@@ -1,0 +1,147 @@
+@import url(./character.css);
+@import url(./stars.css);
+
+.hero__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: flex-start;
+  margin-top: 15rem;
+  padding: 0 10rem;
+}
+
+.hero--left {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hero__title {
+  grid-area: 1/ 1/ 2/ 3;
+  font-size: clamp(3rem, 10vmin, 8rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero__title:hover {
+  opacity: 0.9;
+}
+
+.hero__span {
+  background: rgb(213, 96, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(213, 96, 255, 1) 0%,
+    rgba(169, 88, 255, 1) 56%,
+    rgba(72, 70, 255, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.hero__description {
+  grid-area: 2/ 1/ 3/ 3;
+}
+
+.hero__btns {
+  width: 50%;
+  display: flex;
+  gap: 3rem;
+}
+
+.hero__btn {
+  width: 100%;
+  font-weight: 700;
+}
+
+.hero--right {
+  position: relative;
+  height: 100%;
+}
+
+.hero__img-wrapper {
+  transform: rotate(30deg);
+  animation: planet-rotate 7s infinite;
+}
+
+.hero__img {
+  width: 100%;
+  animation: float 6s infinite;
+}
+
+.hero__blob {
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+
+.theme--dark .hero__blob {
+  display: none;
+}
+
+.hero__blob--first {
+  top: -50%;
+  left: 5%;
+  --blob-opacity: 0.2;
+}
+
+.hero__blob--second {
+  top: -5%;
+  left: -5%;
+  height: 100%;
+  --blob-opacity: 0.4;
+}
+
+.hero__blob--third {
+  bottom: -5%;
+  right: -5%;
+  height: 100%;
+  --blob-opacity: 0.4;
+}
+
+.hero__blob--forth {
+  bottom: -10%;
+  left: -15%;
+  height: 100%;
+  --blob-opacity: 0.3;
+}
+
+.hero__blob--animated {
+  animation: blobs 3s;
+}
+
+@keyframes planet-rotate {
+  0%,
+  100% {
+    transform: rotate(7deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(3%);
+  }
+
+  50% {
+    transform: translateY(-3%);
+  }
+}
+
+@keyframes blobs {
+  0%,
+  100% {
+    opacity: 0;
+    fill: hsl(269, 100%, 50%);
+  }
+
+  50% {
+    opacity: var(--blob-opacity);
+    fill: hsl(284, 100%, 50%);
+  }
+}

@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #3930a3;
+  --dark-color: #14141f;
+  --light-color: white;
+
+  --btn-bg-dark: hsla(0, 0%, 0%, 0.1);
+  --btn-bg-light: hsla(0, 0%, 100%, 0.1);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Urbanist", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  font-size: clamp(1rem, 5vmin, 1.5rem);
+  background-image: linear-gradient(
+    141deg,
+    #14141f 0%,
+    #1f1f30 51%,
+    #14141f 75%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--dark-color);
+}
+
+body.theme--dark {
+  color: var(--light-color);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.background--light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1000;
+  background-image: linear-gradient(141deg, #fff 0%, #f7f7f7 51%, #fff 75%);
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  color: inherit;
+}
+
+.btn--primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 3rem;
+  border-radius: 10rem;
+  box-shadow: inset 0 0 0 0.3rem var(--primary-color);
+  color: inherit;
+  cursor: pointer;
+}
+
+.btn--primary:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 50px var(--light-color) inset; /* Change the color to your own background color */
+  -webkit-box-shadow: 0 0 0 50px var(--light-color) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: var(--dark-color);
+}
+
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px var(--light-color) inset; /*your box-shadow*/
+  -webkit-box-shadow: 0 0 0 50px var(--light-color) inset; /*your box-shadow*/
+  -webkit-text-fill-color: var(--dark-color);
+}
+
+.theme--dark input:-webkit-autofill {
+  box-shadow: 0 0 0 50px var(--dark-color) inset; /* Change the color to your own background color */
+  -webkit-box-shadow: 0 0 0 50px var(--dark-color) inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: var(--light-color);
+}
+
+.theme--dark input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px var(--dark-color) inset; /*your box-shadow*/
+  -webkit-box-shadow: 0 0 0 50px var(--dark-color) inset; /*your box-shadow*/
+  -webkit-text-fill-color: var(--light-color);
+}
