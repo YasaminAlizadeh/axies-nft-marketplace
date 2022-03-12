@@ -89,6 +89,7 @@ const updateCardsPerPage = () => {
       generateCard("nft", NFTdata[j]);
     }
   }
+  cardLikeFunction();
 };
 
 // --------- Update Auctions Section Contect
