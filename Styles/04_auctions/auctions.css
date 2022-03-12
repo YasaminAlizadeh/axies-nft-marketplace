@@ -117,6 +117,8 @@
 }
 
 .card__info {
+  display: flex;
+  flex-direction: column;
   flex: 1;
   width: 100%;
   box-shadow: 0 0.2rem 0 -0.1rem rgba(0, 0, 0, 0.644);
@@ -131,6 +133,7 @@
 }
 
 .card__creator {
+  margin-top: auto;
   display: grid;
   grid-template-columns: auto;
   align-items: center;
