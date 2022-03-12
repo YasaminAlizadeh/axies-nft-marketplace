@@ -306,26 +306,24 @@ const cardLikeFunction = () => {
         (card) => card.id === clikedCard.id
       );
 
+      console.log("----------------------");
+      console.log(cardData);
+
       if (!cardData.is_liked) {
         cardData.likes_count += 1;
         cardData.is_liked = true;
-
-        [
-          ...clikedCard.getElementsByClassName("article__likes-count"),
-        ][0].innerHTML = cardData.likes_count;
 
         clikedCard.classList.add("article--liked");
       } else {
         cardData.likes_count -= 1;
         cardData.is_liked = false;
 
-        [
-          ...clikedCard.getElementsByClassName("article__likes-count"),
-        ][0].innerHTML = cardData.likes_count;
-
         clikedCard.classList.remove("article--liked");
       }
+
+      [
+        ...clikedCard.getElementsByClassName("article__likes-count"),
+      ][0].innerHTML = cardData.likes_count;
     })
   );
 };
-cardLikeFunction();
