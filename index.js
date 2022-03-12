@@ -306,9 +306,6 @@ const cardLikeFunction = () => {
         (card) => card.id === clikedCard.id
       );
 
-      console.log("----------------------");
-      console.log(cardData);
-
       if (!cardData.is_liked) {
         cardData.likes_count += 1;
         cardData.is_liked = true;
