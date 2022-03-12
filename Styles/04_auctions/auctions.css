@@ -117,7 +117,9 @@
 }
 
 .card__info {
+  flex: 1;
   width: 100%;
+  box-shadow: 0 0.2rem 0 -0.1rem rgba(0, 0, 0, 0.644);
 }
 
 .card__title {
@@ -134,7 +136,6 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 0;
-  box-shadow: 0 0.2rem 0 -0.1rem rgba(0, 0, 0, 0.644);
 }
 
 .creator__img {
