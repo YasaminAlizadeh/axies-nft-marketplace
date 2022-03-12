@@ -236,6 +236,7 @@ const paginationBar = () => {
           document.getElementById("auctions").scrollIntoView();
         }
         updateAuctions();
+        cardLikeFunction();
       }
     });
 
@@ -260,6 +261,7 @@ paginationPrevButton.addEventListener("click", () => {
       });
     });
     updateAuctions();
+    cardLikeFunction();
 
     if (mediaQuery.matches) {
       document.getElementById("auctions").scrollIntoView();
@@ -282,6 +284,7 @@ paginationNextButton.addEventListener("click", () => {
       });
     });
     updateAuctions();
+    cardLikeFunction();
 
     if (mediaQuery.matches) {
       document.getElementById("auctions").scrollIntoView();
