@@ -4,6 +4,7 @@
 }
 
 .character__body {
+  display: none;
   position: absolute;
   top: 0;
   left: 50%;
@@ -232,5 +233,13 @@
 
   70% {
     left: 30%;
+  }
+}
+
+/* --------------------- Media Queries ----------------- */
+
+@media screen and (min-width: 992px) {
+  .character__body {
+    display: block;
   }
 }

@@ -1,191 +1,43 @@
+@import url(./menu_left.css);
+@import url(./menu_right.css);
+
 .header__wrapper {
-  display: grid;
-  grid-template-columns: auto 1fr repeat(3, auto);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-items: center;
-  gap: 5rem;
+  gap: clamp(1rem, 5vw, 5rem);
   width: 100%;
-  padding: 2rem 5rem;
   font-weight: 700;
   box-shadow: 0 0.1rem 0.1rem 0.01rem rgba(138, 138, 138, 0.13);
 }
 
-.header__menu {
-  display: flex;
-  gap: 3.5rem;
-  height: 100%;
+.title__img {
+  width: clamp(4rem, 20vw, 14rem);
 }
 
-.menu__item {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-.menu__icon {
-  font-size: 1.2rem;
-}
-
-.menu__submenu {
-  position: absolute;
-  top: 90%;
-  width: clamp(10rem, 250%, 25rem);
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--dark-color);
-  color: var(--light-color);
-  z-index: 100;
-  border-radius: 0.5rem;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.2s ease-in-out;
-}
-
-.theme--dark .menu__submenu {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-.menu__submenu::before {
-  content: "";
-  position: absolute;
-  top: -0.5rem;
-  left: 1rem;
-  background-color: var(--dark-color);
-  width: 1rem;
-  height: 1rem;
-  transform: rotateZ(45deg);
-}
-
-.theme--dark .menu__submenu::before {
-  background-color: var(--light-color);
-}
-
-.menu__item:hover .menu__submenu {
-  transform: scaleY(1);
-}
-
-.menu__item:hover .menu__sub-submenu {
-  transform: scaleY(0);
-}
-
-.submenu__item {
-  justify-content: flex-start;
-  padding: 1.5rem;
-  box-shadow: 0 0.2rem 0 -0.1rem rgba(0, 0, 0, 0.1);
-}
-
-.submenu__item i {
-  font-size: 1rem;
-}
-
-.submenu__item:hover {
-  background-color: rgba(255, 255, 255, 0.08);
-}
-
-.theme--dark .submenu__item:hover {
-  background-color: rgba(0, 0, 0, 0.08);
-}
-
-.menu__sub-submenu {
-  top: 0;
-  left: calc(100% + 1rem);
-}
-
-.menu__sub-submenu::before {
-  top: 1rem;
-  left: -0.5rem;
-  background-color: var(--dark-color);
-}
-
-.theme--dark .menu__sub-submenu::before {
-  background-color: var(--light-color);
-}
-
-.submenu__item:hover .menu__sub-submenu {
-  transform: scaleY(1);
-}
-
-.header__search {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.header__search:hover {
-  color: var(--primary-color);
-}
-
-.search__container {
-  position: relative;
-  opacity: 0;
-  visibility: hidden;
-  width: 0;
-  transform: scale(0);
-  transform-origin: left;
-  transition: all 0.3s ease-in-out;
-}
-
-.search__input {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 100%;
-  padding: 0 1rem;
-  background: transparent;
-  outline: 0;
-  color: var(--light-color);
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 1rem;
-  transition: width 0.5s ease-in-out;
-}
-
-.theme {
-  display: flex;
-  gap: 2rem;
-}
-
-.theme__btn {
-  display: grid;
-  place-items: center;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 1rem;
+.header__menu-btn {
   cursor: pointer;
 }
 
-.theme__btn:hover {
-  opacity: 0.8;
-}
+/* --------------------- Media Queries ----------------- */
 
-.theme__btn--active {
-  background-color: var(--btn-bg-dark);
-}
+@media screen and (min-width: 1312px) {
+  .header__wrapper {
+    position: fixed;
+    top: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
 
-.theme__btn--light img {
-  filter: invert(1);
-}
+  .header__wrapper--scrolled {
+    background-color: var(--theme-secondary-color);
+  }
 
-/* ---------------------Dark Theme ----------------- */
-.theme--dark .theme__btn::after {
-  transform: scale(1);
-}
-
-.theme--dark .theme__btn--active {
-  background-color: var(--btn-bg-light);
-}
-
-.theme--dark .theme__btn--light img {
-  filter: invert(0);
+  .header__menu-btn {
+    display: none;
+  }
 }

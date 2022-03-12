@@ -1,0 +1,68 @@
+.features__wrapper {
+  display: grid;
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  align-items: flex-start;
+  justify-items: center;
+  gap: 8rem;
+  margin-top: 25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  color: var(--light-color);
+  border-radius: 1.2rem;
+}
+
+.features__icon--wallet {
+  background-color: #5142fb;
+}
+
+.features__icon--collection {
+  background-color: #46a433;
+}
+
+.features__icon--nft {
+  background-color: #9835fb;
+}
+
+.features__icon--list {
+  background-color: #df4949;
+}
+
+.features__description {
+  width: 80%;
+  opacity: 0.9;
+}
+
+/* --------------------- Media Queries ----------------- */
+
+@media screen and (min-width: 992px) {
+  .features__wrapper {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1312px) {
+  .features__wrapper {
+    width: 95%;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 3rem;
+    margin-top: 15rem;
+  }
+}

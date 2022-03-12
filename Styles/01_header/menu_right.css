@@ -1,0 +1,247 @@
+.menu--right {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+.header__search {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 2rem auto;
+  cursor: pointer;
+  box-shadow: 0 0.2rem 0 -0.1rem var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.header__search:hover {
+  color: var(--primary-color);
+}
+
+.search__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search__wrapper i {
+  display: none;
+}
+
+.search__input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 0 1rem;
+  background: transparent;
+  outline: 0;
+  color: var(--thene-main-color);
+  font-size: inherit;
+  border: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.search__input::placeholder {
+  color: var(--theme-secondary-color);
+  opacity: 0.5;
+}
+
+.theme--dark .search__input::placeholder {
+  color: var(--primary-color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: all 0s 50000s;
+  -webkit-text-fill-color: var(--theme-secondary-color) !important;
+}
+
+.header__wallet {
+  width: 80%;
+  padding: 1rem 1.8rem;
+  gap: 0.8rem;
+  box-shadow: inset 0 0 0 0.1rem var(--primary-color);
+  white-space: nowrap;
+}
+
+.theme {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.theme__btn {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.theme__btn:hover {
+  opacity: 0.8;
+}
+
+.theme__btn--active {
+  background-color: var(--btn-bg-light);
+}
+
+.theme--dark .theme__btn--active {
+  background-color: var(--btn-bg-dark);
+}
+
+.theme__btn--light img {
+  filter: invert(0);
+}
+
+.theme--dark .theme__btn--light img {
+  filter: invert(1);
+}
+
+/* --------------------- Media Queries ----------------- */
+
+@media screen and (min-width: 1312px) {
+  .menu--right {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    justify-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .header__search {
+    height: 100%;
+    width: min-content;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .search__wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .search__input {
+    top: 0;
+    width: 0;
+    padding: 0;
+    color: var(--theme-main-color);
+  }
+
+  .search__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    height: 100%;
+    width: 5rem;
+    margin: 0;
+    border-radius: 10rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header__search--expanded .search__wrapper {
+    height: 100%;
+    top: 100%;
+    padding: 0 2rem;
+    display: flex;
+    gap: 1rem;
+    background-color: var(--theme-main-color);
+    transform: scaleY(1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header__search--expanded .search__wrapper i {
+    display: block;
+    color: var(--theme-secondary-color);
+  }
+
+  .theme--dark .header__search--expanded .search__wrapper i {
+    color: var(--primary-color);
+  }
+
+  .header__search--expanded .search__btn {
+    bottom: -1rem;
+    border-radius: 10rem 10rem 0 0;
+    background-color: var(--theme-main-color);
+    color: var(--theme-secondary-color);
+  }
+
+  .header__search--expanded .search__input {
+    position: unset;
+    height: 100%;
+    width: 100%;
+    color: var(--secondary-color);
+    transform: scaleX(1);
+  }
+
+  .search__input::placeholder {
+    color: var(--theme-secondary-color);
+    opacity: 0.5;
+  }
+
+  .theme--dark .search__input::placeholder {
+    color: var(--primary-color);
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: all 0s 50000s;
+    -webkit-text-fill-color: var(--theme-secondary-color) !important;
+  }
+
+  .header__wallet {
+    width: 80%;
+    padding: 1.5rem 3rem;
+    gap: 1.5rem;
+    box-shadow: inset 0 0 0 0.3rem var(--primary-color);
+  }
+
+  .theme {
+    margin: 0;
+  }
+
+  .theme__btn {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .theme__btn--active {
+    background-color: var(--btn-bg-dark);
+  }
+
+  .theme--dark .theme__btn--active {
+    background-color: var(--btn-bg-light);
+  }
+
+  .theme__btn--light img {
+    filter: invert(1);
+  }
+
+  .theme--dark .theme__btn--light img {
+    filter: invert(0);
+  }
+}
