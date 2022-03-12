@@ -17,6 +17,11 @@
 
 .seller__card {
   width: min(100%, 50rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.seller__card:hover {
+  opacity: 0.8;
 }
 
 .seller__card a {

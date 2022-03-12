@@ -19,7 +19,19 @@
   gap: 1rem;
   padding: 1.2rem;
   border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 0 0 0.1rem var(--dark-color);
+  color: var(--theme-main-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme--dark .filter__btn {
   box-shadow: 0 0 0 0.1rem var(--light-color);
+}
+
+.filter__btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .picks__filters--left {
@@ -45,15 +57,26 @@
   justify-self: center;
   gap: 1.5rem;
   border-radius: 1.8rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color: rgba(0, 0, 0, 0.9);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme--dark .picks__card {
   background-color: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.9);
-  transition: all 0.3s ease-in-out;
 }
 
 .picks__card .pick__likes {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.theme--dark .picks__card .pick__likes {
   background-color: rgba(0, 0, 0, 0.85);
 }
 
@@ -61,6 +84,15 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
+}
+
+.card__bid-history i {
+  transition: all 0.7s ease-in-out;
+}
+
+.card__bid-history--active i {
+  transform: rotateZ(360deg);
 }
 
 .picks__load-btn {
@@ -68,10 +100,34 @@
   padding: 1.1rem 2.5rem;
   border-radius: 2.5rem;
   background-color: transparent;
-  box-shadow: inset 0 0 0 0.1rem var(--light-color);
+  box-shadow: inset 0 0 0 0.1rem var(--theme-main-color);
+  transition: all 0.3s ease-in-out;
 }
 
-.picks__load-btn:hover {
+.picks__filter-btn:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.theme--dark .picks__filter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.picks__filter-btn--active {
+  background-color: rgba(0, 0, 0, 0.884);
+  color: var(--theme-secondary-color);
+}
+
+.theme--dark .picks__filter-btn--active {
+  background-color: rgba(255, 255, 255, 0.884);
+  color: var(--dark-color);
+}
+
+.picks__filter-btn--active:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+}
+
+.theme--dark .picks__filter-btn--active:hover {
+  background-color: rgba(255, 255, 255, 0.884);
 }
 
 /* --------------------- Media Queries ----------------- */

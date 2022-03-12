@@ -8,6 +8,7 @@
   grid-template-columns: 100%;
   gap: 2.5rem;
   padding: 3rem 1rem;
+  color: var(--light-color);
 }
 
 .footer__item {
@@ -31,8 +32,27 @@
 }
 
 .footer__link {
-  color: var(--theme-main-color);
+  position: relative;
+  display: inline-block;
+  color: var(--light-color);
   opacity: 0.9;
+}
+
+.footer__link::before {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 0;
+  width: 100%;
+  border-bottom: solid 0.1rem var(--light-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer__link:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .footer__form {
@@ -50,6 +70,11 @@
   border: none;
   font-size: inherit;
   background-color: transparent;
+  color: var(--light-color);
+}
+
+.footer__input:focus {
+  outline: none;
 }
 
 .footer__submit-btn {
@@ -87,6 +112,12 @@
   padding: 0.8rem;
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__social-btn:hover {
+  transform: scale(1.1);
 }
 
 /* --------------------- Media Queries ----------------- */

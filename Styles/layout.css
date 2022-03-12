@@ -32,9 +32,9 @@ body {
   font-size: clamp(0.8rem, 5vw, 1.5rem);
   background-image: linear-gradient(
     141deg,
-    #14141f 0%,
-    #1f1f30 51%,
-    #14141f 75%
+    #0c0c14 0%,
+    #0f0f1a 51%,
+    #0c0c14 75%
   );
   background-size: cover;
   background-repeat: no-repeat;
@@ -121,6 +121,7 @@ a {
 }
 
 .section__title {
+  color: var(--theme-main-color);
   font-size: clamp(0.8rem, 10vw, 3rem);
 }
 
@@ -168,8 +169,15 @@ a {
   justify-content: center;
   margin-left: auto;
   border-radius: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--theme-main-color);
+  box-shadow: 0 0 0 0.1rem rgba(0, 0, 0, 0.5);
+  font-weight: 600;
   cursor: pointer;
+}
+
+.theme--dark .article__likes {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: none;
 }
 
 .like__btn {
@@ -181,10 +189,6 @@ a {
   background-position: left;
   background-repeat: no-repeat;
   background-size: 2900%;
-}
-
-.like__btn:hover {
-  background-position: right;
 }
 
 .article--liked .like__btn {

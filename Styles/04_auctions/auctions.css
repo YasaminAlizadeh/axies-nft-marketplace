@@ -5,6 +5,10 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+  background-color: #f3f2ff;
+}
+
+.theme--dark .auctions__wrapper {
   background-color: black;
 }
 
@@ -35,9 +39,16 @@
   justify-self: center;
   gap: 1.5rem;
   border-radius: 1.8rem;
+  background-color: var(--light-color);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color: rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme--dark .auctions__card {
   background-color: var(--dark-color);
   color: rgba(255, 255, 255, 0.85);
-  transition: all 0.3s ease-in-out;
 }
 
 .card__img-container {
@@ -64,7 +75,7 @@
   white-space: nowrap;
   font-weight: 600;
   border-radius: 0.8rem;
-  background-color: var(--dark-color);
+  background-color: var(--theme-secondary-color);
   transform: translateX(-50%);
 }
 
@@ -111,17 +122,10 @@
 
 .card__title {
   width: 90%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card__title:hover {
-  overflow: visible;
 }
 
 .card__title a {
-  color: var(--light-color);
+  color: var(--theme-main-color);
 }
 
 .card__creator {
@@ -149,7 +153,7 @@
 
 .creator__name {
   margin-bottom: auto;
-  color: var(--light-color);
+  color: var(--theme-main-color);
   font-weight: 700;
 }
 
@@ -186,7 +190,7 @@
 .card__bid-number span {
   font-weight: 700;
   font-size: 120%;
-  color: var(--light-color);
+  color: var(--theme-main-color);
 }
 
 .pagination__btns {
@@ -196,7 +200,7 @@
 }
 
 .pagination__btn {
-  color: var(--light-color);
+  color: var(--theme-main-color);
   background-color: transparent;
   border: none;
   font-size: 110%;
@@ -216,13 +220,14 @@
 .pagination__page {
   width: 0.7rem;
   height: 0.7rem;
-  background-color: var(--light-color);
+  background-color: var(--theme-main-color);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .pagination__page--active {
-  box-shadow: 0 0 0 0.3rem black, 0 0 0 0.4rem var(--light-color);
+  box-shadow: 0 0 0 0.3rem var(--theme-secondary-color),
+    0 0 0 0.4rem var(--theme-main-color);
 }
 
 /* --------------------- Media Queries ----------------- */
@@ -260,7 +265,34 @@
 
   .auctions__page {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: auto;
+    grid-template-rows: 1;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .auctions__page--slide-left {
+    animation: slide-left 0.3s forwards;
+  }
+
+  .auctions__page--slide-right {
+    animation: slide-right 0.3s forwards;
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
   }
 
   .auctions__card {

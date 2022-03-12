@@ -63,6 +63,6 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(1, minmax(0, 1fr));
     gap: 3rem;
-    margin-top: 15rem;
+    margin-top: 10rem;
   }
 }

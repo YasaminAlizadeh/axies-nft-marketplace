@@ -18,7 +18,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-.header__search:hover {
+.search__btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.search__btn:hover {
   color: var(--primary-color);
 }
 
