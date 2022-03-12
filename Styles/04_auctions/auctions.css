@@ -14,6 +14,7 @@
 
 .auctions__pages {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +23,7 @@
 
 .auctions__page {
   width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 100%;
   align-items: center;
@@ -201,6 +203,7 @@
   display: flex;
   align-self: center;
   gap: 2rem;
+  margin-top: auto;
 }
 
 .pagination__btn {

@@ -10,7 +10,6 @@ const cardTimeGenerator = (currentPage) => {
         seconds: Math.floor(Math.random() * 59),
       };
     }
-    console.log(element.remaining_time);
   });
 
   const timeContainers = [

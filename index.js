@@ -294,7 +294,9 @@ paginationNextButton.addEventListener("click", () => {
 // --------- Like Card when Clicked on the Heart Button
 
 const cardLikeFunction = () => {
-  const heartBtns = [...document.getElementsByClassName("article__likes")];
+  let heartBtns;
+
+  heartBtns = [...document.getElementsByClassName("article__likes")];
 
   heartBtns.forEach((btn) =>
     btn.addEventListener("click", (e) => {
