@@ -1,6 +1,6 @@
 // --------- Show a random remaining time on NFT Cards
 
-const cardTimeGenerator = () => {
+const cardTimeGenerator = (currentPage) => {
   NFTdata.map((element) => {
     if (element.remaining_time === null) {
       element.remaining_time = {
@@ -10,6 +10,7 @@ const cardTimeGenerator = () => {
         seconds: Math.floor(Math.random() * 59),
       };
     }
+    console.log(element.remaining_time);
   });
 
   const timeContainers = [
@@ -25,7 +26,7 @@ const cardTimeGenerator = () => {
   };
 
   timeContainers.forEach((element, index) => {
-    let remainingTime = NFTdata[index].remaining_time;
+    let remainingTime = NFTdata[index * currentPage].remaining_time;
     let isTimeOver = false;
 
     let generatedTime = timeToString(
@@ -93,10 +94,10 @@ const updateCardsPerPage = () => {
 
 // --------- Update Auctions Section Contect
 
-const updateAuctions = () => {
+const updateAuctions = (currentPage) => {
   paginationBar();
   updateCardsPerPage();
-  cardTimeGenerator();
+  cardTimeGenerator(currentPage);
 };
 
-updateAuctions();
+updateAuctions(1);

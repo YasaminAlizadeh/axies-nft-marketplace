@@ -235,8 +235,7 @@ const paginationBar = () => {
         if (mediaQuery.matches) {
           document.getElementById("auctions").scrollIntoView();
         }
-        updateAuctions();
-        cardLikeFunction();
+        updateAuctions(currentPage);
       }
     });
 
@@ -260,8 +259,7 @@ paginationPrevButton.addEventListener("click", () => {
         page.classList.remove("auctions__page--slide-right");
       });
     });
-    updateAuctions();
-    cardLikeFunction();
+    updateAuctions(currentPage);
 
     if (mediaQuery.matches) {
       document.getElementById("auctions").scrollIntoView();
@@ -283,8 +281,7 @@ paginationNextButton.addEventListener("click", () => {
         page.classList.remove("auctions__page--slide-left");
       });
     });
-    updateAuctions();
-    cardLikeFunction();
+    updateAuctions(currentPage);
 
     if (mediaQuery.matches) {
       document.getElementById("auctions").scrollIntoView();
