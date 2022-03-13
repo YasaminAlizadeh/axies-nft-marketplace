@@ -1,4 +1,4 @@
-// --------- Change Header Background on Windoe Scroll
+// --------- Change Header Background on Window Scroll
 
 const headerWrapper = [
   ...document.getElementsByClassName("header__wrapper"),
