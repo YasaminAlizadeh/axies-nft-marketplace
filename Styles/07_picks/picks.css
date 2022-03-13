@@ -17,6 +17,7 @@
 .filter__btn {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   padding: 1.2rem;
   border-radius: 2rem;
@@ -148,6 +149,7 @@
   .picks__filters {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .picks__filters--left {
