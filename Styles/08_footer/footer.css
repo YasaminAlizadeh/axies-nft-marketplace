@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: 100%;
   gap: 2.5rem;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 6rem 1rem;
   color: var(--light-color);
 }
 

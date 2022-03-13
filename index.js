@@ -94,13 +94,15 @@ ${
   </div>
 
 <div class="card__info">
-<h3 class="card__title">${data.title}</h3>
+<h3 class="card__title"><a href="#">${data.title}</a></h3>
   <div class="card__creator">
+    <a href="#">
     <img
       src="${data.creator_img}"
       alt="nft creator"
       class="creator__img"
     />
+    </a>
   <div class="creator__info">
     <p class="creatot__label">Creator</p>
     <a href="#" class="creator__name">${data.creator}</a>
@@ -341,3 +343,21 @@ const likeFunction = (e) => {
   [...clickedCard.getElementsByClassName("article__likes-count")][0].innerHTML =
     cardData.likes_count;
 };
+
+// Add Functionality to Scroll Up Button
+
+const scrollBtn = document.getElementById("scroll-up-btn");
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+});
+
+window.addEventListener("scroll", () => {
+  scrollBtn.classList.add("scroll__btn--active");
+
+  let scrollTop = window.pageYOffset;
+
+  if (scrollTop === 0) {
+    scrollBtn.classList.remove("scroll__btn--active");
+  }
+});
