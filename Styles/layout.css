@@ -202,12 +202,17 @@ a {
   padding: 2rem;
   border-radius: 50%;
   font-size: 1.8rem;
-  background-color: var(--light-color);
-  color: var(--primary-color);
+  background-color: #3930a3bb;
+  color: var(--light-color);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.theme--dark .scroll__btn {
+  background-color: var(--light-color);
+  color: var(--primary-color);
 }
 
 .scroll__btn i {
