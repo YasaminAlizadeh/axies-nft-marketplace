@@ -25,6 +25,7 @@ const generateCard = (type, data) => {
         data.is_liked ? "article--liked" : ""
       }`;
       element = generateCollectionCard(data);
+
       break;
 
     case "seller":
@@ -46,6 +47,27 @@ const generateCard = (type, data) => {
   }
 
   card.innerHTML = element;
+
+  // Add Random Countdowns to NFT Cards
+  [...card.getElementsByClassName("card__time--text")][0] &&
+    cardTimeGenerator([...card.getElementsByClassName("card__time--text")][0]);
+
+  // Add Like functionality to Heart Buttons in Auctions', Collections' and Picks' Cards
+  [...card.getElementsByClassName("article__likes")][0] &&
+    [...card.getElementsByClassName("article__likes")][0].addEventListener(
+      "click",
+      (e) => likeFunction(e)
+    );
+
+  // Add Rotate functionality to History Buttons in picks Cards
+  const historyBtn = [...card.getElementsByClassName("card__bid-history")][0];
+
+  historyBtn &&
+    historyBtn.addEventListener("click", () => {
+      historyBtn.classList.toggle("card__bid-history--active");
+    });
+
+  // Add Card to Page
   container.appendChild(card);
 };
 
@@ -103,6 +125,8 @@ ${
       : `<div class="card__bid-history"><i class="fa-solid fa-rotate"></i> View History</div>`
   }
 </div>`);
+
+  // btn.addEventListener("click", (e) => {})
 };
 
 const generateCollectionCard = (data) => {
@@ -180,7 +204,7 @@ const generateSellerCard = (data) => {
 </a>`);
 };
 
-// Add Cards To Page
+// --------- Add Cards To Page
 
 collectionsData.forEach((collection) => generateCard("collection", collection));
 sellersData.forEach((seller) => generateCard("seller", seller));
@@ -235,7 +259,7 @@ const paginationBar = () => {
         if (mediaQuery.matches) {
           document.getElementById("auctions").scrollIntoView();
         }
-        updateAuctions(currentPage);
+        updateAuctions();
       }
     });
 
@@ -259,7 +283,7 @@ paginationPrevButton.addEventListener("click", () => {
         page.classList.remove("auctions__page--slide-right");
       });
     });
-    updateAuctions(currentPage);
+    updateAuctions();
 
     if (mediaQuery.matches) {
       document.getElementById("auctions").scrollIntoView();
@@ -281,7 +305,7 @@ paginationNextButton.addEventListener("click", () => {
         page.classList.remove("auctions__page--slide-left");
       });
     });
-    updateAuctions(currentPage);
+    updateAuctions();
 
     if (mediaQuery.matches) {
       document.getElementById("auctions").scrollIntoView();
@@ -293,36 +317,27 @@ paginationNextButton.addEventListener("click", () => {
 
 // --------- Like Card when Clicked on the Heart Button
 
-const cardLikeFunction = () => {
-  let heartBtns;
+const likeFunction = (e) => {
+  const clickedCard = [...document.getElementsByClassName("article")].filter(
+    (element) => element.contains(e.target)
+  )[0];
 
-  heartBtns = [...document.getElementsByClassName("article__likes")];
-
-  heartBtns.forEach((btn) =>
-    btn.addEventListener("click", (e) => {
-      const clikedCard = [...document.getElementsByClassName("article")].filter(
-        (element) => element.contains(e.target)
-      )[0];
-
-      const cardData = [...NFTdata, ...collectionsData, ...picksData].find(
-        (card) => card.id === clikedCard.id
-      );
-
-      if (!cardData.is_liked) {
-        cardData.likes_count += 1;
-        cardData.is_liked = true;
-
-        clikedCard.classList.add("article--liked");
-      } else {
-        cardData.likes_count -= 1;
-        cardData.is_liked = false;
-
-        clikedCard.classList.remove("article--liked");
-      }
-
-      [
-        ...clikedCard.getElementsByClassName("article__likes-count"),
-      ][0].innerHTML = cardData.likes_count;
-    })
+  const cardData = [...NFTdata, ...collectionsData, ...picksData].find(
+    (card) => card.id === clickedCard.id
   );
+
+  if (!cardData.is_liked) {
+    cardData.likes_count += 1;
+    cardData.is_liked = true;
+
+    clickedCard.classList.add("article--liked");
+  } else {
+    cardData.likes_count -= 1;
+    cardData.is_liked = false;
+
+    clickedCard.classList.remove("article--liked");
+  }
+
+  [...clickedCard.getElementsByClassName("article__likes-count")][0].innerHTML =
+    cardData.likes_count;
 };

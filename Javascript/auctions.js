@@ -1,6 +1,6 @@
 // --------- Show a random remaining time on NFT Cards
 
-const cardTimeGenerator = (currentPage) => {
+const RandomTimeGenerator = () => {
   NFTdata.map((element) => {
     if (element.remaining_time === null) {
       element.remaining_time = {
@@ -11,68 +11,70 @@ const cardTimeGenerator = (currentPage) => {
       };
     }
   });
+};
+RandomTimeGenerator();
 
-  const timeContainers = [
-    ...document.getElementsByClassName("card__time--text"),
-  ];
+const timeToString = (day, hour, minute, second) => {
+  const generatedString = `${day} : ${hour < 10 ? "0" + hour : hour} : ${
+    minute < 10 ? "0" + minute : minute
+  } : ${second < 10 ? "0" + second : second}`;
 
-  const timeToString = (day, hour, minute, second) => {
-    const generatedString = `${day} : ${hour < 10 ? "0" + hour : hour} : ${
-      minute < 10 ? "0" + minute : minute
-    } : ${second < 10 ? "0" + second : second}`;
+  return generatedString;
+};
 
-    return generatedString;
-  };
+const cardTimeGenerator = (timeContainer) => {
+  const index = NFTdata.findIndex(
+    (element) =>
+      element.id === timeContainer.parentNode.parentNode.parentNode.id
+  );
 
-  timeContainers.forEach((element, index) => {
-    let remainingTime = NFTdata[index * currentPage].remaining_time;
-    let isTimeOver = false;
+  let remainingTime = NFTdata[index].remaining_time;
+  let isTimeOver = false;
 
-    let generatedTime = timeToString(
-      remainingTime.days,
-      remainingTime.hours,
-      remainingTime.minutes,
-      remainingTime.seconds
-    );
+  let generatedTime = timeToString(
+    remainingTime.days,
+    remainingTime.hours,
+    remainingTime.minutes,
+    remainingTime.seconds
+  );
 
-    element.innerHTML = generatedTime;
+  timeContainer.innerHTML = generatedTime;
 
-    setInterval(() => {
-      if (remainingTime.seconds > 0) {
-        remainingTime.seconds -= 1;
+  setInterval(() => {
+    if (remainingTime.seconds > 0) {
+      remainingTime.seconds -= 1;
+    } else {
+      remainingTime.seconds = 59;
+      if (remainingTime.minutes > 0) {
+        remainingTime.minutes -= 1;
       } else {
-        remainingTime.seconds = 59;
-        if (remainingTime.minutes > 0) {
-          remainingTime.minutes -= 1;
+        remainingTime.minutes = 59;
+        if (remainingTime.hours > 0) {
+          remainingTime.hours -= 1;
         } else {
-          remainingTime.minutes = 59;
-          if (remainingTime.hours > 0) {
-            remainingTime.hours -= 1;
+          remainingTime.hours = 23;
+          if (remainingTime.days > 0) {
+            remainingTime.days -= 1;
           } else {
-            remainingTime.hours = 23;
-            if (remainingTime.days > 0) {
-              remainingTime.days -= 1;
-            } else {
-              isTimeOver = true;
-            }
+            isTimeOver = true;
           }
         }
       }
+    }
 
-      if (isTimeOver) {
-        generatedTime = "Time Over!";
-      } else {
-        generatedTime = timeToString(
-          remainingTime.days,
-          remainingTime.hours,
-          remainingTime.minutes,
-          remainingTime.seconds
-        );
-      }
+    if (isTimeOver) {
+      generatedTime = "Time Over!";
+    } else {
+      generatedTime = timeToString(
+        remainingTime.days,
+        remainingTime.hours,
+        remainingTime.minutes,
+        remainingTime.seconds
+      );
+    }
 
-      element.innerHTML = generatedTime;
-    }, 1000);
-  });
+    timeContainer.innerHTML = generatedTime;
+  }, 1000);
 };
 
 // --------- Add NFTs per Page
@@ -93,10 +95,9 @@ const updateCardsPerPage = () => {
 
 // --------- Update Auctions Section Contect
 
-const updateAuctions = (currentPage) => {
+const updateAuctions = () => {
   paginationBar();
   updateCardsPerPage();
-  cardTimeGenerator(currentPage);
 };
 
-updateAuctions(1);
+updateAuctions();

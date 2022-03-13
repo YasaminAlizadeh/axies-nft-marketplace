@@ -137,8 +137,6 @@ sortBtn.addEventListener("click", () => {
   }
 
   sortBtn.innerHTML = `${btnIcon} Sort By: ${btnText}`;
-  rotateBtn();
-  cardLikeFunction();
 });
 
 // --------- Load More of "Today's Picks" Cards on Button Click
@@ -148,7 +146,6 @@ let picksPerPage = 8;
 picksData.forEach((pick, index) => {
   index < picksPerPage && generateCard("pick", pick);
 });
-cardLikeFunction();
 
 const loadMoreBtn = document.getElementById("picks-load");
 
@@ -161,9 +158,6 @@ loadMoreBtn.addEventListener("click", () => {
   picksData.forEach((pick, index) => {
     index < picksPerPage && generateCard("pick", pick);
   });
-
-  rotateBtn();
-  cardLikeFunction();
 });
 
 // --------- Change Filter Button Styles on Click in Picks Section
@@ -175,16 +169,3 @@ filterBtns.forEach((btn) =>
     btn.classList.toggle("picks__filter-btn--active");
   })
 );
-
-// --------- Rotate View History Buttons on Click in Picks Section
-
-const rotateBtn = () => {
-  const historyBtns = [...document.getElementsByClassName("card__bid-history")];
-
-  historyBtns.forEach((btn) =>
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("card__bid-history--active");
-    })
-  );
-};
-rotateBtn();
