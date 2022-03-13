@@ -127,8 +127,6 @@ ${
       : `<div class="card__bid-history"><i class="fa-solid fa-rotate"></i> View History</div>`
   }
 </div>`);
-
-  // btn.addEventListener("click", (e) => {})
 };
 
 const generateCollectionCard = (data) => {
@@ -344,7 +342,7 @@ const likeFunction = (e) => {
     cardData.likes_count;
 };
 
-// Add Functionality to Scroll Up Button
+// --------- Add Functionality to Scroll Up Button
 
 const scrollBtn = document.getElementById("scroll-up-btn");
 
