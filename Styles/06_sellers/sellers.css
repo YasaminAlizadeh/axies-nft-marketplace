@@ -29,7 +29,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  color: inherit;
+  color: var(--theme-main-color);
 }
 
 .seller__img-container {
