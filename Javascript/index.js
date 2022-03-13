@@ -1,8 +1,8 @@
 // --------- First Load
 
-window.addEventListener("load", () => {
+setTimeout(() => {
   document.body.classList.add("body--loaded");
-});
+}, 5000);
 
 // --------- Generate Cards from Data Arrays
 
