@@ -48,14 +48,14 @@ body {
   display: none;
 }
 
-/* .body--loaded {
+.body--loaded {
   height: 100%;
 }
 
 .body--loaded .body__wrapper {
   display: block;
   animation: first-load 1s 0.5s forwards;
-} */
+}
 
 body.theme--dark {
   --theme-main-color: var(--light-color);
