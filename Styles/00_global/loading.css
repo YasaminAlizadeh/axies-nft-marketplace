@@ -34,20 +34,28 @@
   position: absolute;
   background-color: rgba(0, 0, 0, 0.055);
   border-radius: 100%;
+  transform: rotateZ(-30deg);
 }
 
-.moon__freckle--big {
-  bottom: 1rem;
-  right: 1.5rem;
-  height: 1rem;
+.moon__freckle--lg {
+  top: 1rem;
+  left: 1.5rem;
+  height: 0.8rem;
+  width: 1.5rem;
+}
+
+.moon__freckle--s {
+  top: 0.5rem;
+  left: 3rem;
+  height: 0.5rem;
   width: 1rem;
 }
 
-.moon__freckle--small {
-  bottom: 0.75rem;
-  right: 2.5rem;
-  height: 0.5rem;
-  width: 0.5rem;
+.moon__freckle--xs {
+  top: 1.1rem;
+  left: 3.5rem;
+  height: 0.3rem;
+  width: 0.6rem;
 }
 
 @keyframes planets-shine {
