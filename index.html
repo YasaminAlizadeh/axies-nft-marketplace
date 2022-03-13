@@ -17,7 +17,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href="./Styles/layout.css" />
+    <link rel="stylesheet" href="./Styles/00_global/layout.css" />
     <link rel="stylesheet" href="./Styles/01_header/header.css" />
     <link rel="stylesheet" href="./Styles/02_hero/hero.css" />
     <link rel="stylesheet" href="./Styles/03_features/features.css" />
@@ -31,496 +31,534 @@
   </head>
 
   <body class="theme--dark theme--light">
-    <div id="background" class="background--light"></div>
-
-    <header id="header">
-      <div class="container header__wrapper">
-        <div class="header__title">
-          <img
-            src="./Assets/Images/01_header/logo_dark.png"
-            alt="logo"
-            class="title__img"
-          />
-        </div>
-
-        <div id="menu-btn" class="header__menu-btn">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div id="menu" class="header__menu">
-          <div id="menu-back-btn" class="menu__back-btn">
-            <i class="fa-solid fa-arrow-right"></i>
-          </div>
-
-          <div class="menu--left">
-            <div class="menu__item">
-              <div class="menu__item-btn">
-                <p class="menu__label">Home</p>
-                <i class="fa-solid fa-chevron-down menu__icon"></i>
-              </div>
-              <ul class="menu__submenu">
-                <li class="menu__item submenu__item">Home 1</li>
-                <li class="menu__item submenu__item">Home 2</li>
-                <li class="menu__item submenu__item">
-                  Home 3
-                  <i class="fa-solid fa-chevron-right menu__icon"></i>
-                  <ul class="menu__submenu menu__sub-submenu">
-                    <li class="menu__item submenu__item">Home 3 - 1</li>
-                    <li class="menu__item submenu__item">Home 3 - 2</li>
-                    <li class="menu__item submenu__item">Home 3 - 3</li>
-                    <li class="menu__item submenu__item">Home 3 - 4</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__item-btn">
-                <p class="menu__label">Explore</p>
-                <i class="fa-solid fa-chevron-down menu__icon"></i>
-              </div>
-              <ul class="menu__submenu">
-                <li class="menu__item submenu__item">Explore 1</li>
-                <li class="menu__item submenu__item">Explore 2</li>
-                <li class="menu__item submenu__item">Explore 3</li>
-                <li class="menu__item submenu__item">Explore 4</li>
-                <li class="menu__item submenu__item">Explore 5</li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__item-btn">
-                <p class="menu__label">Activity</p>
-                <i class="fa-solid fa-chevron-down menu__icon"></i>
-              </div>
-              <ul class="menu__submenu">
-                <li class="menu__item submenu__item">Activity 1</li>
-                <li class="menu__item submenu__item">Activity 2</li>
-                <li class="menu__item submenu__item">Activity 3</li>
-                <li class="menu__item submenu__item">Activity 4</li>
-                <li class="menu__item submenu__item">Activity 5</li>
-                <li class="menu__item submenu__item">Activity 6</li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__item-btn">
-                <p class="menu__label">Community</p>
-                <i class="fa-solid fa-chevron-down menu__icon"></i>
-              </div>
-              <ul class="menu__submenu">
-                <li class="menu__item submenu__item">Community 1</li>
-                <li class="menu__item submenu__item">Community 2</li>
-                <li class="menu__item submenu__item">
-                  Community 3
-                  <i class="fa-solid fa-chevron-right menu__icon"></i>
-                  <ul class="menu__submenu menu__sub-submenu">
-                    <li class="menu__item submenu__item">Community 3 - 1</li>
-                    <li class="menu__item submenu__item">Community 3 - 2</li>
-                    <li class="menu__item submenu__item">Community 3 - 3</li>
-                    <li class="menu__item submenu__item">Community 3 - 4</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__item-btn">
-                <p class="menu__label">Pages</p>
-                <i class="fa-solid fa-chevron-down menu__icon"></i>
-              </div>
-              <ul class="menu__submenu">
-                <li class="menu__item submenu__item">Pages 1</li>
-                <li class="menu__item submenu__item">Pages 2</li>
-                <li class="menu__item submenu__item">Pages 3</li>
-                <li class="menu__item submenu__item">Pages 4</li>
-              </ul>
-            </div>
-
-            <div class="menu__item">
-              <div class="menu__item-btn">
-                <p class="menu__label">Contact</p>
-                <i class="fa-solid fa-chevron-down menu__icon"></i>
-              </div>
-              <ul class="menu__submenu">
-                <li class="menu__item submenu__item">Contract 1</li>
-                <li class="menu__item submenu__item">Contract 2</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="menu--right">
-            <div id="header-search" class="header__search">
-              <div id="header-search-wrapper" class="search__wrapper">
-                <i class="fa-solid fa-magnifying-glass search__icon"></i>
-                <input
-                  type="search"
-                  name="search"
-                  id="search"
-                  class="search__input"
-                  placeholder="Search Something..."
-                />
-              </div>
-              <div id="search-btn" class="search__btn">
-                <i class="fa-solid fa-magnifying-glass search__icon"></i>
-              </div>
-            </div>
-
-            <div class="header__wallet btn btn--primary">
-              <i class="fa-solid fa-wallet"></i>
-              <p>Wallet connect</p>
-            </div>
-
-            <div class="theme">
-              <div id="light-theme-btn" class="theme__btn theme__btn--light">
-                <img
-                  src="./Assets/Images/01_header/sun.png"
-                  alt="light theme"
-                />
-              </div>
-              <div
-                id="dark-theme-btn"
-                class="theme__btn theme__btn--dark theme__btn--active"
-              >
-                <img
-                  src="./Assets/Images/01_header/moon-2.png"
-                  alt="dark theme"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section id="hero">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div class="container hero__wrapper">
-          <div class="hero--left">
-            <h1 id="title" class="hero__title">
-              Discover, and collect<br />
-              extraodinary<br />
-              <span class="hero__span"
-                ><span class="hero__span hero__character"
-                  >M
-                  <div class="character__body">
-                    <div class="face__wrapper">
-                      <div class="horn horn--left">
-                        <div class="horn__tip"></div>
-                      </div>
-                      <div class="horn horn--right">
-                        <div class="horn__tip"></div>
-                      </div>
-                      <div class="eyes__wrapper">
-                        <div class="eye eye--left">
-                          <div class="eyelid eyelid--left"></div>
-                          <div class="pupil">
-                            <div class="pupil__center"></div>
-                            <div class="sparkles"></div>
-                          </div>
-                        </div>
-                        <div class="eye eye--right">
-                          <div class="eyelid eyelid--right"></div>
-                          <div class="pupil">
-                            <div class="pupil__center"></div>
-                            <div class="sparkles"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="mouth"></div>
-                    </div>
-                    <div class="hand hand--left"></div>
-                    <div class="hand hand--right"></div>
-                  </div> </span
-                >onster</span
-              >
-              NFTs
-            </h1>
-            <p class="hero__description">
-              Marketplace For Monster Character Collections Non Fungible Token
-              NFTs
-            </p>
-            <div class="hero__btns">
-              <a href="#" class="btn btn--primary hero__btn"
-                ><i class="fa-solid fa-rocket"></i> Explore</a
-              >
-              <a href="#" class="btn btn--primary hero__btn"
-                ><i class="fa-solid fa-plus"></i> Create</a
-              >
-            </div>
-          </div>
-
-          <div class="hero--right">
-            <svg
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-              class="hero__blob hero__blob--first hero__blob--animated"
-            >
-              <filter id="gaussian-blur">
-                <feGaussianBlur stdDeviation="5" result="offset-blur" />
-              </filter>
-
-              <g filter="url(#gaussian-blur)">
-                <path
-                  d="M19.1,-29.3C25.2,-29.6,30.7,-25.3,31.6,-19.6C32.4,-14,28.5,-7,31.8,1.9C35.2,10.9,45.8,21.7,47.4,31.6C49.1,41.5,41.7,50.4,32.2,61.1C22.8,71.9,11.4,84.4,4.8,76C-1.8,67.7,-3.6,38.5,-11.3,26.8C-19.1,15.1,-32.8,21,-39.8,19.4C-46.7,17.9,-46.9,9,-53.2,-3.6C-59.4,-16.2,-71.8,-32.4,-68.7,-40.6C-65.6,-48.9,-47.1,-49.1,-33,-44.2C-19,-39.2,-9.5,-29.1,-1.5,-26.5C6.5,-23.9,13.1,-28.9,19.1,-29.3Z"
-                  transform="translate(100 100)"
-                />
-              </g>
-            </svg>
-            <svg
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-              class="hero__blob hero__blob--second"
-            >
-              <filter id="gaussian-blur">
-                <feGaussianBlur stdDeviation="5" result="offset-blur" />
-              </filter>
-
-              <g filter="url(#gaussian-blur)">
-                <path
-                  d="M17.5,-28.8C28.7,-23.8,48.1,-31.4,59.4,-28.7C70.6,-26,73.6,-13,67.3,-3.6C61,5.7,45.4,11.5,38.2,21.1C30.9,30.7,32.1,44.1,27.1,44.5C22.2,44.9,11.1,32.1,-1.5,34.8C-14.1,37.4,-28.3,55.4,-42.7,60.5C-57.1,65.6,-71.8,57.7,-68.3,45.5C-64.8,33.3,-43.2,16.6,-35.9,4.2C-28.5,-8.2,-35.5,-16.4,-39.7,-29.8C-43.8,-43.2,-45.2,-61.8,-38.1,-69.3C-31,-76.7,-15.5,-72.8,-6.2,-62.1C3.1,-51.4,6.2,-33.8,17.5,-28.8Z"
-                  transform="translate(100 100)"
-                />
-              </g>
-            </svg>
-            <svg
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-              class="hero__blob hero__blob--third"
-            >
-              <filter id="gaussian-blur">
-                <feGaussianBlur stdDeviation="5" result="offset-blur" />
-              </filter>
-
-              <g filter="url(#gaussian-blur)">
-                <path
-                  d="M29.6,-55.2C40,-45.2,51.2,-40.6,57.5,-32.3C63.8,-24,65.2,-12,59.1,-3.5C53,5,39.5,10,31.8,15.9C24.1,21.7,22.2,28.5,17.9,34.7C13.5,40.9,6.8,46.5,-0.4,47.2C-7.5,47.9,-15.1,43.5,-25.2,40.7C-35.3,37.8,-48.1,36.5,-59.4,29.9C-70.7,23.4,-80.6,11.7,-77.3,1.9C-73.9,-7.8,-57.2,-15.6,-48.1,-25.9C-38.9,-36.1,-37.2,-48.8,-30.5,-60.9C-23.7,-73,-11.8,-84.5,-1.1,-82.5C9.6,-80.6,19.1,-65.1,29.6,-55.2Z"
-                  transform="translate(100 100)"
-                />
-              </g>
-            </svg>
-            <svg
-              viewBox="0 0 200 200"
-              xmlns="http://www.w3.org/2000/svg"
-              class="hero__blob hero__blob--forth"
-            >
-              <filter id="gaussian-blur">
-                <feGaussianBlur stdDeviation="5" result="offset-blur" />
-              </filter>
-
-              <g filter="url(#gaussian-blur)">
-                <path
-                  d="M42.1,27.3C32.2,41.3,-13.4,37.7,-26.3,21.8C-39.3,6,-19.6,-22.1,3.1,-20.3C25.9,-18.4,51.9,13.3,42.1,27.3Z"
-                  transform="translate(100 100)"
-                />
-              </g>
-            </svg>
-
-            <div class="hero__img-wrapper">
-              <img
-                src="./Assets/Images/02_hero/hero.png"
-                alt=""
-                role="presentation"
-                class="hero__img"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="features">
-        <div class="container features__wrapper">
-          <div class="features__item">
-            <div class="features__icon features__icon--wallet">
-              <i class="fa-solid fa-wallet"></i>
-            </div>
-            <h3 class="features__title">Set Up Your Wallet</h3>
-            <p class="features__description">
-              Once you've set up your wallet of choice, connect it to OpenSea by
-              clicking the NFT Marketplace in the top right corner.
-            </p>
-          </div>
-
-          <div class="features__item">
-            <div class="features__icon features__icon--collection">
-              <i class="fa-solid fa-shapes"></i>
-            </div>
-            <h3 class="features__title">Create Your Collection</h3>
-            <p class="features__description">
-              Click Create and set up your collection. Add social links, a
-              description, profile & banner images, and set a secondary sales
-              fee.
-            </p>
-          </div>
-
-          <div class="features__item">
-            <div class="features__icon features__icon--nft">
-              <i class="fa-solid fa-image"></i>
-            </div>
-            <h3 class="features__title">Add Your NFTs</h3>
-            <p class="features__description">
-              Upload your work (image, video, audio, or 3D art), add a title and
-              description, and customize your NFTs with properties, stats.
-            </p>
-          </div>
-
-          <div class="features__item">
-            <div class="features__icon features__icon--list">
-              <i class="fa-solid fa-bookmark"></i>
-            </div>
-            <h3 class="features__title">List Them For Sale</h3>
-            <p class="features__description">
-              Choose between auctions, fixed-price listings, and declining-price
-              listings. You choose how you want to sell your NFTs!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="auctions">
-        <div class="container auctions__wrapper">
-          <div class="section__header">
-            <h2 class="section__title">Live Auctions</h2>
-            <a href="#" class="section__explore-btn">Explore More</a>
-          </div>
-
-          <div class="auctions__pages">
-            <div id="auctions-page" class="auctions__page"></div>
-            <div class="pagination__btns">
-              <button
-                id="pagination-prev-btn"
-                class="pagination__btn pagination__btn--previous"
-              >
-                <i class="fa-solid fa-arrow-left"></i>
-              </button>
-              <div id="pagination-pages" class="pagination__pages"></div>
-              <button
-                id="pagination-next-btn"
-                class="pagination__btn pagination__btn--next"
-              >
-                <i class="fa-solid fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="collections">
-        <div class="container collections__wrapper">
-          <div class="section__header">
-            <h2 class="section__title">Popular Collections</h2>
-            <a href="#" class="section__explore-btn">Explore More</a>
-          </div>
-
-          <div id="collections-page" class="collections__page"></div>
-        </div>
-      </section>
-
-      <section id="sellers">
-        <div class="container sellers__wrapper">
-          <div class="section__header">
-            <h2 class="section__title">Top Sellers</h2>
-          </div>
-          <div id="seller-cards" class="seller__cards"></div>
-        </div>
-      </section>
-
-      <section id="picks">
-        <div class="container picks__wrapper">
-          <div class="section__header">
-            <h2 class="section__title">Today's Picks</h2>
-            <a href="#" class="section__explore-btn">Explore More</a>
-          </div>
-          <div class="picks__filters">
-            <div class="picks__filters--left">
-              <div class="filter__btn picks__filter-btn">
-                <i class="fa-solid fa-shapes"></i> Category
-              </div>
-              <div class="filter__btn picks__filter-btn">
-                <i class="fa-solid fa-dollar-sign"></i> Price range
-              </div>
-              <div class="filter__btn picks__filter-btn">
-                <i class="fa-solid fa-bolt"></i> Sale type
-              </div>
-              <div class="filter__btn picks__filter-btn">
-                <i class="fa-solid fa-cube"></i>Blockchain
-              </div>
-            </div>
-            <div class="picks__filters--right">
-              <div id="picks-sort-btn" class="filter__btn picks__sort-btn">
-                <i class="fa-solid fa-arrow-down-wide-short"></i>
-                Sort By: Recently Added
-              </div>
-            </div>
-          </div>
-          <div id="picks-cards" class="picks__cards"></div>
-          <button id="picks-load" class="btn picks__load-btn">Load More</button>
-        </div>
-      </section>
-    </main>
-
-    <footer id="footer">
-      <div class="container footer__wrapper">
-        <div class="footer__item">
-          <img src="./Assets/Images/01_header/logo_dark.png" alt="logo" class="footer__logo" />
-          <p class="footer__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-            tempore aperiam reiciendis amet.
-          </p>
-        </div>
-
-        <div class="footer__item">
-          <h3 class="footer__title">My Account</h3>
-          <div class="footer__links">
-            <a href="#" class="footer__link">Authors</a>
-            <a href="#" class="footer__link">Collection</a>
-            <a href="#" class="footer__link">Author Profile</a>
-            <a href="#" class="footer__link">Create Item</a>
-          </div>
-        </div>
-
-        <div class="footer__item">
-          <h3 class="footer__title">Resources</h3>
-          <div class="footer__links">
-            <a href="#" class="footer__link">Help & Support</a>
-            <a href="#" class="footer__link">Live Auctions</a>
-            <a href="#" class="footer__link">Item Details</a>
-            <a href="#" class="footer__link">Activity</a>
-          </div>
-        </div>
-
-        <div class="footer__item">
-          <h3 class="footer__title">Company</h3>
-          <div class="footer__links">
-            <a href="#" class="footer__link">Explore</a>
-            <a href="#" class="footer__link">Contact Us</a>
-            <a href="#" class="footer__link">Our Blog</a>
-            <a href="#" class="footer__link">FAQ</a>
-          </div>
-        </div>
-        
-        <div class="footer__item">
-          <h3 class="footer__title">Subscribe to Us</h3>
-          <form class="footer__form">
-            <input type="email" class="footer__input" placeholder="info@youremail.com">
-            <button type="submit" class="footer__submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
-          </form>
-          <div class="footer__socials">
-            <div class="footer__social-btn"><i class="fa-brands fa-twitter"></i></div>
-            <div class="footer__social-btn"><i class="fa-brands fa-facebook"></i></div>
-            <div class="footer__social-btn"><i class="fa-solid fa-paper-plane"></i></div>
-            <div class="footer__social-btn"><i class="fa-brands fa-youtube"></i></div>
-            <div class="footer__social-btn"><i class="fa-brands fa-tiktok"></i></div>
-            <div class="footer__social-btn"><i class="fa-brands fa-discord"></i></div>
-          </div>
+    <div class="loading__page">
+      <div class="loading__spinner">
+        <div class="spinner__planet spinner__sun"></div>
+        <div class="spinner__planet spinner__moon">
+          <div class="moon__freckle moon__freckle--big"></div>
+          <div class="moon__freckle moon__freckle--small"></div>
         </div>
       </div>
     </div>
-    </footer>
 
-    <div id="scroll-up-btn" class="scroll__btn"><i class="fa-solid fa-angle-up"></i></div>
+    <div class="body__wrapper">
+      <div id="background" class="background--light"></div>
+
+      <header id="header">
+        <div class="container header__wrapper">
+          <div class="header__title">
+            <img
+              src="./Assets/Images/01_header/logo_dark.png"
+              alt="logo"
+              class="title__img"
+            />
+          </div>
+
+          <div id="menu-btn" class="header__menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="menu" class="header__menu">
+            <div id="menu-back-btn" class="menu__back-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="menu--left">
+              <div class="menu__item">
+                <div class="menu__item-btn">
+                  <p class="menu__label">Home</p>
+                  <i class="fa-solid fa-chevron-down menu__icon"></i>
+                </div>
+                <ul class="menu__submenu">
+                  <li class="menu__item submenu__item">Home 1</li>
+                  <li class="menu__item submenu__item">Home 2</li>
+                  <li class="menu__item submenu__item">
+                    Home 3
+                    <i class="fa-solid fa-chevron-right menu__icon"></i>
+                    <ul class="menu__submenu menu__sub-submenu">
+                      <li class="menu__item submenu__item">Home 3 - 1</li>
+                      <li class="menu__item submenu__item">Home 3 - 2</li>
+                      <li class="menu__item submenu__item">Home 3 - 3</li>
+                      <li class="menu__item submenu__item">Home 3 - 4</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__item">
+                <div class="menu__item-btn">
+                  <p class="menu__label">Explore</p>
+                  <i class="fa-solid fa-chevron-down menu__icon"></i>
+                </div>
+                <ul class="menu__submenu">
+                  <li class="menu__item submenu__item">Explore 1</li>
+                  <li class="menu__item submenu__item">Explore 2</li>
+                  <li class="menu__item submenu__item">Explore 3</li>
+                  <li class="menu__item submenu__item">Explore 4</li>
+                  <li class="menu__item submenu__item">Explore 5</li>
+                </ul>
+              </div>
+
+              <div class="menu__item">
+                <div class="menu__item-btn">
+                  <p class="menu__label">Activity</p>
+                  <i class="fa-solid fa-chevron-down menu__icon"></i>
+                </div>
+                <ul class="menu__submenu">
+                  <li class="menu__item submenu__item">Activity 1</li>
+                  <li class="menu__item submenu__item">Activity 2</li>
+                  <li class="menu__item submenu__item">Activity 3</li>
+                  <li class="menu__item submenu__item">Activity 4</li>
+                  <li class="menu__item submenu__item">Activity 5</li>
+                  <li class="menu__item submenu__item">Activity 6</li>
+                </ul>
+              </div>
+
+              <div class="menu__item">
+                <div class="menu__item-btn">
+                  <p class="menu__label">Community</p>
+                  <i class="fa-solid fa-chevron-down menu__icon"></i>
+                </div>
+                <ul class="menu__submenu">
+                  <li class="menu__item submenu__item">Community 1</li>
+                  <li class="menu__item submenu__item">Community 2</li>
+                  <li class="menu__item submenu__item">
+                    Community 3
+                    <i class="fa-solid fa-chevron-right menu__icon"></i>
+                    <ul class="menu__submenu menu__sub-submenu">
+                      <li class="menu__item submenu__item">Community 3 - 1</li>
+                      <li class="menu__item submenu__item">Community 3 - 2</li>
+                      <li class="menu__item submenu__item">Community 3 - 3</li>
+                      <li class="menu__item submenu__item">Community 3 - 4</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu__item">
+                <div class="menu__item-btn">
+                  <p class="menu__label">Pages</p>
+                  <i class="fa-solid fa-chevron-down menu__icon"></i>
+                </div>
+                <ul class="menu__submenu">
+                  <li class="menu__item submenu__item">Pages 1</li>
+                  <li class="menu__item submenu__item">Pages 2</li>
+                  <li class="menu__item submenu__item">Pages 3</li>
+                  <li class="menu__item submenu__item">Pages 4</li>
+                </ul>
+              </div>
+
+              <div class="menu__item">
+                <div class="menu__item-btn">
+                  <p class="menu__label">Contact</p>
+                  <i class="fa-solid fa-chevron-down menu__icon"></i>
+                </div>
+                <ul class="menu__submenu">
+                  <li class="menu__item submenu__item">Contract 1</li>
+                  <li class="menu__item submenu__item">Contract 2</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="menu--right">
+              <div id="header-search" class="header__search">
+                <div id="header-search-wrapper" class="search__wrapper">
+                  <i class="fa-solid fa-magnifying-glass search__icon"></i>
+                  <input
+                    type="search"
+                    name="search"
+                    id="search"
+                    class="search__input"
+                    placeholder="Search Something..."
+                  />
+                </div>
+                <div id="search-btn" class="search__btn">
+                  <i class="fa-solid fa-magnifying-glass search__icon"></i>
+                </div>
+              </div>
+
+              <div class="header__wallet btn btn--primary">
+                <i class="fa-solid fa-wallet"></i>
+                <p>Wallet connect</p>
+              </div>
+
+              <div class="theme">
+                <div id="light-theme-btn" class="theme__btn theme__btn--light">
+                  <img
+                    src="./Assets/Images/01_header/sun.png"
+                    alt="light theme"
+                  />
+                </div>
+                <div
+                  id="dark-theme-btn"
+                  class="theme__btn theme__btn--dark theme__btn--active"
+                >
+                  <img
+                    src="./Assets/Images/01_header/moon-2.png"
+                    alt="dark theme"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="hero">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+          <div class="container hero__wrapper">
+            <div class="hero--left">
+              <h1 id="title" class="hero__title">
+                Discover, and collect<br />
+                extraodinary<br />
+                <span class="hero__span"
+                  ><span class="hero__span hero__character"
+                    >M
+                    <div class="character__body">
+                      <div class="face__wrapper">
+                        <div class="horn horn--left">
+                          <div class="horn__tip"></div>
+                        </div>
+                        <div class="horn horn--right">
+                          <div class="horn__tip"></div>
+                        </div>
+                        <div class="eyes__wrapper">
+                          <div class="eye eye--left">
+                            <div class="eyelid eyelid--left"></div>
+                            <div class="pupil">
+                              <div class="pupil__center"></div>
+                              <div class="sparkles"></div>
+                            </div>
+                          </div>
+                          <div class="eye eye--right">
+                            <div class="eyelid eyelid--right"></div>
+                            <div class="pupil">
+                              <div class="pupil__center"></div>
+                              <div class="sparkles"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mouth"></div>
+                      </div>
+                      <div class="hand hand--left"></div>
+                      <div class="hand hand--right"></div>
+                    </div> </span
+                  >onster</span
+                >
+                NFTs
+              </h1>
+              <p class="hero__description">
+                Marketplace For Monster Character Collections Non Fungible Token
+                NFTs
+              </p>
+              <div class="hero__btns">
+                <a href="#" class="btn btn--primary hero__btn"
+                  ><i class="fa-solid fa-rocket"></i> Explore</a
+                >
+                <a href="#" class="btn btn--primary hero__btn"
+                  ><i class="fa-solid fa-plus"></i> Create</a
+                >
+              </div>
+            </div>
+
+            <div class="hero--right">
+              <svg
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hero__blob hero__blob--first hero__blob--animated"
+              >
+                <filter id="gaussian-blur">
+                  <feGaussianBlur stdDeviation="5" result="offset-blur" />
+                </filter>
+
+                <g filter="url(#gaussian-blur)">
+                  <path
+                    d="M19.1,-29.3C25.2,-29.6,30.7,-25.3,31.6,-19.6C32.4,-14,28.5,-7,31.8,1.9C35.2,10.9,45.8,21.7,47.4,31.6C49.1,41.5,41.7,50.4,32.2,61.1C22.8,71.9,11.4,84.4,4.8,76C-1.8,67.7,-3.6,38.5,-11.3,26.8C-19.1,15.1,-32.8,21,-39.8,19.4C-46.7,17.9,-46.9,9,-53.2,-3.6C-59.4,-16.2,-71.8,-32.4,-68.7,-40.6C-65.6,-48.9,-47.1,-49.1,-33,-44.2C-19,-39.2,-9.5,-29.1,-1.5,-26.5C6.5,-23.9,13.1,-28.9,19.1,-29.3Z"
+                    transform="translate(100 100)"
+                  />
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hero__blob hero__blob--second"
+              >
+                <filter id="gaussian-blur">
+                  <feGaussianBlur stdDeviation="5" result="offset-blur" />
+                </filter>
+
+                <g filter="url(#gaussian-blur)">
+                  <path
+                    d="M17.5,-28.8C28.7,-23.8,48.1,-31.4,59.4,-28.7C70.6,-26,73.6,-13,67.3,-3.6C61,5.7,45.4,11.5,38.2,21.1C30.9,30.7,32.1,44.1,27.1,44.5C22.2,44.9,11.1,32.1,-1.5,34.8C-14.1,37.4,-28.3,55.4,-42.7,60.5C-57.1,65.6,-71.8,57.7,-68.3,45.5C-64.8,33.3,-43.2,16.6,-35.9,4.2C-28.5,-8.2,-35.5,-16.4,-39.7,-29.8C-43.8,-43.2,-45.2,-61.8,-38.1,-69.3C-31,-76.7,-15.5,-72.8,-6.2,-62.1C3.1,-51.4,6.2,-33.8,17.5,-28.8Z"
+                    transform="translate(100 100)"
+                  />
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hero__blob hero__blob--third"
+              >
+                <filter id="gaussian-blur">
+                  <feGaussianBlur stdDeviation="5" result="offset-blur" />
+                </filter>
+
+                <g filter="url(#gaussian-blur)">
+                  <path
+                    d="M29.6,-55.2C40,-45.2,51.2,-40.6,57.5,-32.3C63.8,-24,65.2,-12,59.1,-3.5C53,5,39.5,10,31.8,15.9C24.1,21.7,22.2,28.5,17.9,34.7C13.5,40.9,6.8,46.5,-0.4,47.2C-7.5,47.9,-15.1,43.5,-25.2,40.7C-35.3,37.8,-48.1,36.5,-59.4,29.9C-70.7,23.4,-80.6,11.7,-77.3,1.9C-73.9,-7.8,-57.2,-15.6,-48.1,-25.9C-38.9,-36.1,-37.2,-48.8,-30.5,-60.9C-23.7,-73,-11.8,-84.5,-1.1,-82.5C9.6,-80.6,19.1,-65.1,29.6,-55.2Z"
+                    transform="translate(100 100)"
+                  />
+                </g>
+              </svg>
+              <svg
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+                class="hero__blob hero__blob--forth"
+              >
+                <filter id="gaussian-blur">
+                  <feGaussianBlur stdDeviation="5" result="offset-blur" />
+                </filter>
+
+                <g filter="url(#gaussian-blur)">
+                  <path
+                    d="M42.1,27.3C32.2,41.3,-13.4,37.7,-26.3,21.8C-39.3,6,-19.6,-22.1,3.1,-20.3C25.9,-18.4,51.9,13.3,42.1,27.3Z"
+                    transform="translate(100 100)"
+                  />
+                </g>
+              </svg>
+
+              <div class="hero__img-wrapper">
+                <img
+                  src="./Assets/Images/02_hero/hero.png"
+                  alt=""
+                  role="presentation"
+                  class="hero__img"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="features">
+          <div class="container features__wrapper">
+            <div class="features__item">
+              <div class="features__icon features__icon--wallet">
+                <i class="fa-solid fa-wallet"></i>
+              </div>
+              <h3 class="features__title">Set Up Your Wallet</h3>
+              <p class="features__description">
+                Once you've set up your wallet of choice, connect it to OpenSea
+                by clicking the NFT Marketplace in the top right corner.
+              </p>
+            </div>
+
+            <div class="features__item">
+              <div class="features__icon features__icon--collection">
+                <i class="fa-solid fa-shapes"></i>
+              </div>
+              <h3 class="features__title">Create Your Collection</h3>
+              <p class="features__description">
+                Click Create and set up your collection. Add social links, a
+                description, profile & banner images, and set a secondary sales
+                fee.
+              </p>
+            </div>
+
+            <div class="features__item">
+              <div class="features__icon features__icon--nft">
+                <i class="fa-solid fa-image"></i>
+              </div>
+              <h3 class="features__title">Add Your NFTs</h3>
+              <p class="features__description">
+                Upload your work (image, video, audio, or 3D art), add a title
+                and description, and customize your NFTs with properties, stats.
+              </p>
+            </div>
+
+            <div class="features__item">
+              <div class="features__icon features__icon--list">
+                <i class="fa-solid fa-bookmark"></i>
+              </div>
+              <h3 class="features__title">List Them For Sale</h3>
+              <p class="features__description">
+                Choose between auctions, fixed-price listings, and
+                declining-price listings. You choose how you want to sell your
+                NFTs!
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="auctions">
+          <div class="container auctions__wrapper">
+            <div class="section__header">
+              <h2 class="section__title">Live Auctions</h2>
+              <a href="#" class="section__explore-btn">Explore More</a>
+            </div>
+
+            <div class="auctions__pages">
+              <div id="auctions-page" class="auctions__page"></div>
+              <div class="pagination__btns">
+                <button
+                  id="pagination-prev-btn"
+                  class="pagination__btn pagination__btn--previous"
+                >
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div id="pagination-pages" class="pagination__pages"></div>
+                <button
+                  id="pagination-next-btn"
+                  class="pagination__btn pagination__btn--next"
+                >
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="collections">
+          <div class="container collections__wrapper">
+            <div class="section__header">
+              <h2 class="section__title">Popular Collections</h2>
+              <a href="#" class="section__explore-btn">Explore More</a>
+            </div>
+
+            <div id="collections-page" class="collections__page"></div>
+          </div>
+        </section>
+
+        <section id="sellers">
+          <div class="container sellers__wrapper">
+            <div class="section__header">
+              <h2 class="section__title">Top Sellers</h2>
+            </div>
+            <div id="seller-cards" class="seller__cards"></div>
+          </div>
+        </section>
+
+        <section id="picks">
+          <div class="container picks__wrapper">
+            <div class="section__header">
+              <h2 class="section__title">Today's Picks</h2>
+              <a href="#" class="section__explore-btn">Explore More</a>
+            </div>
+            <div class="picks__filters">
+              <div class="picks__filters--left">
+                <div class="filter__btn picks__filter-btn">
+                  <i class="fa-solid fa-shapes"></i> Category
+                </div>
+                <div class="filter__btn picks__filter-btn">
+                  <i class="fa-solid fa-dollar-sign"></i> Price range
+                </div>
+                <div class="filter__btn picks__filter-btn">
+                  <i class="fa-solid fa-bolt"></i> Sale type
+                </div>
+                <div class="filter__btn picks__filter-btn">
+                  <i class="fa-solid fa-cube"></i>Blockchain
+                </div>
+              </div>
+              <div class="picks__filters--right">
+                <div id="picks-sort-btn" class="filter__btn picks__sort-btn">
+                  <i class="fa-solid fa-arrow-down-wide-short"></i>
+                  Sort By: Recently Added
+                </div>
+              </div>
+            </div>
+            <div id="picks-cards" class="picks__cards"></div>
+            <button id="picks-load" class="btn picks__load-btn">
+              Load More
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="container footer__wrapper">
+          <div class="footer__item">
+            <img
+              src="./Assets/Images/01_header/logo_dark.png"
+              alt="logo"
+              class="footer__logo"
+            />
+            <p class="footer__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              tempore aperiam reiciendis amet.
+            </p>
+          </div>
+
+          <div class="footer__item">
+            <h3 class="footer__title">My Account</h3>
+            <div class="footer__links">
+              <a href="#" class="footer__link">Authors</a>
+              <a href="#" class="footer__link">Collection</a>
+              <a href="#" class="footer__link">Author Profile</a>
+              <a href="#" class="footer__link">Create Item</a>
+            </div>
+          </div>
+
+          <div class="footer__item">
+            <h3 class="footer__title">Resources</h3>
+            <div class="footer__links">
+              <a href="#" class="footer__link">Help & Support</a>
+              <a href="#" class="footer__link">Live Auctions</a>
+              <a href="#" class="footer__link">Item Details</a>
+              <a href="#" class="footer__link">Activity</a>
+            </div>
+          </div>
+
+          <div class="footer__item">
+            <h3 class="footer__title">Company</h3>
+            <div class="footer__links">
+              <a href="#" class="footer__link">Explore</a>
+              <a href="#" class="footer__link">Contact Us</a>
+              <a href="#" class="footer__link">Our Blog</a>
+              <a href="#" class="footer__link">FAQ</a>
+            </div>
+          </div>
+
+          <div class="footer__item">
+            <h3 class="footer__title">Subscribe to Us</h3>
+            <form class="footer__form">
+              <input
+                type="email"
+                class="footer__input"
+                placeholder="info@youremail.com"
+              />
+              <button type="submit" class="footer__submit-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <div class="footer__socials">
+              <div class="footer__social-btn">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="footer__social-btn">
+                <i class="fa-brands fa-facebook"></i>
+              </div>
+              <div class="footer__social-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </div>
+              <div class="footer__social-btn">
+                <i class="fa-brands fa-youtube"></i>
+              </div>
+              <div class="footer__social-btn">
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
+              <div class="footer__social-btn">
+                <i class="fa-brands fa-discord"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div id="scroll-up-btn" class="scroll__btn">
+        <i class="fa-solid fa-angle-up"></i>
+      </div>
+    </div>
 
     <script src="./Assets/Data/NFTData.js"></script>
     <script src="./Assets/Data/CollectionsData.js"></script>

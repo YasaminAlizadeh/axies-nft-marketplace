@@ -1,3 +1,9 @@
+// --------- First Load
+
+window.addEventListener("load", () => {
+  document.body.classList.add("body--loaded");
+});
+
 // --------- Generate Cards from Data Arrays
 
 const generateCard = (type, data) => {
