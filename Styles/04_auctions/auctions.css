@@ -128,6 +128,7 @@
 
 .card__title {
   width: 90%;
+  text-transform: capitalize;
 }
 
 .card__title a {
