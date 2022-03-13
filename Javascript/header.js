@@ -20,6 +20,7 @@ const menu = document.getElementById("menu");
 const menuBtn = document.getElementById("menu-btn");
 const menuBackBtn = document.getElementById("menu-back-btn");
 const menuItems = [...document.getElementsByClassName("menu__item")];
+const search = document.getElementById("header-search");
 
 menuBtn.addEventListener("click", () => {
   menu.classList.add("header__menu--open");
@@ -37,7 +38,11 @@ window.addEventListener("resize", () => {
 // --------- Close Menu if Clicked Outside of it
 
 window.addEventListener("click", (e) => {
-  if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+  if (
+    !menu.contains(e.target) &&
+    !menuBtn.contains(e.target) &&
+    !search.contains(e.target)
+  ) {
     menu.classList.remove("header__menu--open");
   }
 });
@@ -111,8 +116,6 @@ darkThemeBtn.addEventListener("click", () => {
 });
 
 // --------- Expand search input on click
-
-const search = document.getElementById("header-search");
 
 window.addEventListener("click", (e) => {
   const mediaQuery = window.matchMedia("(min-width: 1312px)");

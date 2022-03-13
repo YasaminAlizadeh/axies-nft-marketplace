@@ -13,12 +13,12 @@
   gap: 1rem;
   padding: 1rem;
   margin: 2rem auto;
-  cursor: pointer;
   box-shadow: 0 0.2rem 0 -0.1rem var(--primary-color);
   transition: all 0.3s ease-in-out;
 }
 
 .search__btn {
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
