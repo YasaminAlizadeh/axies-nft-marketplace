@@ -1,3 +1,7 @@
+.body--loaded .loading__spinner {
+  display: none;
+}
+
 .loading__spinner {
   position: absolute;
   top: 50%;
