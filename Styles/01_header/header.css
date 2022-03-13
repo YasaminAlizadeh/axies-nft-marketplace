@@ -2,7 +2,7 @@
 @import url(./menu_right.css);
 
 .header__wrapper {
-  position: relative;
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,6 +10,11 @@
   width: 100%;
   font-weight: 700;
   box-shadow: 0 0.1rem 0.1rem 0.01rem rgba(138, 138, 138, 0.13);
+  z-index: 1000;
+}
+
+.header__wrapper--scrolled {
+  background-color: var(--theme-secondary-color);
 }
 
 .title__img {
@@ -24,17 +29,11 @@
 
 @media screen and (min-width: 1312px) {
   .header__wrapper {
-    position: fixed;
     top: 0;
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
-    z-index: 1000;
     transition: all 0.3s ease-in-out;
-  }
-
-  .header__wrapper--scrolled {
-    background-color: var(--theme-secondary-color);
   }
 
   .header__menu-btn {
