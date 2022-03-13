@@ -202,7 +202,7 @@
 .pagination__btns {
   display: flex;
   align-self: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: auto;
 }
 
@@ -221,7 +221,7 @@
 .pagination__pages {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.2rem;
 }
 
 .pagination__page {
@@ -262,6 +262,14 @@
 
   .auctions__page {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pagination__btns {
+    gap: 2rem;
+  }
+
+  .pagination__pages {
+    gap: 2rem;
   }
 }
 
