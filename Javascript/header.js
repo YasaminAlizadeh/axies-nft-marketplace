@@ -117,12 +117,15 @@ darkThemeBtn.addEventListener("click", () => {
 
 // --------- Expand search input on click
 
+const searchBtn = document.getElementById("search-btn");
+
 window.addEventListener("click", (e) => {
   const mediaQuery = window.matchMedia("(min-width: 1312px)");
   if (mediaQuery.matches) {
-    if (search.contains(e.target)) {
-      search.classList.add("header__search--expanded");
-    } else {
+    if (searchBtn.contains(e.target)) {
+      search.classList.toggle("header__search--expanded");
+    }
+    if (!search.contains(e.target)) {
       search.classList.remove("header__search--expanded");
       document.getElementById("search").value = "";
     }

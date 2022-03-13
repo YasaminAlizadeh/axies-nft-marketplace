@@ -14,7 +14,6 @@
   padding: 1rem;
   margin: 2rem auto;
   box-shadow: 0 0.2rem 0 -0.1rem var(--primary-color);
-  transition: all 0.3s ease-in-out;
 }
 
 .search__btn {
@@ -29,6 +28,7 @@
 .search__wrapper {
   position: relative;
   width: 100%;
+  transition: all 0.3s ease-in-out;
 }
 
 .search__wrapper i {
@@ -47,7 +47,6 @@
   color: var(--thene-main-color);
   font-size: inherit;
   border: none;
-  transition: all 0.5s ease-in-out;
 }
 
 .search__input::placeholder {
@@ -131,16 +130,18 @@ input:-webkit-autofill:active {
     padding: 0;
     margin-left: auto;
     box-shadow: none;
-    transition: all 0.3s ease-in-out;
   }
 
   .search__wrapper {
+    height: 100%;
     position: absolute;
     top: 100%;
     left: 0;
-    padding: 0;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
+    gap: 1rem;
+    background-color: var(--theme-main-color);
     transform: scaleY(0);
     transform-origin: top;
   }
@@ -162,18 +163,10 @@ input:-webkit-autofill:active {
     width: 5rem;
     margin: 0;
     border-radius: 10rem;
-    transition: all 0.3s ease-in-out;
   }
 
   .header__search--expanded .search__wrapper {
-    height: 100%;
-    top: 100%;
-    padding: 0 2rem;
-    display: flex;
-    gap: 1rem;
-    background-color: var(--theme-main-color);
     transform: scaleY(1);
-    transition: all 0.3s ease-in-out;
   }
 
   .header__search--expanded .search__wrapper i {
@@ -196,7 +189,7 @@ input:-webkit-autofill:active {
     position: unset;
     height: 100%;
     width: 100%;
-    color: var(--secondary-color);
+    color: var(--theme-secondary-color);
     transform: scaleX(1);
   }
 
