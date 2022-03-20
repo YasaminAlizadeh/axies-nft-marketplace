@@ -56,13 +56,14 @@
 .card__img-container {
   position: relative;
   width: 100%;
+  border-radius: 1.8rem;
   overflow: hidden;
 }
 
 .card__img {
   width: 100%;
   height: auto;
-  border-radius: 1.8rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .card__time {
@@ -111,6 +112,10 @@
 
 .card__bid-btn i {
   color: var(--primary-color);
+}
+
+.auctions__card:hover .card__img {
+  transform: scale(1.1);
 }
 
 .auctions__card:hover .card__bid-btn {
