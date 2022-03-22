@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../Assets/Images/01_header/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../Styles/00_global/layout.css" />
+    <link rel="stylesheet" href="../Styles/02_login/login.css" />
+    <title>Login</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="sliders" class="sliders"></div>
+      <div class="login__wrapper">
+        <form action="" method="post" class="login__form">
+          <div class="login__intro">
+            <a href="../index.html" class="back__btn"
+              ><i class="fa-solid fa-chevron-left"></i
+            ></a>
+
+            <h2 class="form__title">Sign In</h2>
+          </div>
+
+          <fieldset class="form__fieldset">
+            <legend hidden></legend>
+            <label for="email" class="form__label">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form__input"
+              placeholder="Email Address"
+            />
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend hidden></legend>
+            <label for="Password" class="form__label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="form__input"
+              placeholder="Password"
+            />
+          </fieldset>
+
+          <button type="submit" class="form__submit">Sign In</button>
+        </form>
+
+        <p class="login__redirect">
+          New on our platform? <a href="#">Create an account</a>
+        </p>
+
+        <p class="login__seperator">or</p>
+
+        <ul class="login__socials">
+          <li class="login__social">
+            <a href="" class="social__link"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li class="login__social">
+            <a href="" class="social__link"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li class="login__social">
+            <a href="" class="social__link"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+          </li>
+          <li class="login__social">
+            <a href="" class="social__link"
+              ><i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <script src="../Javascript/login.js"></script>
+</html>

@@ -115,7 +115,7 @@
 
 /* --------------------- Media Queries ----------------- */
 
-@media screen and (min-width: 1312px) {
+@media screen and (min-width: 1400px) {
   .header__menu {
     position: unset;
     display: grid;

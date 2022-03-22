@@ -25,13 +25,27 @@
   cursor: pointer;
 }
 
+.login {
+  margin-left: auto;
+}
+
+.login__btn {
+  font-size: 120%;
+  color: var(--theme-main-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.login__btn:hover {
+  color: var(--primary-color);
+}
+
 /* --------------------- Media Queries ----------------- */
 
-@media screen and (min-width: 1312px) {
+@media screen and (min-width: 1400px) {
   .header__wrapper {
     top: 0;
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
   }
 

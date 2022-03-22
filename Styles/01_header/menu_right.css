@@ -111,7 +111,7 @@ input:-webkit-autofill:active {
 
 /* --------------------- Media Queries ----------------- */
 
-@media screen and (min-width: 1312px) {
+@media screen and (min-width: 1400px) {
   .menu--right {
     width: 100%;
     display: grid;
