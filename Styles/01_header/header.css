@@ -30,7 +30,7 @@
 }
 
 .login__btn {
-  font-size: 120%;
+  font-size: 105%;
   color: var(--theme-main-color);
   transition: all 0.3s ease-in-out;
 }
