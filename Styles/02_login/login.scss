@@ -89,12 +89,7 @@ body {
       }
 
       &:nth-child(3) {
-        display: none;
         animation: scroll 12s linear infinite;
-
-        @media screen and (min-width: 300px) {
-          display: grid;
-        }
 
         @media screen and (min-width: 1000px) {
           animation: scroll-up 32s linear infinite;

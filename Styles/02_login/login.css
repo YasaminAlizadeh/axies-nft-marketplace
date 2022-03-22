@@ -114,16 +114,8 @@ body {
 }
 
 .container .sliders .slider__wrapper:nth-child(3) {
-  display: none;
   -webkit-animation: scroll 12s linear infinite;
           animation: scroll 12s linear infinite;
-}
-
-@media screen and (min-width: 300px) {
-  .container .sliders .slider__wrapper:nth-child(3) {
-    display: -ms-grid;
-    display: grid;
-  }
 }
 
 @media screen and (min-width: 1000px) {
