@@ -9,6 +9,16 @@
   }
 }
 
+body {
+  height: 100%;
+  background: none;
+  background-color: var(--dark-color);
+
+  @media screen and (min-width: 1000px) {
+    height: 100vh;
+  }
+}
+
 .container {
   display: grid;
   grid-template-rows: 20% 1fr;
@@ -17,8 +27,10 @@
   gap: 5rem;
   height: 100%;
   padding: 2rem 1rem;
-  background-color: var(--dark-color);
-  overflow: hidden;
+
+  @media screen and (min-width: 1000px) {
+    overflow: hidden;
+  }
 
   @media screen and (min-width: 300px) {
     grid-template-rows: 35% 1fr;
@@ -153,6 +165,7 @@
     align-items: center;
     width: Min(90%, 90rem);
     height: 100%;
+    padding: 3rem 0;
     color: var(--light-color);
 
     @media screen and (min-width: 1000px) {
@@ -189,20 +202,13 @@
       }
 
       .form__input {
+        width: 100%;
         padding: 1.5rem;
         border: none;
         outline: none;
         background-color: transparent;
         color: #fff;
         box-shadow: 0 0.2rem 0 -0.1rem #ffffff4d;
-
-        &[type="password"] {
-          font-size: 150%;
-
-          &::placeholder {
-            font-size: 60%;
-          }
-        }
       }
 
       .form__submit {

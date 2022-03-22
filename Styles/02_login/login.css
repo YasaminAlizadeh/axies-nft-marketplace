@@ -1,3 +1,15 @@
+body {
+  height: 100%;
+  background: none;
+  background-color: var(--dark-color);
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    height: 100vh;
+  }
+}
+
 .container {
   display: -ms-grid;
   display: grid;
@@ -9,8 +21,12 @@
   gap: 5rem;
   height: 100%;
   padding: 2rem 1rem;
-  background-color: var(--dark-color);
-  overflow: hidden;
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    overflow: hidden;
+  }
 }
 
 @media screen and (min-width: 300px) {
@@ -250,6 +266,7 @@
           align-items: center;
   width: Min(90%, 90rem);
   height: 100%;
+  padding: 3rem 0;
   color: var(--light-color);
 }
 
@@ -322,6 +339,7 @@
 }
 
 .container .login__wrapper .login__form .form__input {
+  width: 100%;
   padding: 1.5rem;
   border: none;
   outline: none;
@@ -329,26 +347,6 @@
   color: #fff;
   -webkit-box-shadow: 0 0.2rem 0 -0.1rem #ffffff4d;
           box-shadow: 0 0.2rem 0 -0.1rem #ffffff4d;
-}
-
-.container .login__wrapper .login__form .form__input[type="password"] {
-  font-size: 150%;
-}
-
-.container .login__wrapper .login__form .form__input[type="password"]::-webkit-input-placeholder {
-  font-size: 60%;
-}
-
-.container .login__wrapper .login__form .form__input[type="password"]:-ms-input-placeholder {
-  font-size: 60%;
-}
-
-.container .login__wrapper .login__form .form__input[type="password"]::-ms-input-placeholder {
-  font-size: 60%;
-}
-
-.container .login__wrapper .login__form .form__input[type="password"]::placeholder {
-  font-size: 60%;
 }
 
 .container .login__wrapper .login__form .form__submit {
