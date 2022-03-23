@@ -125,6 +125,11 @@ body {
   }
 }
 
+.container .sliders .slider__wrapper:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
 .container .sliders .slider__wrapper img {
   -ms-grid-row: 1;
   grid-row: 1;

@@ -96,6 +96,10 @@ body {
         }
       }
 
+      &:hover {
+        animation-play-state: paused;
+      }
+
       img {
         grid-row: 1;
         height: 100%;
