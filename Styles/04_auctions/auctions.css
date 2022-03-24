@@ -30,6 +30,8 @@
   gap: min(0.1%, 3rem);
   margin-right: calc(-1 * min(0.1%, 3rem));
   align-self: flex-start;
+  transform: translateX(var(--transformX));
+  transition: all 0.5s ease-in-out;
 }
 
 .auctions__card {
@@ -277,31 +279,6 @@
 }
 
 @media screen and (min-width: 992px) {
-  .auctions__page {
-    transform: translateX(var(--transformX));
-    transition: all 0.5s ease-in-out;
-  }
-
-  .auctions__page--slide-left {
-    animation: slide-left 0.3s forwards;
-  }
-
-  .auctions__page--slide-right {
-    animation: slide-right 0.3s forwards;
-  }
-
-  /* @keyframes slide-left {
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes slide-right {
-    100% {
-      transform: translateX(100%);
-    }
-  } */
-
   .auctions__card {
     grid-row: 1;
   }
@@ -314,8 +291,5 @@
 @media screen and (min-width: 1312px) {
   .auctions__wrapper {
     padding: 10rem 2rem;
-  }
-
-  .auctions__page {
   }
 }

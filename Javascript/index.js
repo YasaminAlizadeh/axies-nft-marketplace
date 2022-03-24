@@ -290,20 +290,11 @@ const calculateColumnsCount = () => {
   return columns;
 };
 
-//--------- Update Cards per Page based on Window Size
+// --------- Pagination Data
 
-const updateCardsPerPage = (columns) => {
-  page.style.gridTemplateColumns = `repeat(${NFTdata.length}, minmax(0, 1fr))`;
-  page.style.width = `${(NFTdata.length / columns) * 100}%`;
-};
-
-let columnsCount = calculateColumnsCount();
-updateCardsPerPage(columnsCount);
-
-window.addEventListener("resize", () => {
-  columnsCount = calculateColumnsCount();
-  updateCardsPerPage(columnsCount);
-});
+let currentPage = 1;
+let pagesCount;
+const paginationContainer = document.getElementById("pagination-pages");
 
 // --------- Slide Animation based on Current Page
 
@@ -316,17 +307,10 @@ const slidePages = (page) => {
   );
 };
 
-// --------- Pagination Data
-
-let currentPage = 1;
-const cardsPerPage = columnsCount;
-const pagesCount = Math.floor(NFTdata.length / cardsPerPage) + 1;
-
-const paginationContainer = document.getElementById("pagination-pages");
-
 // --------- Add Pages buttons to Pagination Bar
 
 const paginationBar = () => {
+  console.log("runnin");
   paginationContainer.innerHTML = "";
 
   for (let i = 0; i < pagesCount; i++) {
@@ -338,17 +322,11 @@ const paginationBar = () => {
     }
 
     element.addEventListener("click", () => {
-      const mediaQuery = window.matchMedia("(max-width: 992px)");
-
       if (currentPage !== Number(element.id)) {
         currentPage = Number(element.id);
 
         slidePages(page);
         paginationBar();
-      }
-
-      if (mediaQuery.matches) {
-        document.getElementById("auctions").scrollIntoView();
       }
     });
 
@@ -356,22 +334,35 @@ const paginationBar = () => {
   }
 };
 
+//--------- Update Cards per Page based on Window Size
+
+const updateCardsPerPage = (columns) => {
+  const cardsPerPage = columnsCount;
+  pagesCount = Math.floor(NFTdata.length / cardsPerPage) + 1;
+
+  page.style.gridTemplateColumns = `repeat(${NFTdata.length}, minmax(0, 1fr))`;
+  page.style.width = `${(NFTdata.length / columns) * 100}%`;
+  paginationBar();
+};
+
+let columnsCount = calculateColumnsCount();
+updateCardsPerPage(columnsCount);
+
+window.addEventListener("resize", () => {
+  columnsCount = calculateColumnsCount();
+  updateCardsPerPage(columnsCount);
+});
+
 // --------- Add Functionality to Pagination Buttons
 
 const paginationPrevButton = document.getElementById("pagination-prev-btn");
 const pageCards = [...document.getElementsByClassName("auctions__card")];
 
 paginationPrevButton.addEventListener("click", () => {
-  const mediaQuery = window.matchMedia("(max-width: 992px)");
-
   if (currentPage > 1) {
     currentPage -= 1;
     slidePages(page);
     paginationBar();
-
-    if (mediaQuery.matches) {
-      document.getElementById("auctions").scrollIntoView();
-    }
   } else {
     currentPage = 1;
   }
@@ -380,16 +371,10 @@ paginationPrevButton.addEventListener("click", () => {
 const paginationNextButton = document.getElementById("pagination-next-btn");
 
 paginationNextButton.addEventListener("click", () => {
-  const mediaQuery = window.matchMedia("(max-width: 992px)");
-
   if (currentPage < pagesCount) {
     currentPage += 1;
     slidePages(page);
     paginationBar();
-
-    if (mediaQuery.matches) {
-      document.getElementById("auctions").scrollIntoView();
-    }
   } else {
     currentPage = pagesCount;
   }
