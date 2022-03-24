@@ -2,7 +2,7 @@
 
 setTimeout(() => {
   document.body.classList.add("body--loaded");
-}, 10);
+}, 1000);
 
 // --------- Generate Cards from Data Arrays
 
