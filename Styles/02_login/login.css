@@ -20,7 +20,7 @@ body {
   place-items: center;
   gap: 5rem;
   height: 100%;
-  padding: 2rem 1rem;
+  padding: 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -31,8 +31,8 @@ body {
 
 @media screen and (min-width: 300px) {
   .container {
-    -ms-grid-rows: 35% 1fr;
-        grid-template-rows: 35% 1fr;
+    -ms-grid-rows: 45% 1fr;
+        grid-template-rows: 45% 1fr;
   }
 }
 
@@ -56,6 +56,7 @@ body {
   height: 100%;
   overflow: hidden;
   margin-bottom: auto;
+  padding: 1rem 0;
 }
 
 @media screen and (min-width: 1000px) {
@@ -66,6 +67,7 @@ body {
     -ms-grid-rows: unset;
         grid-template-rows: unset;
     margin: auto;
+    padding: 0 1rem;
   }
 }
 
@@ -263,7 +265,7 @@ body {
           align-items: center;
   width: Min(90%, 90rem);
   height: 100%;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   color: var(--light-color);
 }
 
