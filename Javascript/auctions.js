@@ -77,27 +77,9 @@ const cardTimeGenerator = (timeContainer) => {
   }, 1000);
 };
 
-// --------- Add NFTs per Page
-
-const updateCardsPerPage = () => {
-  const page = document.getElementById("auctions-page");
-  page.innerHTML = "";
-  for (
-    let j = (currentPage - 1) * cardsPerPage;
-    j < currentPage * cardsPerPage;
-    j++
-  ) {
-    if (j < NFTdata.length) {
-      generateCard("nft", NFTdata[j]);
-    }
-  }
-};
-
 // --------- Update Auctions Section Contect
 
-const updateAuctions = () => {
-  paginationBar();
-  updateCardsPerPage();
-};
-
-updateAuctions();
+page.innerHTML = "";
+for (let j = 0; j < NFTdata.length; j++) {
+  generateCard("nft", NFTdata[j]);
+}
