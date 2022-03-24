@@ -2,6 +2,7 @@ const socailsContainer = document.getElementById("socials");
 
 socailsContainer.addEventListener("click", () => {
   socailsContainer.classList.toggle("socials__menu--open");
+  socailsContainer.classList.toggle("socials__menu--close");
 });
 
 window.addEventListener("click", (e) => {
@@ -10,5 +11,6 @@ window.addEventListener("click", (e) => {
     !socailsContainer.contains(e.target)
   ) {
     socailsContainer.classList.remove("socials__menu--open");
+    socailsContainer.classList.add("socials__menu--close");
   }
 });
