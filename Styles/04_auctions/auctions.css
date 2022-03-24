@@ -227,10 +227,15 @@
   opacity: 0.8;
 }
 
-.pagination__pages {
+.page-select {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+  justify-content: center;
+}
+
+.page-select__btns {
+  display: none;
 }
 
 .pagination__page {
@@ -263,7 +268,7 @@
   }
 }
 
-@media screen and (min-width: 688px) {
+@media screen and (min-width: 768px) {
   .auctions__wrapper {
     margin-top: 15rem;
     padding: 5rem 2rem;
@@ -273,8 +278,15 @@
     gap: 2rem;
   }
 
-  .pagination__pages {
+  .page-select__btns {
+    display: flex;
     gap: 2rem;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .page-select__input {
+    display: none;
   }
 }
 

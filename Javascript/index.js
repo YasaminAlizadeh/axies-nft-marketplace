@@ -310,7 +310,6 @@ const slidePages = (page) => {
 // --------- Add Pages buttons to Pagination Bar
 
 const paginationBar = () => {
-  console.log("runnin");
   paginationContainer.innerHTML = "";
 
   for (let i = 0; i < pagesCount; i++) {
@@ -342,6 +341,7 @@ const updateCardsPerPage = (columns) => {
 
   page.style.gridTemplateColumns = `repeat(${NFTdata.length}, minmax(0, 1fr))`;
   page.style.width = `${(NFTdata.length / columns) * 100}%`;
+
   paginationBar();
 };
 
@@ -349,8 +349,13 @@ let columnsCount = calculateColumnsCount();
 updateCardsPerPage(columnsCount);
 
 window.addEventListener("resize", () => {
+  const prevColumnsCount = columnsCount;
+
   columnsCount = calculateColumnsCount();
   updateCardsPerPage(columnsCount);
+
+  currentPage = (currentPage / columnsCount) * prevColumnsCount;
+  slidePages(page);
 });
 
 // --------- Add Functionality to Pagination Buttons
