@@ -234,16 +234,24 @@
   justify-content: center;
 }
 
-.page-select__btns {
-  display: none;
-}
-
 .pagination__page {
   width: 0.7rem;
   height: 0.7rem;
   background-color: var(--theme-main-color);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.page-select__input {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 0 0 0.05rem var(--theme-main-color);
+  color: var(--theme-main-color);
+  font-weight: 600;
+  border-radius: 1rem;
 }
 
 .pagination__page--active {
@@ -283,10 +291,6 @@
     gap: 2rem;
     align-items: center;
     gap: 1.2rem;
-  }
-
-  .page-select__input {
-    display: none;
   }
 }
 

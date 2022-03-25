@@ -270,11 +270,12 @@ window.addEventListener("scroll", () => {
 // --------- Pagination
 
 const page = document.getElementById("auctions-page");
+let paginationBtns = document.getElementById("pagination-pages");
 
 const calculateColumnsCount = () => {
   let columns;
 
-  const mediaQueryXs = window.matchMedia("(min-width: 576px)");
+  const mediaQueryXs = window.matchMedia("(max-width: 767px)");
   const mediaQueryS = window.matchMedia("(min-width: 768px)");
   const mediaQueryMd = window.matchMedia("(min-width: 992px)");
   const mediaQueryLg = window.matchMedia("(min-width: 1200px)");
@@ -296,15 +297,29 @@ let currentPage = 1;
 let pagesCount;
 const paginationContainer = document.getElementById("pagination-pages");
 
+let pageInput = document.getElementById("page-num");
+pageInput.onchange = (e) => changePageInput(e);
+
+pageInput.value = currentPage;
+
 // --------- Slide Animation based on Current Page
 
 const slidePages = (page) => {
-  page.style.setProperty(
-    "--transformX",
-    `calc(-${(100 / pagesCount) * (currentPage - 1)}% - min(0.1%, 3rem) * ${
-      (currentPage - 1) * columnsCount
-    })`
-  );
+  const mediaQueryXs = window.matchMedia("(max-width: 767px)");
+
+  if (mediaQueryXs.matches) {
+    page.style.setProperty(
+      "--transformX",
+      `-${(100 / pagesCount) * (currentPage - 1)}%`
+    );
+  } else {
+    page.style.setProperty(
+      "--transformX",
+      `calc(-${(100 / pagesCount) * (currentPage - 1)}% - min(0.1%, 3rem) * ${
+        (currentPage - 1) * columnsCount
+      })`
+    );
+  }
 };
 
 // --------- Add Pages buttons to Pagination Bar
@@ -331,13 +346,40 @@ const paginationBar = () => {
 
     paginationContainer.appendChild(element);
   }
+
+  pageInput.value = currentPage;
+};
+
+const changePageInput = (e) => {
+  const inputValue = e.target.value;
+
+  if (inputValue < 1) {
+    e.target.value = 1;
+  } else if (inputValue > pagesCount) {
+    e.target.value = pagesCount;
+  } else {
+    currentPage = Number(e.target.value);
+    slidePages(page);
+    paginationBar();
+  }
 };
 
 //--------- Update Cards per Page based on Window Size
 
 const updateCardsPerPage = (columns) => {
   const cardsPerPage = columnsCount;
-  pagesCount = Math.floor(NFTdata.length / cardsPerPage) + 1;
+  pagesCount =
+    Math.floor(NFTdata.length / cardsPerPage) + 1 > NFTdata.length
+      ? NFTdata.length
+      : Math.floor(NFTdata.length / cardsPerPage) + 1;
+
+  if (pagesCount > 20) {
+    pageInput.style.display = "block";
+    paginationBtns.style.display = "none";
+  } else {
+    pageInput.style.display = "none";
+    paginationBtns.style.display = "flex";
+  }
 
   page.style.gridTemplateColumns = `repeat(${NFTdata.length}, minmax(0, 1fr))`;
   page.style.width = `${(NFTdata.length / columns) * 100}%`;
@@ -354,8 +396,18 @@ window.addEventListener("resize", () => {
   columnsCount = calculateColumnsCount();
   updateCardsPerPage(columnsCount);
 
-  currentPage = (currentPage / columnsCount) * prevColumnsCount;
+  const newCurrentPage = (currentPage / columnsCount) * prevColumnsCount;
+
+  currentPage =
+    newCurrentPage > NFTdata.length
+      ? NFTdata.length
+      : newCurrentPage > 0
+      ? newCurrentPage % 1 === 0
+        ? newCurrentPage
+        : Math.floor(newCurrentPage) + 1
+      : 1;
   slidePages(page);
+  paginationBar();
 });
 
 // --------- Add Functionality to Pagination Buttons
