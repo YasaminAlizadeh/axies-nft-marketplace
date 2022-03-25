@@ -10,13 +10,11 @@
 }
 
 body {
-  height: 100%;
+  display: grid;
+  place-items: center;
+  height: 100vh;
   background: none;
   background-color: var(--dark-color);
-
-  @media screen and (min-width: 1000px) {
-    height: 100vh;
-  }
 }
 
 .container {
@@ -25,11 +23,10 @@ body {
   grid-template-columns: 100%;
   place-items: center;
   gap: 5rem;
-  height: 100%;
-  // padding: 2rem 1rem;
   padding: 0;
 
   @media screen and (min-width: 1000px) {
+    height: Min(100vh, 150rem);
     overflow: hidden;
   }
 
