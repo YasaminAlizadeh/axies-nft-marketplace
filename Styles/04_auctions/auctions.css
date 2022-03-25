@@ -254,6 +254,16 @@
   border-radius: 1rem;
 }
 
+.page-select__input::-webkit-outer-spin-button,
+.page-select__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.page-select__input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .pagination__page--active {
   box-shadow: 0 0 0 0.3rem var(--theme-secondary-color),
     0 0 0 0.4rem var(--theme-main-color);
