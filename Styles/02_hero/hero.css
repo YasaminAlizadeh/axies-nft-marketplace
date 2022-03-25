@@ -194,7 +194,6 @@
   }
 
   .hero__img-wrapper {
-    align-self: flex-start;
     width: 100%;
   }
 }
