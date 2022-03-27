@@ -31,7 +31,7 @@
     <title>Axies</title>
   </head>
 
-  <body class="theme--dark theme--light">
+  <body class="theme--light">
     <div class="loading__page">
       <div class="loading__spinner">
         <div class="spinner__planet spinner__sun"></div>
@@ -459,12 +459,13 @@
                 </button>
                 <div class="page-select">
                   <div id="pagination-pages" class="page-select__btns"></div>
-                  <input
-                    type="number"
-                    name="page-num"
-                    id="page-num"
-                    class="page-select__input"
-                  />
+                  <div id="page-input-container" class="page-select__form">
+                    <input
+                      type="number"
+                      name="page-num"
+                      id="page-num"
+                      class="page-select__input"
+                    />
                     <p>/</p>
                     <p id="pages-number"></p>
                   </div>
@@ -626,6 +627,7 @@
     <script src="./Assets/Data/SellersData.js"></script>
     <script src="./Assets/Data/PicksData.js"></script>
     <script src="./Javascript/index.js"></script>
+    <script src="./Javascript/theme.js"></script>
     <script src="./Javascript/header.js"></script>
     <script src="./Javascript/hero.js"></script>
     <script src="./Javascript/auctions.js"></script>

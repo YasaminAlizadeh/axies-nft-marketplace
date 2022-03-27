@@ -93,28 +93,6 @@ menuItems.forEach((item) =>
   })
 );
 
-// --------- Change Theme to Dark/Light on Button Click
-
-const themeBtns = [...document.getElementsByClassName("theme__btn")];
-const lightThemeBtn = document.getElementById("light-theme-btn");
-const darkThemeBtn = document.getElementById("dark-theme-btn");
-
-lightThemeBtn.addEventListener("click", () => {
-  themeBtns.forEach((btn) => btn.classList.remove("theme__btn--active"));
-  lightThemeBtn.classList.add("theme__btn--active");
-  document.querySelector("body").classList.remove("theme--dark");
-  document.getElementById("background").style.transform = "scaleY(1)";
-  document.getElementById("background").style.transformOrigin = "top";
-});
-
-darkThemeBtn.addEventListener("click", () => {
-  themeBtns.forEach((btn) => btn.classList.remove("theme__btn--active"));
-  darkThemeBtn.classList.add("theme__btn--active");
-  document.querySelector("body").classList.add("theme--dark");
-  document.getElementById("background").style.transform = "scaleY(0)";
-  document.getElementById("background").style.transformOrigin = "bottom";
-});
-
 // --------- Expand search input on click
 
 const searchBtn = document.getElementById("search-btn");
