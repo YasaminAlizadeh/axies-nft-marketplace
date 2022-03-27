@@ -318,10 +318,6 @@ main {
 
 @media screen and (min-width: 1312px) {
   .container {
-    padding: 5rem 3rem;
-  }
-
-  .section__header {
-    width: 95%;
+    padding: 5rem;
   }
 }
