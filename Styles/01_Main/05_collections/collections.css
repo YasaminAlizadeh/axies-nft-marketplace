@@ -166,17 +166,10 @@
   .collections__page {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1rem;
-    width: 100%;
   }
 
   .collection__card {
     max-width: unset;
     width: 100%;
-  }
-}
-
-@media screen and (min-width: 1312px) {
-  .collections__page {
-    width: 95%;
   }
 }
