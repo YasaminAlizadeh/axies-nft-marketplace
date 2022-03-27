@@ -32,7 +32,6 @@ body {
   position: relative;
   height: 100vh;
   font-size: clamp(0.8rem, 5vw, 1.5rem);
-  background-image: var(--light-color);
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--theme-main-color);

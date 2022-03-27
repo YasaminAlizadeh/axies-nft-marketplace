@@ -34,7 +34,6 @@ const changeTheme = (theme) => {
 
     case "dark":
       localStorage.setItem("theme", "dark");
-
       document.body.classList.add("theme--dark");
 
       if (background) {
