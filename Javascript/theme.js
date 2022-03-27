@@ -1,7 +1,18 @@
+const themeBtns = [...document.getElementsByClassName("theme__btn")];
+const lightThemeBtn = document.getElementById("light-theme-btn");
+const darkThemeBtn = document.getElementById("dark-theme-btn");
+
 // --------- On Page Load, Get the Selected Theme from LocalStorage
 
 window.addEventListener("load", () => {
   const theme = localStorage.getItem("theme");
+
+  if (theme === "light") {
+    lightThemeBtn.classList.add("theme__btn--active");
+  } else if (theme === "dark") {
+    darkThemeBtn.classList.add("theme__btn--active");
+  }
+
   changeTheme(theme);
 });
 
@@ -32,10 +43,6 @@ const changeTheme = (theme) => {
 };
 
 // --------- Change Theme to Dark/Light on Button Click
-
-const themeBtns = [...document.getElementsByClassName("theme__btn")];
-const lightThemeBtn = document.getElementById("light-theme-btn");
-const darkThemeBtn = document.getElementById("dark-theme-btn");
 
 lightThemeBtn &&
   lightThemeBtn.addEventListener("click", () => {
