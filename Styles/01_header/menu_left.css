@@ -33,9 +33,14 @@
 .menu__item {
   position: relative;
   width: 100%;
+  padding: 0.5rem 0;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 0.2rem 0 -0.1rem rgba(255, 255, 255, 0.13);
+}
+
+.menu__item:last-child {
+  box-shadow: unset;
 }
 
 .menu__item-btn {
@@ -151,6 +156,10 @@
 
   .menu__item {
     width: max-content;
+  }
+
+  .menu__item:last-child {
+    box-shadow: unset;
   }
 
   .menu__item .menu__item {
