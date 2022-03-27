@@ -229,7 +229,6 @@
 
 .page-select {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -240,6 +239,16 @@
   background-color: var(--theme-main-color);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.page-select__form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.page-select__form p {
+  font-weight: 600;
 }
 
 .page-select__input {
