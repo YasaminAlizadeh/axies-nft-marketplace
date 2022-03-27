@@ -169,7 +169,7 @@
   .menu__submenu {
     height: max-content;
     position: absolute;
-    top: 100%;
+    top: 125%;
     width: clamp(10rem, 25vw, 25rem);
     padding-top: 1rem;
     background-color: var(--theme-main-color);
