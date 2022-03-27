@@ -4,7 +4,6 @@
   align-items: flex-start;
   justify-items: center;
   gap: 8rem;
-  margin-top: 25rem;
   transition: all 0.3s ease-in-out;
 }
 
@@ -68,6 +67,5 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(1, minmax(0, 1fr));
     gap: 3rem;
-    margin-top: 10rem;
   }
 }

@@ -1,6 +1,4 @@
 .auctions__wrapper {
-  margin-top: 15rem;
-  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -296,11 +294,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .auctions__wrapper {
-    margin-top: 15rem;
-    padding: 5rem 2rem;
-  }
-
   .pagination__btns {
     gap: 2rem;
   }
@@ -320,11 +313,5 @@
 
   .auctions__card:hover {
     transform: translateY(-1%);
-  }
-}
-
-@media screen and (min-width: 1312px) {
-  .auctions__wrapper {
-    padding: 10rem 2rem;
   }
 }

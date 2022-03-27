@@ -63,6 +63,7 @@
   align-items: center;
   position: relative;
   height: 100%;
+  overflow-x: clip;
 }
 
 .hero__img-wrapper {
@@ -184,9 +185,8 @@
 @media screen and (min-width: 992px) {
   .hero__wrapper {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: flex-start;
-    margin-top: 25rem;
-    padding: 0 10rem;
+    align-items: center;
+    margin-top: 15rem;
   }
 
   .hero--left {

@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  padding: 5rem 1rem;
 }
 
 .collections__page {
@@ -158,10 +157,6 @@
 }
 
 @media screen and (min-width: 688px) {
-  .collections__wrapper {
-    padding: 5rem 2rem;
-  }
-
   .collections__page {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

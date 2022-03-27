@@ -80,11 +80,17 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
 .container {
   width: 100%;
   max-width: 200rem;
   margin: auto;
-  padding: 0 1rem;
+  padding: 5rem 1.5rem;
 }
 
 .background--light {
@@ -298,6 +304,10 @@ a {
 }
 
 @media screen and (min-width: 688px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   .scroll__btn {
     bottom: 2rem;
     right: 2rem;
@@ -307,6 +317,10 @@ a {
 }
 
 @media screen and (min-width: 1312px) {
+  .container {
+    padding: 5rem 3rem;
+  }
+
   .section__header {
     width: 95%;
   }
