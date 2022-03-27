@@ -14,7 +14,7 @@ body {
   place-items: center;
   height: 100vh;
   background: none;
-  background-color: var(--dark-color);
+  background-color: #f3f2ff;
 }
 
 .container {
@@ -165,7 +165,7 @@ body {
     width: Min(90%, 90rem);
     height: 100%;
     padding: 3rem 1rem;
-    color: var(--light-color);
+    color: var(--dark-color);
 
     @media screen and (min-width: 1000px) {
       margin: unset;
@@ -181,11 +181,11 @@ body {
 
         .back__btn {
           margin-right: auto;
-          color: var(--light-color);
+          color: var(--dark-color);
           transition: all 0.3s ease-in-out;
 
           &:hover {
-            color: rgba(255, 255, 255, 0.685);
+            color: rgba(0, 0, 0, 0.685);
           }
         }
 
@@ -206,8 +206,8 @@ body {
         border: none;
         outline: none;
         background-color: transparent;
-        color: #fff;
-        box-shadow: 0 0.2rem 0 -0.1rem #ffffff4d;
+        color: rgb(0, 0, 0);
+        box-shadow: 0 0.2rem 0 -0.1rem #0000004d;
       }
 
       .form__submit {
@@ -243,7 +243,7 @@ body {
       display: block;
       width: 100%;
       text-align: center;
-      color: #ffffffb7;
+      color: #000000b7;
 
       &::after {
         content: "";
@@ -253,7 +253,7 @@ body {
         transform: translateY(-50%);
         width: calc(50% - 2rem);
         height: 0.1rem;
-        background-color: #ffffff23;
+        background-color: #00000023;
       }
 
       &::before {
@@ -264,7 +264,7 @@ body {
         transform: translateY(-50%);
         width: calc(50% - 2rem);
         height: 0.1rem;
-        background-color: #ffffff23;
+        background-color: #00000023;
       }
     }
 
@@ -296,6 +296,42 @@ body {
         .social__link {
           color: var(--light-color);
           font-size: 120%;
+        }
+      }
+    }
+  }
+}
+
+.theme--dark {
+  background-color: var(--dark-color);
+
+  .container {
+    .login__wrapper {
+      color: var(--light-color);
+
+      .login__form {
+        .back__btn {
+          color: var(--light-color);
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.685);
+          }
+        }
+
+        .form__input {
+          color: #fff;
+          box-shadow: 0 0.2rem 0 -0.1rem #ffffff4d;
+        }
+      }
+      .login__seperator {
+        color: #ffffffb7;
+
+        &::after {
+          background-color: #ffffff23;
+        }
+
+        &::before {
+          background-color: #ffffff23;
         }
       }
     }
