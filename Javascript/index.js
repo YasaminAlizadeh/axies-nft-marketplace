@@ -324,6 +324,8 @@ const slidePages = (page) => {
 
 // --------- Add Pages buttons to Pagination Bar
 
+const pageNumbersIndicator = document.getElementById("pages-number");
+
 const paginationBar = () => {
   paginationContainer.innerHTML = "";
 
@@ -348,6 +350,7 @@ const paginationBar = () => {
   }
 
   pageInput.value = currentPage;
+  pageNumbersIndicator.innerText = pagesCount;
 };
 
 const changePageInput = (e) => {
@@ -366,6 +369,8 @@ const changePageInput = (e) => {
 
 //--------- Update Cards per Page based on Window Size
 
+const pageInputContainer = document.getElementById("page-input-container");
+
 const updateCardsPerPage = (columns) => {
   const cardsPerPage = columnsCount;
   pagesCount =
@@ -374,10 +379,10 @@ const updateCardsPerPage = (columns) => {
       : Math.floor(NFTdata.length / cardsPerPage) + 1;
 
   if (pagesCount > 20) {
-    pageInput.style.display = "block";
+    pageInputContainer.style.display = "flex";
     paginationBtns.style.display = "none";
   } else {
-    pageInput.style.display = "none";
+    pageInputContainer.style.display = "none";
     paginationBtns.style.display = "flex";
   }
 
