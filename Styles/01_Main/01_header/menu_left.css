@@ -162,6 +162,14 @@
     box-shadow: unset;
   }
 
+  .menu__item i {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu__item:hover i {
+    transform: rotate(-180deg);
+  }
+
   .menu__item .menu__item {
     width: 100%;
   }
