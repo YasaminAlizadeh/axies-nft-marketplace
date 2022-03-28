@@ -1,5 +1,5 @@
 .body--loaded .loading__spinner {
-  display: block;
+  display: none;
 }
 
 .loading__spinner {
