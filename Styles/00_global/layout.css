@@ -244,13 +244,13 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.scroll__btn:hover {
-  opacity: 0.8;
+.scroll__btn--active {
+  opacity: 0.9;
+  visibility: visible;
 }
 
-.scroll__btn--active {
+.scroll__btn--active:hover {
   opacity: 1;
-  visibility: visible;
 }
 
 @keyframes heart-burst {
