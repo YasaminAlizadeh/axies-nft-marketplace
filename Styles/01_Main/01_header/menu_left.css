@@ -166,7 +166,7 @@
     transition: all 0.3s ease-in-out;
   }
 
-  .menu__item:hover i {
+  .menu__item:hover > i {
     transform: rotate(-180deg);
   }
 
