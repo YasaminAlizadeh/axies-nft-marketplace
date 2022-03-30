@@ -162,14 +162,6 @@
     box-shadow: unset;
   }
 
-  .menu__item i {
-    transition: all 0.3s ease-in-out;
-  }
-
-  .menu__item:hover > i {
-    transform: rotate(-180deg);
-  }
-
   .menu__item .menu__item {
     width: 100%;
   }
@@ -198,6 +190,22 @@
     width: 1rem;
     height: 1rem;
     transform: rotateZ(45deg);
+  }
+
+  .menu__item i {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu__item:hover i {
+    transform: rotate(-180deg);
+  }
+
+  .menu__item:hover .menu__submenu i {
+    transform: none;
+  }
+
+  .menu__item:hover .menu__submenu .menu__item:hover i {
+    transform: rotate(-180deg);
   }
 
   .menu__item-btn {
