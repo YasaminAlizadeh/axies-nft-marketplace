@@ -76,7 +76,7 @@ input:-webkit-autofill:active {
 
 .theme {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -87,6 +87,10 @@ input:-webkit-autofill:active {
   height: 3rem;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+.theme__btn ion-icon {
+  font-size: 150%;
 }
 
 .theme__btn:hover {
