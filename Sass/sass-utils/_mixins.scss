@@ -1,0 +1,9 @@
+@mixin light-theme-colors {
+  $main-color: $dark-color;
+  $secondary-color: $light-color;
+}
+
+@mixin dark-theme-colors {
+  $main-color: $light-color;
+  $secondary-color: $dark-color;
+}

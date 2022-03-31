@@ -1,0 +1,11 @@
+$primary-color: #3930a3;
+$dark-color: #14141f;
+$light-color: white;
+
+$btn-bg-dark: hsla(0, 0%, 0%, 0.1);
+$btn-bg-light: hsla(0, 0%, 100%, 0.1);
+
+$main-color: null;
+$secondary-color: null;
+
+@include light-theme-colors;
