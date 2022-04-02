@@ -32,7 +32,6 @@
 
     &__btn {
       font-size: 105%;
-      color: $main-color;
       transition: all 0.3s ease-in-out;
 
       &:hover {
@@ -47,8 +46,4 @@
     grid-template-columns: auto 1fr auto;
     align-items: center;
   }
-}
-
-.header__wrapper--scrolled {
-  background-color: $secondary-color;
 }

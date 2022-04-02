@@ -11,7 +11,7 @@
   grid-template-columns: 100%;
   align-items: center;
   justify-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .collection__card {
@@ -20,7 +20,7 @@
   align-items: center;
   gap: 2rem;
   height: 100%;
-  width: min(100%, 50rem);
+  width: Min(100%, 50rem);
   align-self: center;
   padding: 2rem;
   border-radius: 1.8rem;
@@ -30,26 +30,19 @@
   transition: all 0.3s ease-in-out;
 }
 
-.theme--dark .collection__card {
-  background-color: rgba(255, 255, 255, 0.06);
-  color: rgba(255, 255, 255, 0.85);
-}
-
 .collection__img-container {
   width: 100%;
   display: grid;
-  grid-template-areas:
-    "first first first second second second"
-    "third third third third third third"
-    "forth forth forth fifth fifth fifth";
-  grid-template-rows: repeat(3, 15rem);
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-areas: "first first first second second second" "third third third third third third" "forth forth forth fifth fifth fifth";
+  grid-template-rows: 15rem 15rem 15rem;
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+    minmax(0, 1fr) minmax(0, 1fr);
   gap: 1rem;
 }
 
 .collection__link,
 .collection__creator-link {
-  color: var(--theme-main-color);
   transition: all 0.3s ease-in-out;
 }
 
@@ -117,20 +110,11 @@
   height: 2rem;
   width: 2rem;
   border-radius: 100%;
-  background-color: var(--primary-color);
-  color: var(--light-color);
-}
-
-.collection__creator {
-  color: #00000080;
-}
-
-.theme--dark .collection__creator {
-  color: #ffffff80;
+  background-color: $primary-color;
+  color: $light-color;
 }
 
 .collection__creator a {
-  color: var(--theme-main-color);
   font-weight: 700;
 }
 
@@ -149,23 +133,20 @@
 
 @media screen and (min-width: 300px) {
   .collection__img-container {
-    grid-template-areas:
-      "first first first second second second"
-      "third third forth forth fifth fifth";
-    grid-template-rows: repeat(2, 20rem);
+    grid-template-areas: "first first first second second second" "third third forth forth fifth fifth";
+    grid-template-rows: 20rem 20rem;
   }
 }
 
 @media screen and (min-width: 688px) {
   .collections__page {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 
 @media screen and (min-width: 992px) {
   .collections__page {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   }
 
   .collection__card {

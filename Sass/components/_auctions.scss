@@ -3,12 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
-  background-color: #f3f2ff;
   overflow-x: clip;
-}
-
-.theme--dark .auctions__wrapper {
-  background-color: black;
 }
 
 .auctions__pages {
@@ -25,8 +20,8 @@
   display: grid;
   grid-template-columns: 100%;
   align-items: center;
-  gap: min(0.1%, 3rem);
-  margin-right: calc(-1 * min(0.1%, 3rem));
+  gap: 2rem;
+  margin-right: -2rem;
   align-self: flex-start;
   transform: translateX(var(--transformX));
   transition: all 0.5s ease-in-out;
@@ -34,7 +29,7 @@
 
 .auctions__card {
   height: 100%;
-  width: min(100%, 50rem);
+  width: Min(100%, 50rem);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -42,16 +37,9 @@
   justify-self: center;
   gap: 1.5rem;
   border-radius: 1.8rem;
-  background-color: var(--light-color);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  color: rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease-in-out;
-}
-
-.theme--dark .auctions__card {
-  background-color: var(--dark-color);
-  color: rgba(255, 255, 255, 0.85);
 }
 
 .card__img-container {
@@ -79,13 +67,12 @@
   white-space: nowrap;
   font-weight: 600;
   border-radius: 0.8rem;
-  background-color: var(--theme-secondary-color);
   transform: translateX(-50%);
 }
 
 .card__time--icon {
   font-size: 110%;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .card__bid-btn {
@@ -95,8 +82,8 @@
   display: flex;
   gap: 1rem;
   padding: 0.5rem 1rem;
-  background-color: var(--light-color);
-  color: var(--dark-color);
+  background-color: $light-color;
+  color: $dark-color;
   font-weight: 600;
   white-space: nowrap;
   border-radius: 3rem;
@@ -112,7 +99,7 @@
 }
 
 .card__bid-btn i {
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .auctions__card:hover .card__img {
@@ -135,10 +122,6 @@
 .card__title {
   width: 90%;
   text-transform: capitalize;
-}
-
-.card__title a {
-  color: var(--theme-main-color);
 }
 
 .card__creator {
@@ -166,14 +149,13 @@
 
 .creator__name {
   margin-bottom: auto;
-  color: var(--theme-main-color);
   font-weight: 700;
 }
 
 .creator__bsc {
   padding: 0.5rem 1.1rem;
-  background-color: var(--primary-color);
-  color: var(--light-color);
+  background-color: $primary-color;
+  color: $light-color;
   font-weight: 600;
   font-size: 80%;
   text-align: center;
@@ -203,7 +185,6 @@
 .card__bid-number span {
   font-weight: 700;
   font-size: 120%;
-  color: var(--theme-main-color);
 }
 
 .pagination__btns {
@@ -214,7 +195,6 @@
 }
 
 .pagination__btn {
-  color: var(--theme-main-color);
   background-color: transparent;
   border: none;
   font-size: 110%;
@@ -234,7 +214,6 @@
 .pagination__page {
   width: 0.7rem;
   height: 0.7rem;
-  background-color: var(--theme-main-color);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -255,8 +234,6 @@
   text-align: center;
   background-color: transparent;
   border: none;
-  box-shadow: 0 0 0 0.05rem var(--theme-main-color);
-  color: var(--theme-main-color);
   font-weight: 600;
   border-radius: 1rem;
 }
@@ -269,11 +246,6 @@
 
 .page-select__input[type="number"] {
   -moz-appearance: textfield;
-}
-
-.pagination__page--active {
-  box-shadow: 0 0 0 0.3rem var(--theme-secondary-color),
-    0 0 0 0.4rem var(--theme-main-color);
 }
 
 /* --------------------- Media Queries ----------------- */

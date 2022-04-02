@@ -25,6 +25,7 @@ const changeTheme = (theme) => {
     case "light":
       localStorage.setItem("theme", "light");
       document.body.classList.remove("theme--dark");
+      document.body.classList.add("theme--light");
 
       if (background) {
         background.style.transform = "scaleY(1)";
@@ -34,6 +35,7 @@ const changeTheme = (theme) => {
 
     case "dark":
       localStorage.setItem("theme", "dark");
+      document.body.classList.remove("theme--light");
       document.body.classList.add("theme--dark");
 
       if (background) {

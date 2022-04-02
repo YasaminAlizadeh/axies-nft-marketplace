@@ -1,0 +1,260 @@
+.theme--dark {
+  background-image: linear-gradient(
+    141deg,
+    #0c0c14 0%,
+    #0f0f1a 51%,
+    #0c0c14 75%
+  );
+  color: $light-color;
+
+  .header__wrapper--scrolled {
+    background-color: $dark-color;
+  }
+
+  .header__menu {
+    background-color: $light-color;
+    color: $dark-color;
+  }
+
+  .menu__submenu::before {
+    background-color: $light-color;
+  }
+
+  .menu__item-btn:hover {
+    background-color: rgba(0, 0, 0, 0.123);
+  }
+
+  .menu__submenu {
+    color: $dark-color;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .submenu__item:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    color: $primary-color;
+  }
+
+  .search__input {
+    color: $light-color;
+  }
+
+  .search__input::placeholder {
+    color: $dark-color;
+  }
+
+  .login__btn {
+    color: $light-color;
+  }
+
+  .hero__blob {
+    display: none;
+  }
+
+  .section__title {
+    color: $light-color;
+  }
+
+  .section__explore-btn {
+    color: $light-color;
+  }
+
+  .auctions__wrapper {
+    background-color: black;
+  }
+
+  .auctions__card {
+    background-color: $dark-color;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .card__title a {
+    color: $light-color;
+  }
+
+  .card__time {
+    background-color: $dark-color;
+  }
+
+  .creator__name {
+    color: $light-color;
+  }
+
+  .card__bid-number span {
+    color: $light-color;
+  }
+
+  .picks__load-btn {
+    box-shadow: inset 0 0 0 0.1rem $light-color;
+  }
+
+  .article__likes {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $light-color;
+    box-shadow: none;
+  }
+
+  .pagination__btn {
+    color: $light-color;
+  }
+
+  .pagination__page {
+    background-color: $light-color;
+  }
+
+  .page-select__input {
+    box-shadow: 0 0 0 0.05rem $light-color;
+    color: $light-color;
+  }
+
+  .pagination__page--active {
+    box-shadow: 0 0 0 0.3rem $dark-color, 0 0 0 0.4rem $light-color;
+  }
+
+  .collection__card {
+    background-color: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .collection__creator {
+    color: #ffffff80;
+  }
+
+  .collection__creator a {
+    color: $light-color;
+  }
+
+  .collection__link,
+  .collection__creator-link {
+    color: $light-color;
+  }
+
+  .seller__card a {
+    color: $light-color;
+  }
+
+  .filter__btn {
+    color: $light-color;
+    box-shadow: 0 0 0 0.1rem $light-color;
+  }
+
+  .picks__card {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .picks__card .pick__likes {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  .picks__filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+
+  .picks__filter-btn--active {
+    background-color: rgba(255, 255, 255, 0.884);
+    color: $dark-color;
+  }
+
+  .picks__filter-btn--active:hover {
+    background-color: rgba(255, 255, 255, 0.884);
+  }
+
+  .socials__menu {
+    background-color: #050508;
+  }
+
+  .socials__placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .socials__menu:hover .socials__placeholder {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .socials__link {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .socials__link:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .scroll__btn {
+    background-color: $light-color;
+    color: $primary-color;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: all 0s 50000s;
+    -webkit-text-fill-color: $dark-color !important;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: $light-color;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: $dark-color;
+  }
+
+  @media screen and (min-width: 1400px) {
+    .header__menu {
+      background-color: transparent;
+      color: inherit;
+    }
+
+    .menu__submenu {
+      background-color: $light-color;
+      color: $dark-color;
+    }
+
+    .menu__item-btn:hover {
+      color: unset;
+      opacity: 0.8;
+    }
+
+    .submenu__item::before {
+      box-shadow: 0 0 0 0.02rem $primary-color;
+    }
+
+    .search__wrapper {
+      background-color: $light-color;
+    }
+
+    .header__search--expanded .search__input {
+      color: $dark-color;
+    }
+
+    .header__search--expanded .search__wrapper i {
+      color: $primary-color;
+    }
+
+    .header__search--expanded .search__btn {
+      background-color: $light-color;
+      color: $dark-color;
+    }
+
+    .search__input {
+      color: $light-color;
+    }
+
+    .search__input::placeholder {
+      color: $primary-color;
+    }
+
+    .theme__btn--active {
+      background-color: hsla(0, 0%, 100%, 0.1);
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      transition: all 0s 50000s;
+      -webkit-text-fill-color: $dark-color !important;
+    }
+  }
+}

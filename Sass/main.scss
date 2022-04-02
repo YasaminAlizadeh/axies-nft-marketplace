@@ -5,5 +5,20 @@
 @import "./base/typography";
 
 @import "./layout/header";
+@import "./layout/hero";
+@import "./layout/footer";
 
+@import "./components/loading";
 @import "./components/buttons";
+@import "./components/menu";
+@import "./components/hero_character";
+@import "./components/hero_stars";
+@import "./components/features";
+@import "./components/auctions";
+@import "./components/collections";
+@import "./components/sellers";
+@import "./components/picks";
+@import "./components/socials";
+
+@import "./themes/dark";
+@import "./themes/light";

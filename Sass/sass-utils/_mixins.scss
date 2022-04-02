@@ -1,9 +1,14 @@
-@mixin light-theme-colors {
-  $main-color: $dark-color;
-  $secondary-color: $light-color;
-}
+@mixin shadow-animation($element, $shadow-color) {
+  & {
+    @keyframes planets-shine--#{$element} {
+      0%,
+      100% {
+        box-shadow: 0 0 3rem 0.1rem $shadow-color;
+      }
 
-@mixin dark-theme-colors {
-  $main-color: $light-color;
-  $secondary-color: $dark-color;
+      50% {
+        box-shadow: 0 0 2rem 0.1rem $shadow-color;
+      }
+    }
+  }
 }
