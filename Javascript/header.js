@@ -39,7 +39,7 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("click", (e) => {
   if (
-    !menu.contains(e.target) &&
+    -1 * e.offsetX > -1 * menu.offsetWidth &&
     !menuBtn.contains(e.target) &&
     !search.contains(e.target)
   ) {
