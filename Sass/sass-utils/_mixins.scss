@@ -12,3 +12,14 @@
     }
   }
 }
+
+@mixin flex($direction, $isCenter, $gap) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+
+  @if $isCenter {
+    align-items: center;
+    justify-content: center;
+  }
+}
