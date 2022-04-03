@@ -13,7 +13,7 @@
 
   .header__menu {
     background-color: $light-color;
-    color: $dark-color;
+    color: #14141f;
   }
 
   .menu__submenu::before {
@@ -184,20 +184,12 @@
     color: $primary-color;
   }
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: all 0s 50000s;
-    -webkit-text-fill-color: $dark-color !important;
-  }
+  .theme__btn--active {
+    background-color: hsla(0, 0%, 0%, 0.137);
 
-  ::-webkit-scrollbar-track {
-    background: $light-color;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: $dark-color;
+    @media screen and (min-width: 1300px) {
+      background-color: hsla(0, 0%, 100%, 0.137);
+    }
   }
 
   @media screen and (min-width: 1400px) {
@@ -243,18 +235,6 @@
 
     .search__input::placeholder {
       color: $primary-color;
-    }
-
-    .theme__btn--active {
-      background-color: hsla(0, 0%, 100%, 0.1);
-    }
-
-    input:-webkit-autofill,
-    input:-webkit-autofill:hover,
-    input:-webkit-autofill:focus,
-    input:-webkit-autofill:active {
-      transition: all 0s 50000s;
-      -webkit-text-fill-color: $dark-color !important;
     }
   }
 }
