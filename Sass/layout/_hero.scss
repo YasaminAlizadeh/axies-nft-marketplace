@@ -67,7 +67,7 @@
   width: 80%;
   overflow: hidden;
   transform: rotate(30deg);
-  animation: planet-rotate 9s infinite;
+  animation: planet-rotate 9s linear infinite;
 }
 
 .hero__img {
