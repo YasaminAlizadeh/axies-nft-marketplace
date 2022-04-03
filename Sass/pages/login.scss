@@ -1,0 +1,335 @@
+@import "../sass-utils/mixins";
+@import "../sass-utils/variables";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "./themes/dark";
+@import "./themes/light";
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: none;
+  background-color: #f3f2ff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  place-items: center;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
+    height: Min(100vh, 100rem);
+    overflow: hidden;
+  }
+
+  // @media screen and (min-width: 300px) {
+  // }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 50% 1fr;
+    grid-template-rows: unset;
+    gap: 5rem;
+  }
+
+  .sliders {
+    align-self: flex-start;
+    display: grid;
+    grid-template-rows: Repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: auto;
+    padding: 1rem 0;
+
+    @media screen and (min-width: 768px) {
+      width: Min(100%, 70rem);
+      grid-template-columns: Repeat(3, minmax(0, 1fr));
+      grid-template-rows: unset;
+      margin: auto;
+      padding: 0 1rem;
+    }
+
+    .slider__wrapper {
+      width: 200%;
+      height: 100%;
+      display: grid;
+      gap: Min(0.5%, 1rem);
+      overflow: clip;
+
+      @media screen and (min-width: 768px) {
+        width: 100%;
+        height: 120%;
+        display: grid;
+        grid-template-rows: Repeat(14, 1fr);
+      }
+
+      &:nth-child(1) {
+        animation: scroll 25s linear infinite;
+
+        @media screen and (min-width: 768px) {
+          animation: scroll-up 35s linear infinite;
+        }
+      }
+
+      &:nth-child(2) {
+        animation: scroll-rev 25s linear infinite;
+
+        @media screen and (min-width: 768px) {
+          animation: scroll-up-rev 35s linear infinite;
+        }
+      }
+
+      &:nth-child(3) {
+        animation: scroll 22s linear infinite;
+
+        @media screen and (min-width: 768px) {
+          animation: scroll-up 32s linear infinite;
+        }
+      }
+
+      &:hover {
+        animation-play-state: paused;
+      }
+
+      img {
+        grid-row: 1;
+        height: 100%;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 1rem;
+
+        @media screen and (min-width: 768px) {
+          width: 100%;
+          height: 100%;
+          grid-column: 1;
+          grid-row: unset;
+        }
+      }
+
+      @keyframes scroll {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+
+      @keyframes scroll-rev {
+        0%,
+        100% {
+          transform: translate3d(-50%, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+
+      @keyframes scroll-up {
+        0%,
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+        50% {
+          transform: translate3d(0, -50%, 0);
+        }
+      }
+
+      @keyframes scroll-up-rev {
+        0%,
+        100% {
+          transform: translate3d(0, -50%, 0);
+        }
+        50% {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  .login__wrapper {
+    @include flex(column, false, 3rem);
+    align-items: center;
+    width: Min(90%, 90rem);
+    height: 100%;
+    padding: 3rem 1rem;
+    color: $dark-color;
+
+    @media screen and (min-width: 768px) {
+      margin: unset;
+      justify-content: center;
+    }
+
+    .login__form {
+      @include flex(column, false, 3rem);
+      width: 100%;
+
+      .login__intro {
+        @include flex(row, true, 0);
+
+        .back__btn {
+          margin-right: auto;
+          color: $dark-color;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            color: rgba(0, 0, 0, 0.685);
+          }
+        }
+
+        .form__title {
+          margin-right: auto;
+          align-self: center;
+        }
+      }
+
+      .form__fieldset {
+        @include flex(column, false, 1rem);
+        border: none;
+      }
+
+      .form__input {
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        box-shadow: 0 0.2rem 0 -0.1rem #0000004d;
+      }
+
+      .form__submit {
+        padding: 1.5rem 0;
+        border: none;
+        border-radius: 0.6rem;
+        background-color: $primary-color;
+        color: $light-color;
+        font-size: 100%;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          filter: brightness(1.4);
+        }
+      }
+    }
+
+    .login__redirect {
+      a {
+        color: #4c40d8;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          filter: brightness(1.4);
+        }
+      }
+    }
+
+    .login__seperator {
+      position: relative;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #000000b7;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: calc(50% - 2rem);
+        height: 0.1rem;
+        background-color: #00000023;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: calc(50% - 2rem);
+        height: 0.1rem;
+        background-color: #00000023;
+      }
+    }
+
+    .login__socials {
+      @include flex(row, true, 2rem);
+      width: 100%;
+
+      .login__social {
+        @include flex(row, true, 0);
+        width: 4rem;
+        height: 4rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: all 0.25s ease-in-out;
+
+        $colors: #2a2f45, #5caae7, #d64f3d, #414142;
+
+        @for $i from 1 through length($colors) {
+          &:nth-of-type(#{$i}) {
+            background-color: nth($colors, $i);
+          }
+        }
+
+        &:hover {
+          border-radius: 50%;
+          filter: brightness(1.2);
+        }
+
+        .social__link {
+          color: $light-color;
+          font-size: 120%;
+        }
+      }
+    }
+  }
+}
+
+.theme--dark {
+  background-color: $dark-color;
+
+  .container {
+    .login__wrapper {
+      color: $light-color;
+
+      .login__form {
+        .back__btn {
+          color: $light-color;
+
+          &:hover {
+            color: rgba(255, 255, 255, 0.685);
+          }
+        }
+
+        .form__input {
+          color: #fff;
+          box-shadow: 0 0.2rem 0 -0.1rem #ffffff4d;
+        }
+      }
+      .login__seperator {
+        color: #ffffffb7;
+
+        &::after {
+          background-color: #ffffff23;
+        }
+
+        &::before {
+          background-color: #ffffff23;
+        }
+      }
+    }
+  }
+}

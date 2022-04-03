@@ -6,12 +6,12 @@
   }
 
   .header__menu {
-    background-color: $dark-color;
-    color: $light-color;
+    background-color: #f3f2ff;
+    color: $dark-color;
   }
 
   .menu__submenu::before {
-    background-color: $dark-color;
+    background-color: #f3f2ff;
   }
 
   .menu__item-btn:hover {
@@ -19,13 +19,13 @@
   }
 
   .menu__submenu {
-    color: $light-color;
-    background-color: rgba(255, 255, 255, 0.05);
+    color: $dark-color;
+    background-color: rgba(0, 0, 0, 0.05);
   }
 
   .submenu__item:hover {
     background-color: rgba(255, 255, 255, 0.08);
-    color: $light-color;
+    color: $dark-color;
   }
 
   .search__input {
@@ -33,7 +33,7 @@
   }
 
   .search__input::placeholder {
-    color: $light-color;
+    color: $dark-color;
   }
 
   .login__btn {
@@ -172,20 +172,8 @@
     color: $light-color;
   }
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: all 0s 50000s;
-    -webkit-text-fill-color: $light-color !important;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: $dark-color;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: $light-color;
+  .theme__btn--active {
+    background-color: hsla(0, 0%, 0%, 0.137);
   }
 
   @media screen and (min-width: 1400px) {
@@ -195,8 +183,8 @@
     }
 
     .menu__submenu {
-      background-color: $dark-color;
-      color: $light-color;
+      background-color: #f3f2ff;
+      color: $dark-color;
     }
 
     .menu__item-btn:hover {
@@ -205,7 +193,7 @@
     }
 
     .submenu__item::before {
-      box-shadow: 0 0 0 0.02rem $light-color;
+      box-shadow: 0 0 0 0.02rem $dark-color;
     }
 
     .search__wrapper {
@@ -213,16 +201,16 @@
     }
 
     .header__search--expanded .search__input {
-      color: $light-color;
+      color: $dark-color;
     }
 
     .header__search--expanded .search__wrapper i {
-      color: $light-color;
+      color: $dark-color;
     }
 
     .header__search--expanded .search__btn {
       background-color: $dark-color;
-      color: $light-color;
+      color: $dark-color;
     }
 
     .search__input {
@@ -230,7 +218,7 @@
     }
 
     .search__input::placeholder {
-      color: $light-color;
+      color: $dark-color;
     }
 
     .theme__btn--active {
@@ -242,7 +230,7 @@
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
       transition: all 0s 50000s;
-      -webkit-text-fill-color: $light-color !important;
+      -webkit-text-fill-color: $dark-color !important;
     }
   }
 }
