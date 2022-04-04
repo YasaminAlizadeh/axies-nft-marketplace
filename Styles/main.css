@@ -11,8 +11,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  position: relative;
   height: 100vh;
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   color: #14141f; }
@@ -80,7 +80,7 @@ main {
   place-items: center;
   height: 4rem;
   width: 4rem;
-  background-image: url("../../Assets/Images/03_Live Auctions/heart-animation.png");
+  background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png");
   background-position: left;
   background-repeat: no-repeat;
   background-size: 2900%; }
@@ -551,6 +551,10 @@ a {
   .footer__links {
     gap: 1.5rem; } }
 @media screen and (min-width: 1312px) {
+  #footer {
+    width: fit-content;
+    margin: auto; }
+
   .footer__wrapper {
     width: 95%;
     grid-template-columns: Repeat(5, minmax(0, 1fr));
@@ -559,6 +563,9 @@ a {
   .footer__item:last-child {
     grid-area: unset;
     gap: 1rem; } }
+body {
+  height: 100vh; }
+
 .body--loaded .loading__spinner {
   display: none; }
 
@@ -657,7 +664,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 1.5rem 3rem;
+  padding: 0.8rem 3rem;
   border-radius: 10rem;
   box-shadow: inset 0 0 0 0.3rem #3930a3;
   color: inherit;
@@ -698,6 +705,9 @@ a {
     .section__explore-btn {
       margin-right: unset;
       margin-left: auto; } }
+  @media screen {
+    .section__explore-btn .btn--primary {
+      padding: 1.5rem 3rem; } }
 
 .header__menu {
   position: fixed;
