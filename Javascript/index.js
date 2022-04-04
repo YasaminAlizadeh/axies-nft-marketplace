@@ -1,5 +1,3 @@
-let AssetsDirectory = "./Assets";
-
 // --------- First Load
 
 document.addEventListener("DOMContentLoaded", () => {

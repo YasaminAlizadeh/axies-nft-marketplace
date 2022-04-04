@@ -1,5 +1,3 @@
-AssetsDirectory = "../Assets";
-
 const tabsContent = document.getElementById("tabs-content");
 const tabsLabelsContainer = document.getElementById("tabs-labels");
 const tabsLabels = document.getElementsByClassName("tabs__label");
