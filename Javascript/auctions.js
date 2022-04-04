@@ -1,3 +1,5 @@
+const currentURL = window.location.href;
+
 const generateNFTCard = (data) => {
   const card = document.createElement("article");
   if (data.is_liked) {
@@ -30,9 +32,9 @@ const generateNFTCard = (data) => {
   </div>
 
 <div class="card__info">
-<h3 class="card__title"><a href="./Pages/item.html?${data.id}">${
-    data.title
-  }</a></h3>
+<h3 class="card__title"><a href="${
+    currentURL.split("?").length > 1 ? "" : "./Pages/item.html"
+  }?${data.id}">${data.title}</a></h3>
   <div class="card__creator">
     <a href="#">
     <img
