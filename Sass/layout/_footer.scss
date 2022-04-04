@@ -218,6 +218,11 @@
 }
 
 @media screen and (min-width: 1312px) {
+  #footer {
+    width: fit-content;
+    margin: auto;
+  }
+
   .footer__wrapper {
     width: 95%;
     grid-template-columns: Repeat(5, minmax(0, 1fr));
