@@ -1338,6 +1338,10 @@ body {
   height: 100%; }
   body .header__wrapper {
     box-shadow: 0 0.1rem 0.1rem 0.01rem #00000013; }
+    body .header__wrapper .menu__submenu {
+      background-color: white; }
+      body .header__wrapper .menu__submenu::before {
+        background-color: white; }
     body .header__wrapper .header__wallet {
       box-shadow: inset 0 0 0 0.2rem #3930a3; }
   body .intro {
@@ -1601,8 +1605,6 @@ body {
         grid-template-columns: 35% 1fr;
         align-items: flex-start;
         gap: 3rem; } }
-  body .like__btn, body .item__wrapper .details--right .details__interactions .views__icon {
-    background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png"); }
 
 .theme--light .header__wrapper--scrolled {
   background-color: #f3f2ff; }
@@ -1655,5 +1657,8 @@ body {
   background-color: #14141f; }
   .theme--dark .auctions__wrapper .auctions__card {
     background-color: #c6c6ff1e; }
+
+.like__btn, body .item__wrapper .details--right .details__interactions .views__icon {
+  background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png"); }
 
 /*# sourceMappingURL=item.css.map */

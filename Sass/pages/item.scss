@@ -384,10 +384,6 @@ body {
       gap: 3rem;
     }
   }
-
-  .like__btn {
-    background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png");
-  }
 }
 
 .theme--light {
@@ -511,4 +507,8 @@ body {
       background-color: #c6c6ff1e;
     }
   }
+}
+
+.like__btn {
+  background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png");
 }
