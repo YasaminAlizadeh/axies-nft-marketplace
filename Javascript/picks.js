@@ -1,3 +1,83 @@
+const generatePicksCard = (data) => {
+  const card = document.createElement("article");
+  if (data.is_liked) {
+    card.className += " article--liked";
+  }
+  card.id = data.id;
+
+  let container;
+  let element;
+
+  container = document.getElementById("picks-cards");
+  card.className = `article picks__card ${
+    data.is_liked ? "article--liked" : ""
+  }`;
+
+  element = `
+  <div class="card__img-container">
+  <img
+    src="${AssetsDirectory}${data.NFT_img}"
+    alt="NFT"
+    class="card__img"
+    loading="lazy"
+  />
+ <div class="article__likes pick__likes">
+<div class="like__btn"></div>
+<p class="article__likes-count pick__likes-count">${data.likes_count}</p>
+</div>
+  </div>
+
+<div class="card__info">
+<h3 class="card__title"><a href="./Pages/item.html?${data.id}">${
+    data.title
+  }</a></h3>
+  <div class="card__creator">
+    <a href="#">
+    <img
+      src="${AssetsDirectory}${data.creator_img}"
+      alt="nft creator"
+      class="creator__img"
+    />
+    </a>
+  <div class="creator__info">
+    <p class="creatot__label">Creator</p>
+    <a href="#" class="creator__name">${data.creator}</a>
+    </p>
+  </div>
+  ${data.is_BSC ? `<div class="creator__bsc">BSC</div>` : ``}
+  </div>
+  </div>
+
+  <div class="card__current-bid">
+  <div class="card__bid-info">
+  <p class="card__bid-label">Current Bid</p>
+  <p class="card__bid-number"><span>${data.current_bid} ETH</span>
+   = $${Math.floor(data.current_bid * 2604.42).toLocaleString()}</p>
+  </div>
+ <div class="card__bid-history"><i class="fa-solid fa-rotate"></i> View History</div>
+</div>`;
+
+  card.innerHTML = element;
+
+  // Add Like functionality to Heart Buttons in Cards
+  [...card.getElementsByClassName("article__likes")][0] &&
+    [...card.getElementsByClassName("article__likes")][0].addEventListener(
+      "click",
+      (e) => likeFunction(e, [...itemsData])
+    );
+
+  // Add Rotate functionality to History Buttons in picks Cards
+  const historyBtn = [...card.getElementsByClassName("card__bid-history")][0];
+
+  historyBtn &&
+    historyBtn.addEventListener("click", () => {
+      historyBtn.classList.toggle("card__bid-history--active");
+    });
+
+  // Add Card to Page
+  container.appendChild(card);
+};
+
 // --------- Add Functionality to the Sort Button in Picks Section
 
 const sortBtn = document.getElementById("picks-sort-btn");
@@ -25,27 +105,27 @@ sortBtn.addEventListener("click", () => {
     case "date-up":
       btnIcon = `<i class="fa-solid fa-arrow-down-wide-short"></i>`;
       btnText = "Date: Latest";
-      picksData
+      itemsData
         .sort((pick1, pick2) => pick1.date_added - pick2.date_added)
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
     case "date-down":
       btnIcon = `<i class="fa-solid fa-arrow-down-short-wide"></i>`;
       btnText = "Date: Oldest";
-      picksData
+      itemsData
         .sort((pick1, pick2) => pick2.date_added - pick1.date_added)
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
     case "name-up":
       btnIcon = `<i class="fa-solid fa-arrow-down-short-wide"></i>`;
       btnText = "Name: A-Z";
-      picksData
+      itemsData
         .sort((pick1, pick2) => {
           if (pick1.title.toLowerCase() < pick2.title.toLowerCase()) {
             return -1;
@@ -56,14 +136,14 @@ sortBtn.addEventListener("click", () => {
           }
         })
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
     case "name-down":
       btnIcon = `<i class="fa-solid fa-arrow-down-wide-short"></i>`;
       btnText = "Name: Z-A";
-      picksData
+      itemsData
         .sort((pick1, pick2) => {
           if (pick1.title.toLowerCase() > pick2.title.toLowerCase()) {
             return -1;
@@ -74,14 +154,14 @@ sortBtn.addEventListener("click", () => {
           }
         })
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
     case "price-up":
       btnIcon = `<i class="fa-solid fa-arrow-down-short-wide"></i>`;
       btnText = "Price: Low To High";
-      picksData
+      itemsData
         .sort((pick1, pick2) => {
           if (pick1.current_bid < pick2.current_bid) {
             return -1;
@@ -92,14 +172,14 @@ sortBtn.addEventListener("click", () => {
           }
         })
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
     case "price-down":
       btnIcon = `<i class="fa-solid fa-arrow-down-wide-short"></i>`;
       btnText = "Price: High to Low";
-      picksData
+      itemsData
         .sort((pick1, pick2) => {
           if (pick1.current_bid > pick2.current_bid) {
             return -1;
@@ -110,14 +190,14 @@ sortBtn.addEventListener("click", () => {
           }
         })
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
     case "likes-down":
       btnIcon = `<i class="fa-solid fa-arrow-down-wide-short"></i>`;
       btnText = "Most Popular";
-      picksData
+      itemsData
         .sort((pick1, pick2) => {
           if (pick1.likes_count > pick2.likes_count) {
             return -1;
@@ -128,7 +208,7 @@ sortBtn.addEventListener("click", () => {
           }
         })
         .forEach((pick, index) => {
-          index < picksPerPage && generateCard("pick", pick);
+          index < picksPerPage && generatePicksCard(pick);
         });
       break;
 
@@ -143,8 +223,8 @@ sortBtn.addEventListener("click", () => {
 
 let picksPerPage = 8;
 
-picksData.forEach((pick, index) => {
-  index < picksPerPage && generateCard("pick", pick);
+itemsData.forEach((pick, index) => {
+  index < picksPerPage && generatePicksCard(pick);
 });
 
 const loadMoreBtn = document.getElementById("picks-load");
@@ -155,8 +235,8 @@ loadMoreBtn.addEventListener("click", () => {
 
   picksPerPage += 8;
 
-  picksData.forEach((pick, index) => {
-    index < picksPerPage && generateCard("pick", pick);
+  itemsData.forEach((pick, index) => {
+    index < picksPerPage && generatePicksCard(pick);
   });
 });
 
