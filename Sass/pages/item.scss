@@ -108,6 +108,10 @@ body {
         .details__likes {
           height: 3rem;
           cursor: pointer;
+
+          .like__btn {
+            background-image: url("../../Assets//Images/03_Live_Auctions/heart-animation.png");
+          }
         }
 
         .views__icon {

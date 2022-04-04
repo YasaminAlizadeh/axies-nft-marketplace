@@ -80,7 +80,7 @@ main {
   place-items: center;
   height: 4rem;
   width: 4rem;
-  background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png");
+  background-image: url("../Assets/Images/03_Live_Auctions/heart-animation.png");
   background-position: left;
   background-repeat: no-repeat;
   background-size: 2900%; }
@@ -1407,6 +1407,8 @@ body {
         body .item__wrapper .details--right .details__interactions .details__likes, body .item__wrapper .details--right .details__interactions .views__icon {
           height: 3rem;
           cursor: pointer; }
+          body .item__wrapper .details--right .details__interactions .details__likes .like__btn, body .item__wrapper .details--right .details__interactions .views__icon .like__btn, body .item__wrapper .details--right .details__interactions .details__likes .views__icon, body .item__wrapper .details--right .details__interactions .views__icon .views__icon {
+            background-image: url("../../Assets//Images/03_Live_Auctions/heart-animation.png"); }
         body .item__wrapper .details--right .details__interactions .views__icon {
           background: unset;
           cursor: unset; }
