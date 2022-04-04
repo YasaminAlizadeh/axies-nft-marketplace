@@ -185,8 +185,9 @@ const calculateColumnsCount = () => {
 
 // --------- Pagination Data
 
-let currentPage = 1;
 let pagesCount;
+let currentPage = Number(localStorage.getItem("currentPage")) || 1;
+
 const paginationContainer = document.getElementById("pagination-pages");
 
 let pageInput = document.getElementById("page-num");
@@ -243,6 +244,8 @@ const changePageInput = (e) => {
     e.target.value = pagesCount;
   } else {
     currentPage = Number(e.target.value);
+    localStorage.setItem("currentPage", currentPage);
+
     slidePages(page);
     paginationBar();
   }
@@ -259,6 +262,11 @@ const updateCardsPerPage = (columns) => {
     itemsData.length
       ? Math.floor(itemsData.length / cardsPerPage)
       : Math.floor(itemsData.length / cardsPerPage) + 1;
+
+  page.style.setProperty(
+    "--transformX",
+    `-${(100 / pagesCount) * (currentPage - 1)}%`
+  );
 
   if (pagesCount > 20) {
     pageInputContainer.style.display = "flex";
@@ -293,6 +301,8 @@ window.addEventListener("resize", () => {
         ? newCurrentPage
         : Math.floor(newCurrentPage) + 1
       : 1;
+  localStorage.setItem("currentPage", currentPage);
+
   slidePages(page);
   paginationBar();
 });
@@ -305,10 +315,13 @@ const pageCards = [...document.getElementsByClassName("auctions__card")];
 paginationPrevButton.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage -= 1;
+    localStorage.setItem("currentPage", currentPage);
+
     slidePages(page);
     paginationBar();
   } else {
     currentPage = 1;
+    localStorage.setItem("currentPage", currentPage);
   }
 });
 
@@ -317,10 +330,13 @@ const paginationNextButton = document.getElementById("pagination-next-btn");
 paginationNextButton.addEventListener("click", () => {
   if (currentPage < pagesCount) {
     currentPage += 1;
+    localStorage.setItem("currentPage", currentPage);
+
     slidePages(page);
     paginationBar();
   } else {
     currentPage = pagesCount;
+    localStorage.setItem("currentPage", currentPage);
   }
 });
 
