@@ -1337,8 +1337,10 @@ a {
 
 body {
   height: 100%; }
-  body .header__wrapper .header__wallet {
-    box-shadow: inset 0 0 0 0.2rem #3930a3; }
+  body .header__wrapper {
+    box-shadow: 0 0.1rem 0.1rem 0.01rem #00000013; }
+    body .header__wrapper .header__wallet {
+      box-shadow: inset 0 0 0 0.2rem #3930a3; }
   body .intro {
     display: flex;
     flex-direction: column;
@@ -1599,8 +1601,13 @@ body {
         align-items: flex-start;
         gap: 3rem; } }
 
-.theme--dark .header__wrapper .header__wallet {
-  box-shadow: inset 0 0 0 0.2rem white; }
+.theme--light .header__wrapper--scrolled {
+  background-color: #f3f2ff; }
+
+.theme--dark .header__wrapper {
+  box-shadow: 0 0.1rem 0.1rem 0.01rem #b2b2ca2a; }
+  .theme--dark .header__wrapper .header__wallet {
+    box-shadow: inset 0 0 0 0.2rem white; }
 .theme--dark .intro {
   background: linear-gradient(141deg, #ffffff18, #f1f1f118, #ffffff18), url("../../Assets/Images/08_item/colin-steele-dr3AHOwu2AY-unsplash.jpg");
   background-size: cover;
