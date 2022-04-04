@@ -556,7 +556,6 @@ a {
     margin: auto; }
 
   .footer__wrapper {
-    width: 95%;
     grid-template-columns: Repeat(5, minmax(0, 1fr));
     place-items: center; }
 
@@ -1359,7 +1358,6 @@ body {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
 @media screen and (min-width: 1312px) {
   .features__wrapper {
-    width: 95%;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr);
     gap: 3rem; } }

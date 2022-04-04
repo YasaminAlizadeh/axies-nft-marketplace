@@ -1,8 +1,8 @@
 // --------- First Load
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.body.classList.add("body--loaded");
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.body.classList.add("body--loaded");
+// });
 
 // --------- Add Functionality to Scroll Up Button
 
