@@ -705,10 +705,10 @@ body {
     .section__explore-btn {
       margin-right: unset;
       margin-left: auto; } }
-  @media screen {
-    .section__explore-btn .btn--primary {
-      padding: 1.5rem 3rem; } }
 
+@media screen and (min-width: 576px) {
+  .btn--primary {
+    padding: 1.5rem 3rem; } }
 .header__menu {
   position: fixed;
   top: 0;
