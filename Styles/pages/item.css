@@ -1653,7 +1653,7 @@ body {
   background-color: #14141f; }
   .theme--dark .auctions__wrapper .auctions__card {
     background-color: #c6c6ff1e; }
-    .theme--dark .auctions__wrapper .auctions__card .like__btn, .theme--dark .auctions__wrapper .auctions__card body .item__wrapper .details--right .details__interactions .views__icon, body .item__wrapper .details--right .details__interactions .theme--dark .auctions__wrapper .auctions__card .views__icon {
-      background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png"); }
+  .theme--dark .auctions__wrapper .like__btn, .theme--dark .auctions__wrapper body .item__wrapper .details--right .details__interactions .views__icon, body .item__wrapper .details--right .details__interactions .theme--dark .auctions__wrapper .views__icon {
+    background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png"); }
 
 /*# sourceMappingURL=item.css.map */
