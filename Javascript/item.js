@@ -8,7 +8,6 @@ const urlParameter = (url) => {
   const itemId = (url + "?").split("?")[1];
   selectedItem = itemsData.find((item) => item.id === itemId);
 
-  console.log(selectedItem);
   displayItem(selectedItem);
 };
 
