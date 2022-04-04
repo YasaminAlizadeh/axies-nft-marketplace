@@ -1,4 +1,4 @@
-let AssetsDirectory = "../Assets";
+let AssetsDirectory = "./Assets";
 
 // --------- First Load
 
