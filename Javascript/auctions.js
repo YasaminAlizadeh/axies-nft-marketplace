@@ -1,5 +1,3 @@
-AssetsDirectory = "../Assets";
-
 const generateNFTCard = (data) => {
   const card = document.createElement("article");
   if (data.is_liked) {
