@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="../Assets/Images/01_header/favicon.ico?"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="../Styles/pages/item.css" />
+
+    <title>item</title>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <div class="container header__wrapper">
+        <div class="header__title">
+          <img
+            src="../Assets/Images/01_header/logo_dark.png"
+            alt="logo"
+            class="title__img"
+          />
+        </div>
+
+        <div id="menu" class="header__menu">
+          <div id="menu-back-btn" class="menu__back-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+
+          <div class="menu--left">
+            <div class="menu__item">
+              <div class="menu__item-btn">
+                <p class="menu__label">Home</p>
+                <i class="fa-solid fa-chevron-down menu__icon"></i>
+              </div>
+              <ul class="menu__submenu">
+                <li class="menu__item submenu__item">Home 1</li>
+                <li class="menu__item submenu__item">Home 2</li>
+                <li class="menu__item submenu__item">
+                  Home 3
+                  <i class="fa-solid fa-chevron-right menu__icon"></i>
+                  <ul class="menu__submenu menu__sub-submenu">
+                    <li class="menu__item submenu__item">Home 3 - 1</li>
+                    <li class="menu__item submenu__item">Home 3 - 2</li>
+                    <li class="menu__item submenu__item">Home 3 - 3</li>
+                    <li class="menu__item submenu__item">Home 3 - 4</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+              <div class="menu__item-btn">
+                <p class="menu__label">Explore</p>
+                <i class="fa-solid fa-chevron-down menu__icon"></i>
+              </div>
+              <ul class="menu__submenu">
+                <li class="menu__item submenu__item">Explore 1</li>
+                <li class="menu__item submenu__item">Explore 2</li>
+                <li class="menu__item submenu__item">Explore 3</li>
+                <li class="menu__item submenu__item">Explore 4</li>
+                <li class="menu__item submenu__item">Explore 5</li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+              <div class="menu__item-btn">
+                <p class="menu__label">Activity</p>
+                <i class="fa-solid fa-chevron-down menu__icon"></i>
+              </div>
+              <ul class="menu__submenu">
+                <li class="menu__item submenu__item">Activity 1</li>
+                <li class="menu__item submenu__item">Activity 2</li>
+                <li class="menu__item submenu__item">Activity 3</li>
+                <li class="menu__item submenu__item">Activity 4</li>
+                <li class="menu__item submenu__item">Activity 5</li>
+                <li class="menu__item submenu__item">Activity 6</li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+              <div class="menu__item-btn">
+                <p class="menu__label">Community</p>
+                <i class="fa-solid fa-chevron-down menu__icon"></i>
+              </div>
+              <ul class="menu__submenu">
+                <li class="menu__item submenu__item">Community 1</li>
+                <li class="menu__item submenu__item">Community 2</li>
+                <li class="menu__item submenu__item">
+                  Community 3
+                  <i class="fa-solid fa-chevron-right menu__icon"></i>
+                  <ul class="menu__submenu menu__sub-submenu">
+                    <li class="menu__item submenu__item">Community 3 - 1</li>
+                    <li class="menu__item submenu__item">Community 3 - 2</li>
+                    <li class="menu__item submenu__item">Community 3 - 3</li>
+                    <li class="menu__item submenu__item">Community 3 - 4</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+              <div class="menu__item-btn">
+                <p class="menu__label">Pages</p>
+                <i class="fa-solid fa-chevron-down menu__icon"></i>
+              </div>
+              <ul class="menu__submenu">
+                <li class="menu__item submenu__item">Pages 1</li>
+                <li class="menu__item submenu__item">Pages 2</li>
+                <li class="menu__item submenu__item">Pages 3</li>
+                <li class="menu__item submenu__item">Pages 4</li>
+              </ul>
+            </div>
+
+            <div class="menu__item">
+              <div class="menu__item-btn">
+                <p class="menu__label">Contact</p>
+                <i class="fa-solid fa-chevron-down menu__icon"></i>
+              </div>
+              <ul class="menu__submenu">
+                <li class="menu__item submenu__item">Contract 1</li>
+                <li class="menu__item submenu__item">Contract 2</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="menu--right">
+            <div id="header-search" class="header__search">
+              <div id="header-search-wrapper" class="search__wrapper">
+                <i class="fa-solid fa-magnifying-glass search__icon"></i>
+                <input
+                  type="search"
+                  name="search"
+                  id="search"
+                  class="search__input"
+                  placeholder="Search Something..."
+                />
+              </div>
+              <div id="search-btn" class="search__btn">
+                <i class="fa-solid fa-magnifying-glass search__icon"></i>
+              </div>
+            </div>
+
+            <div class="header__wallet btn btn--primary">
+              <i class="fa-solid fa-wallet"></i>
+              <p>Wallet connect</p>
+            </div>
+
+            <div class="theme">
+              <div id="light-theme-btn" class="theme__btn theme__btn--light">
+                <ion-icon name="sunny-outline"></ion-icon>
+              </div>
+              <div id="dark-theme-btn" class="theme__btn theme__btn--dark">
+                <ion-icon name="moon-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="login">
+          <a href="./login.html" class="login__btn">
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </div>
+        <div id="menu-btn" class="header__menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <section id="intro" class="container intro">
+      <h1>Item Details</h1>
+      <p>
+        <a href="../index.html">Home</a> / <a href="#">Explore</a> /
+        <a href="#">Item Details</a>
+      </p>
+    </section>
+
+    <section id="item-details" class="container article item__wrapper">
+      <div class="details--left">
+        <img src="" alt="item" id="item-img" class="details__img" />
+      </div>
+
+      <div class="details--right">
+        <h2 id="item-title" class="item__title"></h2>
+        <div class="details__interactions">
+          <div class="details__views">
+            <div class="views__icon">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <p id="item-views"></p>
+          </div>
+          <div id="item-like-btn" class="details__likes">
+            <div class="like__btn"></div>
+            <p id="item-likes" class="article__likes-count"></p>
+          </div>
+        </div>
+        <div class="details__btns">
+          <div class="details__share">
+            <ion-icon name="paper-plane-outline"></ion-icon>
+          </div>
+          <div class="details__more">
+            <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+          </div>
+        </div>
+        <a href="#" class="details__owner">
+          <div class="owner__wrapper">
+            <img src="" alt="owner" id="item-owner-img" />
+            <div class="owner__info">
+              <p>Owned By</p>
+              <strong id="item-owner"></strong>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="details__creator">
+          <div class="creator__wrapper">
+            <img src="" alt="creator" id="item-creator-img" />
+            <div class="creator__info">
+              <p>Created By</p>
+              <strong id="item-creator"></strong>
+            </div>
+          </div>
+        </a>
+        <div class="details__text">
+          Habitant sollicitudin faucibus cursus lectus pulvinar dolor non
+          ultrices eget. Facilisi lobortisal morbi fringilla urna amet sed ipsum
+          vitae ipsum malesuada. Habitant sollicitudin faucibus cursus lectus
+          pulvinar dolor non ultrices eget. Facilisi lobortisal morbi fringilla
+          urna amet sed ipsum
+        </div>
+        <div class="details__current-bid">
+          <p>Current Bid</p>
+          <p class="card__bid-number">
+            <strong id="item-current-bid"></strong>
+            = <span id="item-current-bid-dollars"></span>
+          </p>
+        </div>
+        <div class="details__countdown">
+          <p>Countdown</p>
+          <strong id="item-countdown" class="details__remaining-time"></strong>
+        </div>
+        <a href="" class="btn btn--primary details__bid-btn"
+          ><ion-icon name="bag-outline"></ion-icon>Place a bid</a
+        >
+
+        <section class="details__tabs">
+          <ul id="tabs-labels" class="tabs__labels" style="--active-index: 0">
+            <li id="tab-1" class="tabs__label tabs__label--active">
+              Bid History
+            </li>
+            <li id="tab-2" class="tabs__label">Info</li>
+            <li id="tab-3" class="tabs__label">Provenance</li>
+          </ul>
+          <div id="tabs-content" class="tabs__content"></div>
+        </section>
+      </div>
+    </section>
+
+    <section id="auctions">
+      <div class="container auctions__wrapper">
+        <div class="section__header">
+          <h2 class="section__title">Live Auctions</h2>
+          <a href="#" class="section__explore-btn">Explore More</a>
+        </div>
+
+        <div class="auctions__pages">
+          <div
+            id="auctions-page"
+            class="auctions__page"
+            style="--transformX: 0"
+          ></div>
+          <div class="pagination__btns">
+            <button
+              id="pagination-prev-btn"
+              class="pagination__btn pagination__btn--previous"
+            >
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="page-select">
+              <div id="pagination-pages" class="page-select__btns"></div>
+              <div id="page-input-container" class="page-select__form">
+                <input
+                  type="number"
+                  name="page-num"
+                  id="page-num"
+                  class="page-select__input"
+                />
+                <p>/</p>
+                <p id="pages-number"></p>
+              </div>
+            </div>
+            <button
+              id="pagination-next-btn"
+              class="pagination__btn pagination__btn--next"
+            >
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container footer__wrapper">
+        <div class="footer__item">
+          <img
+            src="../Assets/Images/01_header/logo_dark.png"
+            alt="logo"
+            class="footer__logo"
+          />
+          <p class="footer__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            tempore aperiam reiciendis amet.
+          </p>
+        </div>
+
+        <div class="footer__item">
+          <h3 class="footer__title">My Account</h3>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Authors</a>
+            <a href="#" class="footer__link">Collection</a>
+            <a href="#" class="footer__link">Author Profile</a>
+            <a href="#" class="footer__link">Create Item</a>
+          </div>
+        </div>
+
+        <div class="footer__item">
+          <h3 class="footer__title">Resources</h3>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Help & Support</a>
+            <a href="#" class="footer__link">Live Auctions</a>
+            <a href="#" class="footer__link">Item Details</a>
+            <a href="#" class="footer__link">Activity</a>
+          </div>
+        </div>
+
+        <div class="footer__item">
+          <h3 class="footer__title">Company</h3>
+          <div class="footer__links">
+            <a href="#" class="footer__link">Explore</a>
+            <a href="#" class="footer__link">Contact Us</a>
+            <a href="#" class="footer__link">Our Blog</a>
+            <a href="#" class="footer__link">FAQ</a>
+          </div>
+        </div>
+
+        <div class="footer__item">
+          <h3 class="footer__title">Subscribe to Us</h3>
+          <form class="footer__form">
+            <input
+              type="email"
+              class="footer__input"
+              placeholder="info@youremail.com"
+            />
+            <button type="submit" class="footer__submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+          <div class="footer__socials">
+            <div class="footer__social-btn">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="footer__social-btn">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer__social-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <div class="footer__social-btn">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="footer__social-btn">
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <div class="footer__social-btn">
+              <i class="fa-brands fa-discord"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="text"></div>
+
+    <script src="../Assets/Data/itemsData.js"></script>
+    <script src="../Javascript/header.js"></script>
+    <script src="../Javascript/auctions.js"></script>
+    <script src="../Javascript/theme.js"></script>
+    <script src="../Javascript/item.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

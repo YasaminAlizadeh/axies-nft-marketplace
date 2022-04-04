@@ -1,0 +1,496 @@
+@import "../sass-utils/mixins";
+@import "../sass-utils/variables";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../layout/header";
+@import "../layout/footer";
+
+@import "../components/buttons";
+@import "../components/menu";
+@import "../components/auctions";
+
+@import "../themes/dark";
+@import "../themes/light";
+
+body {
+  height: 100%;
+
+  .header__wrapper {
+    .header__wallet {
+      box-shadow: inset 0 0 0 0.2rem $primary-color;
+    }
+  }
+
+  .intro {
+    @include flex(column, true, 1rem);
+    background: linear-gradient(141deg, #ffffff80, #f1f1f180, #ffffff80),
+      url("../../Assets/Images/08_item/colin-steele-dr3AHOwu2AY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5rem;
+
+    h1 {
+      font-size: 300%;
+    }
+
+    a {
+      &:not(:last-of-type) {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &:last-of-type {
+        color: $dark-color;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      padding-top: 10rem;
+    }
+  }
+
+  .item__wrapper {
+    height: max-content;
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2rem;
+    align-items: center;
+    background-color: #f3f2ff;
+
+    .details--left {
+      width: min(100%, 100rem);
+      height: 100%;
+
+      .details__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: auto;
+      }
+    }
+
+    .details--right {
+      display: grid;
+      grid-template-areas: "item-title item-title" "item-interaction item-interaction" "item-btns item-btns" "item-owner item-owner" "item-creator item-creator" "item-text item-text" "item-current-bid item-current-bid" "item-countdown item-countdown" "item-btn item-btn" "item-tabs item-tabs";
+      grid-template-columns: Repeat(2, minmax(0, 1fr));
+      place-items: center;
+      gap: 1rem;
+
+      .item__title {
+        grid-area: item-title;
+        margin-right: auto;
+      }
+
+      .details__interactions {
+        @include flex(row, false, 1rem);
+        grid-area: item-interaction;
+
+        & > div {
+          @include flex(row, true, 0);
+          padding-right: 1.5rem;
+          background-color: rgb(11, 11, 19);
+          color: $light-color;
+          border-radius: 10rem;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        .details__likes {
+          height: 3rem;
+          cursor: pointer;
+        }
+
+        .views__icon {
+          @extend .details__likes;
+          @extend .like__btn;
+          background: unset;
+          cursor: unset;
+        }
+
+        @media screen and (min-width: 576px) {
+          margin-right: auto;
+        }
+      }
+
+      .details__btns {
+        @include flex(row, false, 1rem);
+        grid-area: item-btns;
+        align-items: center;
+
+        & > div {
+          @include flex(row, true, 0);
+          padding: 0.8rem;
+          border-radius: 50%;
+          background-color: #2e2e642a;
+          cursor: pointer;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        @media screen and (min-width: 576px) {
+          margin-left: auto;
+        }
+      }
+
+      .details__creator {
+        grid-area: item-creator;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: #2e2e642a;
+        color: $dark-color;
+        transition: all 0.3s ease-in-out;
+
+        .creator__wrapper {
+          display: grid;
+          grid-template-columns: min(25%, 7rem) 1fr;
+          gap: 1rem;
+          align-items: center;
+
+          img {
+            border-radius: 1rem;
+            width: 100%;
+          }
+
+          .creator__info {
+            @include flex(column, false, 0.5rem);
+          }
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .details__owner {
+        @extend .details__creator;
+        grid-area: item-owner;
+
+        .owner__wrapper {
+          @extend .creator__wrapper;
+
+          .owner__info {
+            @include flex(column, false, 0.5rem);
+          }
+        }
+      }
+
+      .details__text {
+        grid-area: item-text;
+        color: $secondary-color--dark;
+      }
+
+      .details__current-bid {
+        @include flex(row, false, 0);
+        grid-area: item-current-bid;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: #2e2e642a;
+
+        span {
+          font-weight: unset;
+          font-size: unset;
+        }
+      }
+
+      .details__countdown {
+        @extend .details__current-bid;
+        grid-area: item-countdown;
+      }
+
+      .details__bid-btn {
+        grid-area: item-btn;
+        width: 100%;
+        padding: 1rem;
+        font-weight: 600;
+        box-shadow: inset 0 0 0 0.2rem #2e2e64;
+
+        @media screen and (min-width: 768px) {
+          padding: 1.5rem;
+        }
+      }
+
+      .details__tabs {
+        grid-area: item-tabs;
+        width: 100%;
+
+        .tabs__labels {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          place-items: center;
+          box-shadow: 0 0.2rem 0 -0.1rem #2e2e642a;
+
+          .tabs__label {
+            position: relative;
+            width: 100%;
+            padding: 1.5rem 0;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:first-of-type {
+              &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 0.2rem;
+                bottom: 0;
+                left: calc(var(--active-index) * 100%);
+                box-shadow: inset 0 -0.3rem 0 -0.1rem $primary-color;
+                transition: all 0.2s ease-in-out;
+              }
+            }
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+
+          @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(3, 10rem);
+          }
+        }
+
+        .tabs__content {
+          height: 25rem;
+          padding: 1rem 1rem 1rem 0;
+          overflow: auto;
+
+          .bid-history__item {
+            display: grid;
+            grid-template-columns: min(25%, 6rem) 1fr;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem 0;
+            transition: all 0.3s ease-in-out;
+
+            &:not(:last-of-type) {
+              box-shadow: 0 0.2rem 0 -0.1rem #2e2e642a;
+            }
+
+            &:hover {
+              padding: 1.5rem 1rem;
+              border-radius: 1rem;
+              background-color: #2e2e642a;
+            }
+
+            img {
+              grid-area: 1/ 1/ 2/ 2;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              aspect-ratio: 1 / 1;
+              border-radius: 1rem;
+              transition: all 0.3s ease-in-out;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+
+            .bid__info {
+              @include flex(column, false, 1rem);
+              justify-content: space-between;
+
+              .bid__info--left {
+                display: grid;
+                grid-template-rows: repeat(3, minmax(0, 1fr));
+                align-items: center;
+                gap: 1rem;
+                color: $secondary-color--dark;
+
+                strong a {
+                  font-size: 120%;
+                  color: $dark-color;
+                  transition: all 0.3s ease-in-out;
+
+                  &:hover {
+                    opacity: 0.7;
+                  }
+                }
+
+                .bid__status {
+                  margin-top: -0.5rem;
+                }
+
+                @media screen and (min-width: 450px) {
+                  grid-template-columns: auto 1fr;
+                  grid-template-rows: repeat(2, minmax(0, 1fr));
+
+                  .bid__status {
+                    margin-top: unset;
+                  }
+
+                  .bid__time {
+                    grid-area: 2/ 1/ 3/ 3;
+                  }
+                }
+              }
+
+              @media screen and (min-width: 450px) {
+                @include flex(row, false, 1rem);
+                align-items: center;
+              }
+            }
+
+            .bid__number {
+              font-weight: 600;
+              color: $dark-color;
+
+              span {
+                font-weight: 500;
+                color: $secondary-color--dark;
+              }
+            }
+          }
+
+          .tabs__provenance {
+            padding: 1rem 0;
+            color: $secondary-color--dark;
+          }
+        }
+      }
+
+      @media screen and (min-width: 576px) {
+        grid-template-areas: "item-title item-title" "item-interaction item-btns" "item-owner item-creator" "item-text item-text" "item-current-bid item-countdown" "item-btn item-btn" "item-tabs item-tabs";
+        gap: 2rem 1rem;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 35% 1fr;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+  }
+}
+
+.theme--dark {
+  .header__wrapper {
+    .header__wallet {
+      box-shadow: inset 0 0 0 0.2rem $light-color;
+    }
+  }
+
+  .intro {
+    background: linear-gradient(141deg, #ffffff18, #f1f1f118, #ffffff18),
+      url("../../Assets/Images/08_item/colin-steele-dr3AHOwu2AY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    a {
+      &:not(:last-of-type) {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      &:last-of-type {
+        color: $light-color;
+      }
+    }
+  }
+
+  .item__wrapper {
+    background-color: $dark-color;
+
+    .details--right {
+      .details__btns {
+        & > div {
+          background-color: #d5d5ff2a;
+        }
+      }
+
+      .details__creator {
+        background-color: #d5d5ff2a;
+        color: $light-color;
+      }
+
+      .details__owner {
+        @extend .details__creator;
+      }
+
+      .details__text {
+        color: $secondary-color--light;
+      }
+
+      .details__current-bid {
+        background-color: #d5d5ff2a;
+      }
+
+      .details__countdown {
+        @extend .details__current-bid;
+      }
+
+      .details__bid-btn {
+        box-shadow: inset 0 0 0 0.2rem $light-color;
+
+        &:hover {
+          background-color: $light-color;
+          color: $dark-color;
+        }
+      }
+
+      .details__tabs {
+        .tabs__labels {
+          box-shadow: 0 0.2rem 0 -0.1rem rgba(255, 255, 255, 0.103);
+        }
+
+        .tabs__content {
+          .bid-history__item {
+            &:not(:last-of-type) {
+              box-shadow: 0 0.2rem 0 -0.1rem rgba(255, 255, 255, 0.103);
+            }
+
+            &:hover {
+              background-color: #d5d5ff2a;
+            }
+
+            .bid__info {
+              .bid__info--left {
+                color: $secondary-color--light;
+
+                strong a {
+                  color: $light-color;
+                }
+              }
+            }
+
+            .bid__number {
+              color: $light-color;
+
+              span {
+                color: $secondary-color--light;
+              }
+            }
+          }
+
+          .tabs__provenance {
+            color: $secondary-color--light;
+          }
+        }
+      }
+    }
+  }
+
+  .auctions__wrapper {
+    background-color: $dark-color;
+
+    .auctions__card {
+      background-color: #c6c6ff1e;
+    }
+  }
+}
