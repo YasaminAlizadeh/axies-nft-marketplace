@@ -1,5 +1,4 @@
 const currentURL = window.location.href;
-console.log(currentURL.split("?"));
 
 const generateNFTCard = (data) => {
   const card = document.createElement("article");
