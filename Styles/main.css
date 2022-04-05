@@ -2223,13 +2223,13 @@ body {
     .theme--light .submenu__item::before {
       box-shadow: 0 0 0 0.02rem #14141f; }
     .theme--light .search__wrapper {
-      background-color: #14141f; }
+      background-color: #f3f2ff; }
     .theme--light .header__search--expanded .search__input {
       color: #14141f; }
     .theme--light .header__search--expanded .search__wrapper i {
       color: #14141f; }
     .theme--light .header__search--expanded .search__btn {
-      background-color: #14141f;
+      background-color: #f3f2ff;
       color: #14141f; }
     .theme--light .search__input {
       color: #14141f; }
