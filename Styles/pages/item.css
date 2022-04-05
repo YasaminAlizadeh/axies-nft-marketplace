@@ -1545,16 +1545,30 @@ body {
               padding: 1.5rem 1rem;
               border-radius: 1rem;
               background-color: #2e2e6417; }
-            body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item img {
-              grid-area: 1/ 1/ 2/ 2;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              aspect-ratio: 1 / 1;
-              border-radius: 1rem;
-              transition: all 0.3s ease-in-out; }
-              body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item img:hover {
-                opacity: 0.8; }
+            body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item .bid-maker__img {
+              position: relative;
+              grid-area: 1/ 1/ 2/ 2; }
+              body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item .bid-maker__img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+                border-radius: 1rem;
+                transition: all 0.3s ease-in-out; }
+                body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item .bid-maker__img img:hover {
+                  opacity: 0.8; }
+              body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item .bid-maker__img i {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 1.8rem;
+                width: 1.8rem;
+                border-radius: 100%;
+                background-color: #3930a3;
+                color: white;
+                font-size: 1rem; }
             body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item .bid__info {
               display: flex;
               flex-direction: column;

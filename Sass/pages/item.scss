@@ -305,17 +305,35 @@ body {
               background-color: #2e2e6417;
             }
 
-            img {
+            .bid-maker__img {
+              position: relative;
               grid-area: 1/ 1/ 2/ 2;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              aspect-ratio: 1 / 1;
-              border-radius: 1rem;
-              transition: all 0.3s ease-in-out;
 
-              &:hover {
-                opacity: 0.8;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+                border-radius: 1rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                  opacity: 0.8;
+                }
+              }
+
+              i {
+                display: grid;
+                place-items: center;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                height: 1.8rem;
+                width: 1.8rem;
+                border-radius: 100%;
+                background-color: $primary-color;
+                color: $light-color;
+                font-size: 1rem;
               }
             }
 
