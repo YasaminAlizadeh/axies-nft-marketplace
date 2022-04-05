@@ -87,6 +87,20 @@ const historyItemDisplay = (container, data) => {
 
 // Display item data in page
 const displayItem = (selectedItem) => {
+  const {
+    id,
+    NFT_img,
+    title,
+    views,
+    likes_count,
+    owner,
+    owner_img,
+    creator,
+    creator_img,
+    current_bid,
+    remaining_time,
+  } = selectedItem;
+
   document.title = `Item: ${selectedItem.title}`;
 
   const itemContainer = document.getElementById("item-details");
@@ -105,29 +119,29 @@ const displayItem = (selectedItem) => {
   );
   const itemCountdown = document.getElementById("item-countdown");
 
-  itemContainer.id = selectedItem.id;
-  itemImg.src = `${AssetsDirectory}${selectedItem.NFT_img}`;
-  itemTitle.innerText = selectedItem.title;
-  itemViews.innerText = selectedItem.views;
+  itemContainer.id = id;
+  itemImg.src = `${AssetsDirectory}${NFT_img}`;
+  itemTitle.innerText = title;
+  itemViews.innerText = views;
   itemLikeBtn.addEventListener("click", (e) => {
     e.preventDefault();
     likeFunction(e, itemsData);
   });
-  itemLikes.innerText = selectedItem.likes_count;
-  itemOwner.innerText = selectedItem.owner;
-  itemOwnerImg.src = `${AssetsDirectory}${selectedItem.owner_img}`;
-  itemCreator.innerText = selectedItem.creator;
-  itemCreatorImg.src = `${AssetsDirectory}${selectedItem.creator_img}`;
-  itemCurrentBid.innerText = `${selectedItem.current_bid} ETH`;
+  itemLikes.innerText = likes_count;
+  itemOwner.innerText = owner;
+  itemOwnerImg.src = `${AssetsDirectory}${owner_img}`;
+  itemCreator.innerText = creator;
+  itemCreatorImg.src = `${AssetsDirectory}${creator_img}`;
+  itemCurrentBid.innerText = `${current_bid} ETH`;
   itemCurrentBidDollars.innerText = `$${Math.floor(
-    selectedItem.current_bid * 2604.42
+    current_bid * 2604.42
   ).toLocaleString()}`;
   setInterval(() => {
     itemCountdown.innerText = timeToString(
-      selectedItem.remaining_time.days,
-      selectedItem.remaining_time.hours,
-      selectedItem.remaining_time.minutes,
-      selectedItem.remaining_time.seconds
+      remaining_time.days,
+      remaining_time.hours,
+      remaining_time.minutes,
+      remaining_time.seconds
     );
   }, 1000);
   tabsContentDisplay("tab-1");
