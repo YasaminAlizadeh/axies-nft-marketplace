@@ -30,8 +30,11 @@ const generateNFTCard = (data) => {
   </div>
 
 <div class="card__info">
-<h3 class="card__title"><a href="${/Pages/item.html
-  }?${data.id}"}>${data.title}</a></h3>
+<h3 class="card__title">
+  <a href="/Pages/item.html?${data.id}"}>
+    ${data.title}
+  </a>
+  </h3>
   <div class="card__creator">
     <a href="#">
     <img
