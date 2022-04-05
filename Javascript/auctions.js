@@ -8,7 +8,7 @@ const generateNFTCard = (data) => {
   let container;
   let element;
 
-  container = document.getElementById("auctions-page");
+  container = document.querySelector("#auctions-page");
   card.className = `article auctions__card ${
     data.is_liked ? "article--liked" : ""
   }`;
@@ -67,20 +67,20 @@ const generateNFTCard = (data) => {
   card.innerHTML = element;
 
   // Add Random Countdowns to NFT Cards
-  const timeContainer = [...card.getElementsByClassName("card__time--text")][0];
+  const timeContainer = [...card.querySelectorAll(".card__time--text")][0];
   const timeContainerCard = timeContainer.parentNode.parentNode.parentNode.id;
 
   timeContainer && cardTimeGenerator(timeContainer, timeContainerCard);
 
   // Add Like functionality to Heart Buttons in Cards
-  [...card.getElementsByClassName("article__likes")][0] &&
-    [...card.getElementsByClassName("article__likes")][0].addEventListener(
+  [...card.querySelectorAll(".article__likes")][0] &&
+    [...card.querySelectorAll(".article__likes")][0].addEventListener(
       "click",
       (e) => likeFunction(e, [...itemsData])
     );
 
   // Add Rotate functionality to History Buttons in picks Cards
-  const historyBtn = [...card.getElementsByClassName("card__bid-history")][0];
+  const historyBtn = [...card.querySelectorAll(".card__bid-history")][0];
 
   historyBtn &&
     historyBtn.addEventListener("click", () => {
@@ -155,7 +155,7 @@ const cardTimeGenerator = (timeContainer, id) => {
 
 // --------- Update Auctions Section Contect
 
-const page = document.getElementById("auctions-page");
+const page = document.querySelector("#auctions-page");
 
 page.innerHTML = "";
 for (let j = 0; j < itemsData.length; j++) {
@@ -164,7 +164,7 @@ for (let j = 0; j < itemsData.length; j++) {
 
 // --------- Pagination
 
-let paginationBtns = document.getElementById("pagination-pages");
+let paginationBtns = document.querySelector("#pagination-pages");
 
 const calculateColumnsCount = () => {
   let columns;
@@ -190,9 +190,9 @@ const calculateColumnsCount = () => {
 let pagesCount;
 let currentPage = Number(localStorage.getItem("currentPage")) || 1;
 
-const paginationContainer = document.getElementById("pagination-pages");
+const paginationContainer = document.querySelector("#pagination-pages");
 
-let pageInput = document.getElementById("page-num");
+let pageInput = document.querySelector("#page-num");
 pageInput.onchange = (e) => changePageInput(e);
 
 pageInput.value = currentPage;
@@ -208,7 +208,7 @@ const slidePages = (page) => {
 
 // --------- Add Pages buttons to Pagination Bar
 
-const pageNumbersIndicator = document.getElementById("pages-number");
+const pageNumbersIndicator = document.querySelector("#pages-number");
 
 const paginationBar = () => {
   paginationContainer.innerHTML = "";
@@ -255,7 +255,7 @@ const changePageInput = (e) => {
 
 //--------- Update Cards per Page based on Window Size
 
-const pageInputContainer = document.getElementById("page-input-container");
+const pageInputContainer = document.querySelector("#page-input-container");
 
 const updateCardsPerPage = (columns) => {
   const cardsPerPage = columnsCount;
@@ -311,8 +311,8 @@ window.addEventListener("resize", () => {
 
 // --------- Add Functionality to Pagination Buttons
 
-const paginationPrevButton = document.getElementById("pagination-prev-btn");
-const pageCards = [...document.getElementsByClassName("auctions__card")];
+const paginationPrevButton = document.querySelector("#pagination-prev-btn");
+const pageCards = [...document.querySelectorAll(".auctions__card")];
 
 paginationPrevButton.addEventListener("click", () => {
   if (currentPage > 1) {
@@ -327,7 +327,7 @@ paginationPrevButton.addEventListener("click", () => {
   }
 });
 
-const paginationNextButton = document.getElementById("pagination-next-btn");
+const paginationNextButton = document.querySelector("#pagination-next-btn");
 
 paginationNextButton.addEventListener("click", () => {
   if (currentPage < pagesCount) {
@@ -347,7 +347,7 @@ paginationBar();
 // --------- Like Card when Clicked on the Heart Button
 
 const likeFunction = (e, data) => {
-  const clickedCard = [...document.getElementsByClassName("article")].filter(
+  const clickedCard = [...document.querySelectorAll(".article")].filter(
     (element) => element.contains(e.currentTarget)
   )[0];
 
@@ -365,6 +365,6 @@ const likeFunction = (e, data) => {
     clickedCard.classList.remove("article--liked");
   }
 
-  [...clickedCard.getElementsByClassName("article__likes-count")][0].innerHTML =
+  [...clickedCard.querySelectorAll(".article__likes-count")][0].innerHTML =
     cardData.likes_count;
 };
