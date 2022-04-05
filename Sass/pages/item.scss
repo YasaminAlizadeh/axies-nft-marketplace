@@ -17,6 +17,8 @@
 body {
   height: 100%;
 
+  background-color: #f3f2ff;
+
   .header__wrapper {
     box-shadow: 0 0.1rem 0.1rem 0.01rem #00000013;
 
@@ -62,11 +64,11 @@ body {
 
   .item__wrapper {
     height: max-content;
+    width: min(100%, 170rem);
     display: grid;
     grid-template-columns: 100%;
     gap: 2rem;
     align-items: center;
-    background-color: #f3f2ff;
 
     .details--left {
       width: min(100%, 100rem);
@@ -300,7 +302,7 @@ body {
             &:hover {
               padding: 1.5rem 1rem;
               border-radius: 1rem;
-              background-color: #2e2e642a;
+              background-color: #2e2e6417;
             }
 
             img {
@@ -387,7 +389,7 @@ body {
     }
 
     @media screen and (min-width: 768px) {
-      grid-template-columns: 35% 1fr;
+      grid-template-columns: 40% 1fr;
       align-items: flex-start;
       gap: 3rem;
     }
@@ -401,6 +403,8 @@ body {
 }
 
 .theme--dark {
+  background-color: $dark-color;
+
   .header__wrapper {
     box-shadow: 0 0.1rem 0.1rem 0.01rem #b2b2ca2a;
 
@@ -427,8 +431,6 @@ body {
   }
 
   .item__wrapper {
-    background-color: $dark-color;
-
     .details--right {
       .details__btns {
         & > div {

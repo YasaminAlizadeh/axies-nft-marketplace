@@ -1335,7 +1335,8 @@ a {
       -webkit-text-fill-color: #14141f !important; } }
 
 body {
-  height: 100%; }
+  height: 100%;
+  background-color: #f3f2ff; }
   body .header__wrapper {
     box-shadow: 0 0.1rem 0.1rem 0.01rem #00000013; }
     body .header__wrapper .menu__submenu {
@@ -1365,11 +1366,11 @@ body {
         padding-top: 10rem; } }
   body .item__wrapper {
     height: max-content;
+    width: min(100%, 170rem);
     display: grid;
     grid-template-columns: 100%;
     gap: 2rem;
-    align-items: center;
-    background-color: #f3f2ff; }
+    align-items: center; }
     body .item__wrapper .details--left {
       width: min(100%, 100rem);
       height: 100%; }
@@ -1543,7 +1544,7 @@ body {
             body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item:hover {
               padding: 1.5rem 1rem;
               border-radius: 1rem;
-              background-color: #2e2e642a; }
+              background-color: #2e2e6417; }
             body .item__wrapper .details--right .details__tabs .tabs__content .bid-history__item img {
               grid-area: 1/ 1/ 2/ 2;
               width: 100%;
@@ -1602,27 +1603,27 @@ body {
           gap: 2rem 1rem; } }
     @media screen and (min-width: 768px) {
       body .item__wrapper {
-        grid-template-columns: 35% 1fr;
+        grid-template-columns: 40% 1fr;
         align-items: flex-start;
         gap: 3rem; } }
 
 .theme--light .header__wrapper--scrolled {
   background-color: #f3f2ff; }
 
-.theme--dark .header__wrapper {
-  box-shadow: 0 0.1rem 0.1rem 0.01rem #b2b2ca2a; }
-  .theme--dark .header__wrapper .header__wallet {
-    box-shadow: inset 0 0 0 0.2rem white; }
-.theme--dark .intro {
-  background: linear-gradient(141deg, #ffffff18, #f1f1f118, #ffffff18), url("../../Assets/Images/08_item/colin-steele-dr3AHOwu2AY-unsplash.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
-  .theme--dark .intro a:not(:last-of-type) {
-    color: rgba(255, 255, 255, 0.5); }
-  .theme--dark .intro a:last-of-type {
-    color: white; }
-.theme--dark .item__wrapper {
+.theme--dark {
   background-color: #14141f; }
+  .theme--dark .header__wrapper {
+    box-shadow: 0 0.1rem 0.1rem 0.01rem #b2b2ca2a; }
+    .theme--dark .header__wrapper .header__wallet {
+      box-shadow: inset 0 0 0 0.2rem white; }
+  .theme--dark .intro {
+    background: linear-gradient(141deg, #ffffff18, #f1f1f118, #ffffff18), url("../../Assets/Images/08_item/colin-steele-dr3AHOwu2AY-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .theme--dark .intro a:not(:last-of-type) {
+      color: rgba(255, 255, 255, 0.5); }
+    .theme--dark .intro a:last-of-type {
+      color: white; }
   .theme--dark .item__wrapper .details--right .details__btns > div {
     background-color: #d5d5ff2a; }
   .theme--dark .item__wrapper .details--right .details__creator, .theme--dark .item__wrapper .details--right .details__owner {
@@ -1653,10 +1654,10 @@ body {
       color: #ffffffb2; }
   .theme--dark .item__wrapper .details--right .details__tabs .tabs__content .tabs__provenance {
     color: #ffffffb2; }
-.theme--dark .auctions__wrapper {
-  background-color: #14141f; }
-  .theme--dark .auctions__wrapper .auctions__card {
-    background-color: #c6c6ff1e; }
+  .theme--dark .auctions__wrapper {
+    background-color: #14141f; }
+    .theme--dark .auctions__wrapper .auctions__card {
+      background-color: #c6c6ff1e; }
 
 .like__btn, body .item__wrapper .details--right .details__interactions .views__icon {
   background-image: url("../../Assets/Images/03_Live_Auctions/heart-animation.png"); }
