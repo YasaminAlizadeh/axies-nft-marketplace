@@ -101,7 +101,7 @@ const displayItem = (selectedItem) => {
     remaining_time,
   } = selectedItem;
 
-  document.title = `Item: ${selectedItem.title}`;
+  document.title = `Item: ${title}`;
 
   const itemContainer = document.getElementById("item-details");
   const itemImg = document.getElementById("item-img");
