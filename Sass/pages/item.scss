@@ -30,6 +30,14 @@ body {
       }
     }
 
+    .search__wrapper {
+      background-color: $light-color;
+    }
+
+    .header__search--expanded .search__btn {
+      background-color: $light-color;
+    }
+
     .header__wallet {
       box-shadow: inset 0 0 0 0.2rem $primary-color;
     }

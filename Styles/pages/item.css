@@ -1343,6 +1343,10 @@ body {
       background-color: white; }
       body .header__wrapper .menu__submenu::before {
         background-color: white; }
+    body .header__wrapper .search__wrapper {
+      background-color: white; }
+    body .header__wrapper .header__search--expanded .search__btn {
+      background-color: white; }
     body .header__wrapper .header__wallet {
       box-shadow: inset 0 0 0 0.2rem #3930a3; }
   body .intro {
