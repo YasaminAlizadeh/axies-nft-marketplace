@@ -1,4 +1,5 @@
 const currentURL = window.location.href;
+console.log(currentURL.split("?"));
 
 const generateNFTCard = (data) => {
   const card = document.createElement("article");
@@ -32,9 +33,9 @@ const generateNFTCard = (data) => {
   </div>
 
 <div class="card__info">
-<h3 class="card__title"><a href="${
+<h3 class="card__title"><a href=${`${
     currentURL.split("?").length > 1 ? "" : "./Pages/item.html"
-  }?${data.id}">${data.title}</a></h3>
+  }?${data.id}`}>${data.title}</a></h3>
   <div class="card__creator">
     <a href="#">
     <img
