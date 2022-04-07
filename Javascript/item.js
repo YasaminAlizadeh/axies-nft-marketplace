@@ -1,6 +1,6 @@
-const tabsContent = document.getElementById("tabs-content");
-const tabsLabelsContainer = document.getElementById("tabs-labels");
-const tabsLabels = document.getElementsByClassName("tabs__label");
+const tabsContent = document.querySelector("#tabs-content");
+const tabsLabelsContainer = document.querySelector("#tabs-labels");
+const tabsLabels = document.querySelectorAll(".tabs__label");
 let selectedItem;
 
 // Get the selected item Id from the URL
@@ -103,21 +103,21 @@ const displayItem = (selectedItem) => {
 
   document.title = `Item: ${title}`;
 
-  const itemContainer = document.getElementById("item-details");
-  const itemImg = document.getElementById("item-img");
-  const itemTitle = document.getElementById("item-title");
-  const itemViews = document.getElementById("item-views");
-  const itemLikeBtn = document.getElementById("item-like-btn");
-  const itemLikes = document.getElementById("item-likes");
-  const itemOwner = document.getElementById("item-owner");
-  const itemOwnerImg = document.getElementById("item-owner-img");
-  const itemCreator = document.getElementById("item-creator");
-  const itemCreatorImg = document.getElementById("item-creator-img");
-  const itemCurrentBid = document.getElementById("item-current-bid");
-  const itemCurrentBidDollars = document.getElementById(
-    "item-current-bid-dollars"
+  const itemContainer = document.querySelector("#item-details");
+  const itemImg = document.querySelector("#item-img");
+  const itemTitle = document.querySelector("#item-title");
+  const itemViews = document.querySelector("#item-views");
+  const itemLikeBtn = document.querySelector("#item-like-btn");
+  const itemLikes = document.querySelector("#item-likes");
+  const itemOwner = document.querySelector("#item-owner");
+  const itemOwnerImg = document.querySelector("#item-owner-img");
+  const itemCreator = document.querySelector("#item-creator");
+  const itemCreatorImg = document.querySelector("#item-creator-img");
+  const itemCurrentBid = document.querySelector("#item-current-bid");
+  const itemCurrentBidDollars = document.querySelector(
+    "#item-current-bid-dollars"
   );
-  const itemCountdown = document.getElementById("item-countdown");
+  const itemCountdown = document.querySelector("#item-countdown");
 
   itemContainer.id = id;
   itemImg.src = `${AssetsDirectory}${NFT_img}`;
