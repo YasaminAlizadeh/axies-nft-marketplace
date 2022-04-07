@@ -4,7 +4,7 @@ const generateSellerCard = (data) => {
 
   let container;
 
-  container = document.getElementById("seller-cards");
+  container = document.querySelector("#seller-cards");
   card.className = `article seller__card`;
 
   let element = `<a href="#">
@@ -23,7 +23,7 @@ const generateSellerCard = (data) => {
   </div>
   </a>`;
 
-  container = document.getElementById("seller-cards");
+  container = document.querySelector("#seller-cards");
   card.className = `article seller__card`;
 
   card.innerHTML = element;
