@@ -18,7 +18,7 @@ const shuffleArray = (array) => {
 };
 
 const addSlider = () => {
-  const sliders = document.getElementById("sliders");
+  const sliders = document.querySelector("#sliders");
   sliders.innerText = "";
 
   for (let i = 0; i < 3; i++) {
@@ -44,7 +44,7 @@ addSlider();
 
 // ---------------- Disable dragging of Images
 
-[...document.getElementsByClassName("slider__img")].forEach(
+[...document.querySelectorAll(".slider__img")].forEach(
   (item) =>
     (item.ondragstart = () => {
       return false;
