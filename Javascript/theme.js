@@ -7,7 +7,7 @@ const background = document.querySelector("#background");
 // --------- On Page Load, Get the Selected Theme from LocalStorage
 
 window.addEventListener("load", () => {
-  const theme = localStorage.getItem("theme");
+  const theme = localStorage.getItem("theme") || "dark";
 
   if (theme === "light") {
     lightThemeBtn && lightThemeBtn.classList.add("theme__btn--active");
