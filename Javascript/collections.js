@@ -67,7 +67,7 @@ const generateCollectionCard = (data) => {
                 </div>
               </div>`;
 
-  container = document.getElementById("collections-page");
+  container = document.querySelector("#collections-page");
   card.className = `article collection__card ${
     data.is_liked ? "article--liked" : ""
   }`;
@@ -75,8 +75,8 @@ const generateCollectionCard = (data) => {
   card.innerHTML = element;
 
   // Add Like functionality to Heart Buttons in Cards
-  [...card.getElementsByClassName("article__likes")][0] &&
-    [...card.getElementsByClassName("article__likes")][0].addEventListener(
+  [...card.querySelectorAll(".article__likes")][0] &&
+    [...card.querySelectorAll(".article__likes")][0].addEventListener(
       "click",
       (e) => likeFunction(e, [...collectionsData])
     );
