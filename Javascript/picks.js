@@ -8,7 +8,7 @@ const generatePicksCard = (data) => {
   let container;
   let element;
 
-  container = document.getElementById("picks-cards");
+  container = document.querySelector("#picks-cards");
   card.className = `article picks__card ${
     data.is_liked ? "article--liked" : ""
   }`;
@@ -60,14 +60,14 @@ const generatePicksCard = (data) => {
   card.innerHTML = element;
 
   // Add Like functionality to Heart Buttons in Cards
-  [...card.getElementsByClassName("article__likes")][0] &&
-    [...card.getElementsByClassName("article__likes")][0].addEventListener(
+  [...card.querySelectorAll(".article__likes")][0] &&
+    [...card.querySelectorAll(".article__likes")][0].addEventListener(
       "click",
       (e) => likeFunction(e, [...itemsData])
     );
 
   // Add Rotate functionality to History Buttons in picks Cards
-  const historyBtn = [...card.getElementsByClassName("card__bid-history")][0];
+  const historyBtn = [...card.querySelectorAll(".card__bid-history")][0];
 
   historyBtn &&
     historyBtn.addEventListener("click", () => {
@@ -80,7 +80,7 @@ const generatePicksCard = (data) => {
 
 // --------- Add Functionality to the Sort Button in Picks Section
 
-const sortBtn = document.getElementById("picks-sort-btn");
+const sortBtn = document.querySelector("#picks-sort-btn");
 const sortBy = [
   "date-up",
   "date-down",
@@ -95,7 +95,7 @@ let currentSortByIndex = 0;
 sortBtn.addEventListener("click", () => {
   let btnIcon = "";
   let btnText = "";
-  const container = document.getElementById("picks-cards");
+  const container = document.querySelector("#picks-cards");
   container.innerHTML = "";
 
   currentSortByIndex =
@@ -227,10 +227,10 @@ itemsData.forEach((pick, index) => {
   index < picksPerPage && generatePicksCard(pick);
 });
 
-const loadMoreBtn = document.getElementById("picks-load");
+const loadMoreBtn = document.querySelector("#picks-load");
 
 loadMoreBtn.addEventListener("click", () => {
-  const container = document.getElementById("picks-cards");
+  const container = document.querySelector("#picks-cards");
   container.innerHTML = "";
 
   picksPerPage += 8;
@@ -242,7 +242,7 @@ loadMoreBtn.addEventListener("click", () => {
 
 // --------- Change Filter Button Styles on Click in Picks Section
 
-const filterBtns = [...document.getElementsByClassName("picks__filter-btn")];
+const filterBtns = [...document.querySelectorAll(".picks__filter-btn")];
 
 filterBtns.forEach((btn) =>
   btn.addEventListener("click", () => {
