@@ -488,8 +488,7 @@ body {
       width: 200%;
       height: 100%;
       display: grid;
-      gap: Min(0.5%, 1rem);
-      overflow: clip; }
+      gap: Min(0.5%, 1rem); }
       @media screen and (min-width: 768px) {
         .container .sliders .slider__wrapper {
           width: 100%;
