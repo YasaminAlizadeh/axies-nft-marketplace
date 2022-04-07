@@ -1,8 +1,6 @@
 // --------- Change Header Background on Window Scroll
 
-const headerWrapper = [
-  ...document.getElementsByClassName("header__wrapper"),
-][0];
+const headerWrapper = [...document.querySelectorAll(".header__wrapper")][0];
 
 window.addEventListener("scroll", () => {
   headerWrapper.classList.add("header__wrapper--scrolled");
@@ -16,11 +14,11 @@ window.addEventListener("scroll", () => {
 
 // --------- Open/Close Menu
 
-const menu = document.getElementById("menu");
-const menuBtn = document.getElementById("menu-btn");
-const menuBackBtn = document.getElementById("menu-back-btn");
-const menuItems = [...document.getElementsByClassName("menu__item")];
-const search = document.getElementById("header-search");
+const menu = document.querySelector("#menu");
+const menuBtn = document.querySelector("#menu-btn");
+const menuBackBtn = document.querySelector("#menu-back-btn");
+const menuItems = [...document.querySelectorAll(".menu__item")];
+const search = document.querySelector("#header-search");
 
 menuBtn.addEventListener("click", () => {
   menu.classList.add("header__menu--open");
@@ -51,7 +49,7 @@ window.addEventListener("click", (e) => {
 
 window.addEventListener("resize", () => {
   const expandedMenuItems = [
-    ...document.getElementsByClassName("menu__item--expanded"),
+    ...document.querySelectorAll(".menu__item--expanded"),
   ];
 
   menu.classList.remove("header__menu--open");
@@ -95,7 +93,7 @@ menuItems.forEach((item) =>
 
 // --------- Expand search input on click
 
-const searchBtn = document.getElementById("search-btn");
+const searchBtn = document.querySelector("#search-btn");
 
 window.addEventListener("click", (e) => {
   const mediaQuery = window.matchMedia("(min-width: 1312px)");
@@ -105,7 +103,7 @@ window.addEventListener("click", (e) => {
     }
     if (!search.contains(e.target)) {
       search.classList.remove("header__search--expanded");
-      document.getElementById("search").value = "";
+      document.querySelector("#search").value = "";
     }
   }
 });
