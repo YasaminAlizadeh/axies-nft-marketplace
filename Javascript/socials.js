@@ -1,4 +1,4 @@
-const socailsContainer = document.getElementById("socials");
+const socailsContainer = document.querySelector("#socials");
 
 socailsContainer.addEventListener("click", () => {
   socailsContainer.classList.toggle("socials__menu--open");
