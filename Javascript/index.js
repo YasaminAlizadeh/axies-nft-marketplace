@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --------- Add Functionality to Scroll Up Button
 
-const scrollBtn = document.getElementById("scroll-up-btn");
+const scrollBtn = document.querySelector("#scroll-up-btn");
 
 scrollBtn.addEventListener("click", () => {
   window.scrollTo(0, 0);
