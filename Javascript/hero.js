@@ -1,10 +1,10 @@
 // --------- Animate the H1 character
 
-const title = document.getElementById("title");
-const characterFace = [...document.getElementsByClassName("face__wrapper")][0];
-const characterEyelids = [...document.getElementsByClassName("eyelid")];
-const characterEyePupils = [...document.getElementsByClassName("pupil")];
-const characterHands = [...document.getElementsByClassName("hand")];
+const title = document.querySelector("#title");
+const characterFace = [...document.querySelectorAll(".face__wrapper")][0];
+const characterEyelids = [...document.querySelectorAll(".eyelid")];
+const characterEyePupils = [...document.querySelectorAll(".pupil")];
+const characterHands = [...document.querySelectorAll(".hand")];
 
 title.addEventListener("mouseover", () => {
   characterFace.classList.add("face__wrapper--animated");
@@ -38,7 +38,7 @@ characterHands[0].addEventListener("webkitAnimationEnd", () => {
 
 // --------- Animate Blobs
 
-const blobs = [...document.getElementsByClassName("hero__blob")];
+const blobs = [...document.querySelectorAll(".hero__blob")];
 const blobsCount = blobs.length;
 
 blobs.forEach((blob, index) =>
