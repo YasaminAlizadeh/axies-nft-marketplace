@@ -20,10 +20,6 @@
     background-color: $light-color;
   }
 
-  .menu__item-btn:hover {
-    background-color: rgba(0, 0, 0, 0.123);
-  }
-
   .menu__submenu {
     color: $dark-color;
     background-color: rgba(0, 0, 0, 0.05);
@@ -203,7 +199,7 @@
       color: $dark-color;
     }
 
-    .menu__item-btn:hover {
+    .menu__item:hover .menu__item-btn {
       color: unset;
       opacity: 0.8;
     }
