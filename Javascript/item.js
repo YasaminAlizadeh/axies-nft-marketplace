@@ -59,7 +59,9 @@ const historyItemDisplay = (container, data) => {
 
   item.className = "bid-history__item";
 
-  const element = `
+  const element =
+    (data &&
+      `
       <a href="#" class="bid-maker__img">
         <img src=${AssetsDirectory}${data.bid_maker_img} alt="bid maker" />
         <i class="fa-solid fa-check"></i>
@@ -79,7 +81,8 @@ const historyItemDisplay = (container, data) => {
         </span>
         </p>
       </div>
-`;
+`) ||
+    "";
 
   item.innerHTML += element;
   container.appendChild(item);
