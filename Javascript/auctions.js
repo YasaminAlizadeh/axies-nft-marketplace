@@ -1,3 +1,5 @@
+const PAGE_URL = window.location.href;
+
 const generateNFTCard = (data) => {
   const card = document.createElement("article");
   if (data.is_liked) {
@@ -31,7 +33,9 @@ const generateNFTCard = (data) => {
 
 <div class="card__info">
 <h3 class="card__title">
-  <a href="/axies/Pages/item.html?${data.id}"}>
+  <a href="${
+    PAGE_URL.split("?").length > 1 ? "" : `./Pages/item.html?${data.id}`
+  }"}>
     ${data.title}
   </a>
   </h3>
