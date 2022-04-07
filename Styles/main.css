@@ -429,7 +429,7 @@ a {
 .footer__form {
   display: flex;
   flex-direction: column;
-  box-shadow: inset 0 0 0 0.05rem #ffffff80;
+  box-shadow: inset 0 0 0 0.1rem #ffffff80;
   border-radius: 1.1rem;
   -moz-border-radius: 1.1rem;
   overflow: hidden; }
@@ -1901,7 +1901,7 @@ body {
   border-radius: 2rem;
   cursor: pointer;
   z-index: 100;
-  box-shadow: 0 1rem 2rem -0.05rem #0026ff36, 0 0 0.8rem 0.05rem #bb00ff36, inset 0 -0.25rem 0 -0.1rem #3654ff, 0 0.25rem 0 -0.1rem #3654ff;
+  box-shadow: 0 1rem 2rem -0.1rem #0026ff36, 0 0 0.8rem 0.1rem #bb00ff36, inset 0 -0.25rem 0 -0.1rem #3654ff, 0 0.25rem 0 -0.1rem #3654ff;
   transition: all 0.3s ease-in-out; }
 
 .socials__placeholder {
@@ -2038,7 +2038,7 @@ body {
   .theme--dark .pagination__page {
     background-color: white; }
   .theme--dark .page-select__input {
-    box-shadow: 0 0 0 0.05rem white;
+    box-shadow: 0 0 0 0.1rem white;
     color: white; }
   .theme--dark .pagination__page--active {
     box-shadow: 0 0 0 0.3rem #14141f, 0 0 0 0.4rem white; }
@@ -2161,7 +2161,7 @@ body {
   .theme--light .pagination__page {
     background-color: #14141f; }
   .theme--light .page-select__input {
-    box-shadow: 0 0 0 0.05rem #14141f;
+    box-shadow: 0 0 0 0.1rem #14141f;
     color: #14141f; }
   .theme--light .pagination__page--active {
     box-shadow: 0 0 0 0.3rem white, 0 0 0 0.4rem #14141f; }
