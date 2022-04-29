@@ -1,0 +1,26 @@
+.intro {
+  @include flex(column, true, 1rem);
+  background: linear-gradient(141deg, #ffffff80, #f1f1f180, #ffffff80),
+    url("../../Assets/Images/08_item/colin-steele-dr3AHOwu2AY-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 5rem;
+
+  h1 {
+    font-size: 300%;
+  }
+
+  a {
+    &:not(:last-of-type) {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:last-of-type {
+      color: $dark-color;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    padding-top: 10rem;
+  }
+}

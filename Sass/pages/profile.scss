@@ -1,0 +1,208 @@
+@import "../sass-utils/mixins";
+@import "../sass-utils/variables";
+
+@import "../base/reset";
+@import "../base/typography";
+
+@import "../layout/header";
+@import "../layout/intro";
+@import "../layout/footer";
+
+@import "../components/buttons";
+@import "../components/menu";
+
+@import "../themes/dark";
+@import "../themes/light";
+
+.profile__wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 2rem;
+  background-color: $dark-color;
+  grid-template-areas: "img" "cover" "form";
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "img cover" "form form";
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas: "img img ." "cover cover cover" "form form form";
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: 1.25fr repeat(2, minmax(0, 2fr));
+    grid-template-areas: "img cover cover" "img form form" "img form form";
+  }
+
+  .profile__btn {
+    padding: 1rem 5rem;
+    border-radius: 5rem;
+    border: 0;
+    background-color: transparent;
+    color: $light-color;
+    font-weight: 600;
+    box-shadow: inset 0 0 0 0.2rem $light-color;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $light-color;
+      color: $dark-color;
+    }
+  }
+
+  .upload__label {
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .upload__input {
+    display: none;
+    opacity: 0;
+    visibility: 0;
+  }
+
+  .img__container {
+    grid-area: img;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: min(5vw, 1.5rem);
+    border-radius: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.15);
+
+    @media screen and (min-width: 776px) {
+      max-width: 30rem;
+    }
+
+    @media screen and (min-width: 992px) {
+      height: min-content;
+      max-width: unset;
+    }
+
+    .profile__img {
+      width: 100%;
+      aspect-ratio: 1/ 1;
+      object-fit: cover;
+      border-radius: 0.75rem;
+    }
+  }
+
+  .info__container {
+    grid-area: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .profile__cover {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 1rem;
+
+      @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      h3 {
+        grid-area: 1/ 1/ 2/ -1;
+      }
+
+      .cover__btn {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        aspect-ratio: 2.5/ 1;
+        border-radius: 0.75rem;
+        box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+
+        @media screen and (min-width: 768px) {
+          aspect-ratio: 3.5/ 1;
+        }
+      }
+
+      .cover__example {
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: opacity 0.5s ease-in-out;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      .cover__example:nth-of-type(2) {
+        background-image: url(../../Assets/Images/09_profile/option1_bg_profile.jpg);
+      }
+
+      .cover__example:nth-of-type(3) {
+        background-image: url(../../Assets/Images/09_profile//option2_bg_profile.jpg);
+      }
+    }
+  }
+
+  .profile__info {
+    grid-area: form;
+
+    .profile__form {
+      display: grid;
+      grid-template-columns: 100%;
+      gap: 2rem;
+
+      @media screen and (min-width: 576px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .form__field {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .form__input {
+          padding: 1rem;
+          background-color: transparent;
+          color: $light-color;
+          border: 0;
+          border-radius: 0.75rem;
+          box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.15);
+        }
+
+        textarea {
+          resize: none;
+        }
+      }
+
+      .form--left {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form--right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .profile__btn {
+          align-self: flex-start;
+          background-color: $primary-color;
+          box-shadow: unset;
+          margin-bottom: 1rem;
+
+          &:hover {
+            background-color: transparent;
+            color: $light-color;
+            box-shadow: inset 0 0 0 0.2rem $primary-color;
+          }
+        }
+      }
+
+      .form__submit {
+        @media screen and (min-width: 768px) {
+          width: max-content;
+        }
+      }
+    }
+  }
+}
