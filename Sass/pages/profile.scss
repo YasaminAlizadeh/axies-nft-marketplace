@@ -18,7 +18,6 @@
   display: grid;
   grid-template-columns: 100%;
   gap: 2rem;
-  background-color: $dark-color;
   grid-template-areas: "img" "cover" "form";
 
   @media screen and (min-width: 576px) {
@@ -41,14 +40,14 @@
     border-radius: 5rem;
     border: 0;
     background-color: transparent;
-    color: $light-color;
+    color: $dark-color;
     font-weight: 600;
-    box-shadow: inset 0 0 0 0.2rem $light-color;
+    box-shadow: inset 0 0 0 0.2rem $primary-color;
     transition: all 0.5s ease-in-out;
 
     &:hover {
-      background-color: $light-color;
-      color: $dark-color;
+      background-color: $primary-color;
+      color: $light-color;
     }
   }
 
@@ -70,7 +69,7 @@
     gap: 1.5rem;
     padding: min(5vw, 1.5rem);
     border-radius: 0.75rem;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: #f3f2ff;
 
     @media screen and (min-width: 776px) {
       max-width: 30rem;
@@ -114,7 +113,7 @@
         width: 100%;
         aspect-ratio: 2.5/ 1;
         border-radius: 0.75rem;
-        box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.15);
+        box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.15);
         cursor: pointer;
 
         @media screen and (min-width: 768px) {
@@ -162,10 +161,10 @@
         .form__input {
           padding: 1rem;
           background-color: transparent;
-          color: $light-color;
+          color: $dark-color;
           border: 0;
           border-radius: 0.75rem;
-          box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.15);
+          box-shadow: inset 0 0 0 0.1rem rgba(0, 0, 0, 0.15);
         }
 
         textarea {
@@ -187,6 +186,7 @@
         .profile__btn {
           align-self: flex-start;
           background-color: $primary-color;
+          color: $light-color;
           box-shadow: unset;
           margin-bottom: 1rem;
 
@@ -202,6 +202,48 @@
         @media screen and (min-width: 768px) {
           width: max-content;
         }
+      }
+    }
+  }
+}
+
+.theme--dark {
+  .profile__wrapper {
+    .profile__btn {
+      color: $light-color;
+      box-shadow: inset 0 0 0 0.2rem $light-color;
+
+      &:hover {
+        background-color: $light-color;
+        color: $dark-color;
+      }
+    }
+  }
+
+  .img__container {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .profile__info {
+    .profile__form {
+      .form__field {
+        .form__input {
+          color: $light-color;
+          box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.15);
+        }
+      }
+
+      .form--right {
+        .profile__btn {
+        }
+      }
+    }
+  }
+
+  .info__container {
+    .profile__cover {
+      .cover__btn {
+        box-shadow: inset 0 0 0 0.1rem rgba(255, 255, 255, 0.15);
       }
     }
   }
