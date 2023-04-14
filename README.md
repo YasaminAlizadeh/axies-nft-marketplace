@@ -25,8 +25,11 @@ You can view a live demo of the project by visiting [this link](https://yasamina
 Here are some screenshots of the project:
 
 ![image](https://user-images.githubusercontent.com/68509830/232149454-16b142c9-4785-4066-b7c8-255ddaec7a3b.png)
+
 ![image](https://user-images.githubusercontent.com/68509830/232148607-19d2dcfd-633a-48eb-a218-c6704f1a9f01.png)
+
 ![image](https://user-images.githubusercontent.com/68509830/232148943-813ff243-487b-40de-8d08-7db3f11dbaea.png)
+
 ![image](https://user-images.githubusercontent.com/68509830/232148719-aaa3c21d-348c-4a21-a46d-229eeb055407.png)
 
 
