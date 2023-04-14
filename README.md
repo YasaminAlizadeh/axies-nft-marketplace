@@ -1,4 +1,4 @@
-# NFT Marketplace
+# Axies NFT Marketplace
 
 This personal project showcases my skills in JavaScript, HTML, and Sass. It includes a landing page, login page, and single item page for an NFT marketplace. The platform features a slider to showcase items, dummy data to display more items, a custom loading spinner, and a carousel in the login page. Beautiful visual effects are used throughout the platform to enhance the user experience.
 
