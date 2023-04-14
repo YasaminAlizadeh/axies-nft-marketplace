@@ -14,7 +14,7 @@ You can view a live demo of the project by visiting [this link](https://yasamina
 
 1. Clone the repository to your local machine.
 2. Open the project in your preferred code editor.
-3. Open the index.html file in your web browser
+3. Open the `index.html` file in your web browser
 
 ## Credits
 
