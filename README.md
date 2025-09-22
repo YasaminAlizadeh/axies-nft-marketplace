@@ -60,7 +60,7 @@ Since this is a static website built with vanilla HTML, CSS, and JavaScript, you
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YasaminAlizadeh/axies-nft-marketplace.git](https://github.com/YasaminAlizadeh/axies-nft-marketplace.git)
+    git clone https://github.com/YasaminAlizadeh/axies-nft-marketplace.git
     ```
 
 2.  **Open `index.html`:**
